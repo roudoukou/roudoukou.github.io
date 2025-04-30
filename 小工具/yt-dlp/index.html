@@ -16,25 +16,25 @@
   <meta name="author" content="肉豆蔻吖">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.高性能架构1.1 读写分离主从读写分离: 主机写, 丛机读 1.2 CAP定理分布式系统设计的定理 CAPC一致性 Consistence, A可用性 Availability, P分区容错性 Partition Tolerance分布式系统中, 设计读写操作, 只能满足三者中的两个, 还一个必须被牺牲 C &#x3D;&gt; 当主机写入了数据, 丛机立马就能读取到最新的数据A &#x3D;">
+    <meta name="description" content="yt-dlp的使用  介绍：yt-dlp 是一款功能丰富的命令行音频&#x2F;视频下载器，支持数千个网站。该项目是基于现已停用的youtube-dlc的youtube-dl分支。  GitHub仓库：https:&#x2F;&#x2F;github.com&#x2F;yt-dlp&#x2F;yt-dlp&#x2F; ffmpeg 的自定义版本：https:&#x2F;&#x2F;github.com&#x2F;yt-dlp&#x2F;FFmpeg-Builds#ffmpeg-stat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ShardingSphere5">
-<meta property="og:url" content="https://xiamu.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/ShardingSphere5/index.html">
+<meta property="og:title" content="yt-dlp">
+<meta property="og:url" content="https://xiamu.icu/%E5%B0%8F%E5%B7%A5%E5%85%B7/yt-dlp/index.html">
 <meta property="og:site_name" content="肉豆蔻吖">
-<meta property="og:description" content="1.高性能架构1.1 读写分离主从读写分离: 主机写, 丛机读 1.2 CAP定理分布式系统设计的定理 CAPC一致性 Consistence, A可用性 Availability, P分区容错性 Partition Tolerance分布式系统中, 设计读写操作, 只能满足三者中的两个, 还一个必须被牺牲 C &#x3D;&gt; 当主机写入了数据, 丛机立马就能读取到最新的数据A &#x3D;">
+<meta property="og:description" content="yt-dlp的使用  介绍：yt-dlp 是一款功能丰富的命令行音频&#x2F;视频下载器，支持数千个网站。该项目是基于现已停用的youtube-dlc的youtube-dl分支。  GitHub仓库：https:&#x2F;&#x2F;github.com&#x2F;yt-dlp&#x2F;yt-dlp&#x2F; ffmpeg 的自定义版本：https:&#x2F;&#x2F;github.com&#x2F;yt-dlp&#x2F;FFmpeg-Builds#ffmpeg-stat">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-03T10:40:56.000Z">
+<meta property="article:published_time" content="2025-04-30T22:10:52.000Z">
 <meta property="article:modified_time" content="2025-04-30T14:14:13.746Z">
 <meta property="article:author" content="肉豆蔻吖">
-<meta property="article:tag" content="数据库">
-<meta property="article:tag" content="ShardingSphere5">
+<meta property="article:tag" content="小工具">
+<meta property="article:tag" content="yt-dlp">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>ShardingSphere5 - 肉豆蔻吖</title>
+  <title>yt-dlp - 肉豆蔻吖</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ShardingSphere5"></span>
+            <span id="subtitle" data-typed-text="yt-dlp"></span>
           
         </div>
 
@@ -224,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-03 10:40" pubdate>
-          2024年8月3日 上午
+        <time datetime="2025-04-30 22:10" pubdate>
+          2025年4月30日 晚上
         </time>
       </span>
     
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          448 字
+          904 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          4 分钟
+          8 分钟
         
       </span>
     
@@ -285,17 +285,25 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ShardingSphere5</h1>
+            <h1 style="display: none">yt-dlp</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="1-高性能架构"><a href="#1-高性能架构" class="headerlink" title="1.高性能架构"></a>1.高性能架构</h2><h3 id="1-1-读写分离"><a href="#1-1-读写分离" class="headerlink" title="1.1 读写分离"></a>1.1 读写分离</h3><p>主从<br>读写分离: 主机写, 丛机读</p>
-<h3 id="1-2-CAP定理"><a href="#1-2-CAP定理" class="headerlink" title="1.2 CAP定理"></a>1.2 CAP定理</h3><p>分布式系统设计的定理 CAP<br>C一致性 Consistence, A可用性 Availability, P分区容错性 Partition Tolerance<br>分布式系统中, 设计读写操作, 只能满足三者中的两个, 还一个必须被牺牲</p>
-<p>C &#x3D;&gt; 当主机写入了数据, 丛机立马就能读取到最新的数据<br>A &#x3D;&gt; 对于非故障的节点在合理的时间应该返回合理的响应(不是错误和超时的响应)<br>   比如5秒内, 你要给我返回结果, 你第6秒超时了, 才给我的结果, 这超时了<br>P &#x3D;&gt; 当网络分区后, 系统能够继续履行职责 (服务之间出现了网络中断, 网络拥堵, 丢包, 但是能够接着运行, 比如给用户响应系统超时, 稍后重试, 或者给用户返回一个旧的数据)</p>
-<p>有的数据必须选择CP, 有的数据必须选择AP, 分布式系统理论上不可能选择CA架构<br>可用性: 在可容忍的时间返回一个正确的结果</p>
-<p>CP 数据还没同步过来, 返回error<br>AP 数据还没同步过来, 返回旧的数据</p>
-<h3 id="1-3-垂直分片-垂直分库"><a href="#1-3-垂直分片-垂直分库" class="headerlink" title="1.3 垂直分片-垂直分库"></a>1.3 垂直分片-垂直分库</h3>
+                <p>yt-dlp的使用</p>
+<blockquote>
+<p>介绍：yt-dlp 是一款功能丰富的命令行音频&#x2F;视频下载器，支持<a target="_blank" rel="noopener" href="https://github.com/yt-dlp/yt-dlp/blob/release/supportedsites.md">数千个网站</a>。该项目是基于现已停用的youtube-dlc的youtube-dl分支。</p>
+</blockquote>
+<p>GitHub仓库：<br><a target="_blank" rel="noopener" href="https://github.com/yt-dlp/yt-dlp/">https://github.com/yt-dlp/yt-dlp/</a></p>
+<p>ffmpeg 的自定义版本：<br><a target="_blank" rel="noopener" href="https://github.com/yt-dlp/FFmpeg-Builds#ffmpeg-static-auto-builds">https://github.com/yt-dlp/FFmpeg-Builds#ffmpeg-static-auto-builds</a></p>
+<p>yt-dlp 可以直接扔到ffmpeg的bin目录下</p>
+<p>添加环境变量，分别输出，确保环境变量配置成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg<br>ffprobe<br>yt-dlp<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://youtu.be/sKrT6mBrosc<br>yt-dlp -–merge-output-format mp4 https://youtu.be/sKrT6mBrosc<br><br><span class="hljs-comment"># 下载 mp4</span><br>yt-dlp --merge-output-format mp4 https://www.youtube.com/watch?v=KOLDiXnQC7Q<br><br><span class="hljs-comment"># 下载 mp3</span><br>yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=yn3js31DDzg<br><br><span class="hljs-comment"># webm 无损</span><br>yt-dlp -f ba https://www.youtube.com/watch?v=yn3js31DDzg -o <span class="hljs-string">&quot;%(title)s.%(ext)s&quot;</span><br><br><span class="hljs-comment"># m4a</span><br>yt-dlp -x --audio-format m4a https://www.youtube.com/watch?v=yn3js31DDzg -o <span class="hljs-string">&quot;%(title)s.%(ext)s&quot;</span><br><br><span class="hljs-comment"># 列表</span><br>yt-dlp -x --audio-format mp3 <span class="hljs-string">&#x27;https://www.youtube.com/watch?v=DKYpSNS2rM8&amp;list=PLqgdqsklja5kBj4UBD4Q5as3NzcDp1O_6&#x27;</span><br><br></code></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618467617">https://zhuanlan.zhihu.com/p/618467617</a></p>
+
                 
               </div>
             
@@ -310,6 +318,16 @@
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/" class="category-chain-item">小工具</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -318,9 +336,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+        <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">#小工具</a>
       
-        <a href="/tags/ShardingSphere5/">#ShardingSphere5</a>
+        <a href="/tags/yt-dlp/">#yt-dlp</a>
       
     </div>
   
@@ -332,8 +350,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ShardingSphere5</div>
-      <div>https://xiamu.icu/数据库/ShardingSphere5/</div>
+      <div>yt-dlp</div>
+      <div>https://xiamu.icu/小工具/yt-dlp/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +363,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月3日</div>
+          <div>2025年4月30日</div>
         </div>
       
       
@@ -372,6 +390,23 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/JS/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E8%BE%93%E5%87%BA/" title="浏览器不输出">
+                        <span class="hidden-mobile">浏览器不输出</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
