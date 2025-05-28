@@ -24,7 +24,7 @@
 <meta property="og:description" content="常见的hook脚本 过定时器setInterval 123456789101112var _setInterval &#x3D; setIntervalsetInterval &#x3D; function (a,b) &amp;#123;    if(a.toString().indexOf(&amp;#x27;debugger&amp;#x27;) &#x3D;&#x3D; -1)&amp;#123;        return function()&amp;#123;&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-22T23:35:20.000Z">
-<meta property="article:modified_time" content="2025-05-23T08:19:00.228Z">
+<meta property="article:modified_time" content="2025-05-28T06:22:37.774Z">
 <meta property="article:author" content="肉豆蔻吖">
 <meta property="article:tag" content="逆向">
 <meta property="article:tag" content="hook">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.8k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          11 分钟
+          15 分钟
         
       </span>
     
@@ -304,6 +304,11 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> cookieTemp = <span class="hljs-string">&#x27;&#x27;</span>;<span class="hljs-comment">// 定义空字符串</span><br>  <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">defineProperty</span>(<span class="hljs-variable language_">document</span>, <span class="hljs-string">&#x27;cookie&#x27;</span>, &#123;<br><br>    <span class="hljs-attr">set</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">val</span>) &#123;<br>      <span class="hljs-comment">// 设置 cookie的信息,检测到 cookie的值的信息</span><br>      <span class="hljs-keyword">if</span> (val.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&#x27;m&#x27;</span>) != -<span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">debugger</span>; <span class="hljs-comment">// 设置断点</span><br>      &#125;<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Hook捕获到cookie设置-&gt;&#x27;</span>, val);<br>      cookieTemp = val; <span class="hljs-comment">//获取到cookie的信息;</span><br>      <span class="hljs-keyword">return</span> val;<br>    &#125;,<br>    <span class="hljs-attr">get</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>      <span class="hljs-keyword">return</span> cookieTemp;<span class="hljs-comment">// 返回 cookie的信息</span><br>    &#125;,<br>  &#125;);<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><br><span class="hljs-variable language_">console</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>()<br><span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params">s</span>) &#123;<br>    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)&#123;<br>        <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">1100000</span>;i++)&#123;<br>        history.<span class="hljs-title function_">pushState</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,i)<br>            &#125;<br>    &#125;<br><br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-property">toString</span> = <span class="hljs-string">&#x27;[object Object]&#x27;</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span>.<span class="hljs-property">toString</span> = <span class="hljs-string">&#x27;ƒ toString() &#123; [native code] &#125;&#x27;</span><br><br></code></pre></td></tr></table></figure>
+
+
+<p>console.log的hook</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs js">(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-string">&#x27;use strict&#x27;</span>;<br>    <span class="hljs-keyword">let</span> _log = <span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span>;<br>    <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">defineProperty</span>(<span class="hljs-variable language_">console</span>, <span class="hljs-string">&#x27;log&#x27;</span>, &#123;<br>            <span class="hljs-attr">configurable</span>: <span class="hljs-literal">true</span>,<br>            <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>,<br>            <span class="hljs-attr">get</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>                <span class="hljs-keyword">return</span> _log;<br>            &#125;,<br>            <span class="hljs-attr">set</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">newVal</span>) &#123;<br>                <span class="hljs-keyword">debugger</span>;<br>                _log = newVal;<br>            &#125;<br>        &#125;);<br>    &#125; <span class="hljs-keyword">catch</span> (e) &#123;<br>        <span class="hljs-keyword">const</span> _fallbackLog = <span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span>;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">...args</span>) &#123;<br>            _fallbackLog.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>, args);<br>        &#125;;<br>    &#125;<br>&#125;)();<br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
