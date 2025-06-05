@@ -1,0 +1,994 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 100vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/bg.jpg') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="梧桐落，又还秋色，又还寂寞">
+				  
+				</span>
+
+				
+			  </div>
+
+			  
+				<div class="scroll-down-bar">
+				  <i class="iconfont icon-arrowdown"></i>
+				</div>
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  <div class="container nopadding-x-md">
+			<div class="py-5" id="board"
+			  style=margin-top:0>
+			  
+			  <div class="container">
+				<div class="row">
+				  <div class="col-12 col-md-10 m-auto">
+					
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Web/%E8%BF%99%E4%B9%88%E5%8F%AF%E7%88%B1%E7%9C%9F%E6%98%AF%E6%8A%B1%E6%AD%89/" target="_self">
+          这么可爱真是抱歉
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Web/%E8%BF%99%E4%B9%88%E5%8F%AF%E7%88%B1%E7%9C%9F%E6%98%AF%E6%8A%B1%E6%AD%89/" target="_self">
+        <div>
+          B站视频的嵌入直接引入iframe嵌入, markdown是支持iframe标签的 通过设置width和height调整视频的大小 12&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=987809477&amp;bvid=BV1y44y1Q7uZ&amp;cid=895436270&amp;page=1&quot; width=
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-31 10:45" pubdate>
+              2023-03-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Web/">Web</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%BF%99%E4%B9%88%E5%8F%AF%E7%88%B1%E7%9C%9F%E6%98%AF%E6%8A%B1%E6%AD%89/">这么可爱真是抱歉</a>
+            
+              <a href="/tags/%E5%8F%AF%E7%88%B1/">可爱</a>
+            
+              <a href="/tags/B%E7%AB%99/">B站</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Web/CSS%E6%A8%B1%E8%8A%B1/" target="_self">
+          CSS樱花
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Web/CSS%E6%A8%B1%E8%8A%B1/" target="_self">
+        <div>
+          运行 12npm install http-server -ghttp-server  效果图: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-30 23:54" pubdate>
+              2023-03-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Web/">Web</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%A8%B1%E8%8A%B1/">樱花</a>
+            
+              <a href="/tags/CSS/">CSS</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/%E6%9D%82%E9%A1%B9/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          局域网内共享文件夹
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%9D%82%E9%A1%B9/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+        <div>
+          前言有时候给同学需要发实验, 但是实验贼泥马的多这个时候如果还挨个用 QQ 发送文件夹就显得非常蛋疼 开搞因为平时我的实验都会放在一个固定的文件夹中, 所以只需要把这个文件夹共享出去, 对面同样连接着校园网就能直接访问到这个共享文件夹 修改一个好记的主机名主要就是为了好记 共享文件夹选中要共享的文件夹, 右键属性, 共享, 可以给 Everyone 设置访问权限 去掉密码保护去掉密码保护之后, 别
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-30 15:50" pubdate>
+              2023-03-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/">局域网</a>
+            
+              <a href="/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/">共享文件夹</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/%E5%B0%8F%E5%B7%A5%E5%85%B7/PicGo/" target="_self">
+          PicGo
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E5%B0%8F%E5%B7%A5%E5%85%B7/PicGo/" target="_self">
+        <div>
+          PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具  下载PicGo, 双击 exe 文件运行配置相关的信息 12345KeyId: XXXKeySecret: XXXBucket: fine-food区域: oss-cn-shenzhen自定义域名: https://food.xiamu.icu  可能当你看见这篇文档时, 这些秘钥都已经失效了上传文件了, 就会保存在剪切板中
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-30 11:03" pubdate>
+              2023-03-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
+            
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/">软件</a>
+            
+              <a href="/tags/PicGo/">PicGo</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Java/MongoDB/" target="_self">
+          MongoDB
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Java/MongoDB/" target="_self">
+        <div>
+          核心概念数据库（database） 数据库是一个数据仓库，数据库服务下可以创建很多数据库，数据库中可以存放很多集合集合（collection） 集合类似于 JS 中的数组，在集合中可以存放很多文档文档（document） 文档是数据库中的最小单位，类似于 JS 中的对象 1234567891011121314151617181920212223242526272829303132333435363
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-27 08:00" pubdate>
+              2023-03-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Java/">Java</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">Java</a>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+            
+              <a href="/tags/NodeJs/">NodeJs</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/" target="_self">
+          字符串反转
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/" target="_self">
+        <div>
+          输入一个 abcd, 输出一个 dcba 1234public String solve (String str) &#123;    // write code here    return return new StringBuffer(str).reverse().toString();&#125;  或者遍历到 StringBuffer 123456789101112public Stri
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-27 08:00" pubdate>
+              2023-03-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/%E7%AE%97%E6%B3%95/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0gcd/" target="_self">
+          最大公约数gcd
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E7%AE%97%E6%B3%95/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0gcd/" target="_self">
+        <div>
+          12345678public int gcd (int a, int b) &#123; // 2 4  4 2  2 0    // write code here;    if (b == 0) &#123;        return a;    &#125; else &#123;        return gcd(b, a%b);    &#125;&#125;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-27 08:00" pubdate>
+              2023-03-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+              <a href="/tags/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/">最大公约数</a>
+            
+              <a href="/tags/gcd/">gcd</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/%E5%B0%8F%E5%B7%A5%E5%85%B7/ZoomIt/" target="_self">
+          ZoomIt
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E5%B0%8F%E5%B7%A5%E5%85%B7/ZoomIt/" target="_self">
+        <div>
+          下载解压, 双击 ZoomIt.exe 运行, 可以自行创建快捷方式 Ctrl 1 进入缩放模式滑动鼠标&#x2F;方向键 缩放左键开始绘画右键退出绘画 Ctrl 2 开始绘画不进入缩放Ctrl +&#x2F;- 或者 Ctrl ↑ Ctrl ↓ 调整光标或者线条大小空格 光标居中W 白板B 黑板T 左对齐输入文本Shift T 右对齐输入文本Ctrl +&#x2F;- 或者 Ctrl ↑ Ctr
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-26 22:01" pubdate>
+              2023-03-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
+            
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/">软件</a>
+            
+              <a href="/tags/ZoomIt/">ZoomIt</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Web/Vue%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/" target="_self">
+          Vue样式穿透
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Web/Vue%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/" target="_self">
+        <div>
+          在开发中, 多多少少会用到组件库, 但是组件库的样式非常有限, 如果不懂 scoped 的话, 想要修改就有可能会变得有点困难常见的组件化开发都会见到 scoped, scoped 就相当于一个作用域, 只作用于当前这个组件, 不会被其他的组件所影响 123&lt;style lang=&quot;scss&quot; scoped&gt;...&lt;/style&gt;  此时页面上存在一个按
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-26 08:00" pubdate>
+              2023-03-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Web/">Web</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CSS/">CSS</a>
+            
+              <a href="/tags/Web/">Web</a>
+            
+              <a href="/tags/Vue/">Vue</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Web/npm%20%E5%AE%89%E8%A3%85yarn/" target="_self">
+          npm 安装yarn
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Web/npm%20%E5%AE%89%E8%A3%85yarn/" target="_self">
+        <div>
+          安装 1npm install -g yarn --registry=https://registry.npm.taobao.org  配置源 1234yarn config set registry https://registry.npm.taobao.org -gyarn config set sass_binary_site http://cdn.npm.taobao.org/dist/n
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-03-26 08:00" pubdate>
+              2023-03-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Web/">Web</a>
+            
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Web/">Web</a>
+            
+              <a href="/tags/NodeJs/">NodeJs</a>
+            
+              <a href="/tags/npm/">npm</a>
+            
+              <a href="/tags/yarn/">yarn</a>
+            
+          </div>
+        
+		
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/6/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/8/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+    <script type="text/javascript">$(".pagination a").each(function(){$(this)[0].href+="#board";})</script>
+  
+
+
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>

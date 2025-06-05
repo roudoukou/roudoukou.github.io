@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>Java简历编写 - 社招篇 - 肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 70vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/bg.jpg') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="Java简历编写 - 社招篇">
+				  
+				</span>
+
+				
+				  <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      肉豆蔻吖
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2025-04-23 22:06" pubdate>
+        2025年4月23日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      59
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+				
+			  </div>
+
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java简历编写 - 社招篇</h1>
+            
+            <div class="markdown-body">
+              <h2 id="投递渠道"><a href="#投递渠道" class="headerlink" title="投递渠道"></a>投递渠道</h2><p>boss、猎聘，多个号同时</p>
+<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><ol>
+<li>个人信息<br>姓名, 性别, 年龄（年纪大可以写出生年月），邮箱，手机号，期望薪资（面议）, x年工作经验，到岗时间</li>
+<li>教育经历<br>毕业院校，专业，学历，毕业时间，专业成绩</li>
+<li>工作经历</li>
+</ol>
+<blockquote>
+<p>markdown 的关键词注意大小写, 中英文逗号, 关键词前后添加空格</p>
+</blockquote>
+<h2 id="个人优势"><a href="#个人优势" class="headerlink" title="个人优势"></a>个人优势</h2><ol>
+<li>良好 Java 基础，熟悉 JDK8 新特性，对集合、锁、多线程、JVM、设计模式有一定了解</li>
+<li>具有良好的编码规范，面向对象编程思想、算法基础扎实（力扣 200 题）</li>
+<li>熟悉 MySQL 数据库，熟悉 MySQL 优化，了解 MongoDB、DB2、Oracle、ES</li>
+<li>熟悉 Spring、SpringMVC、Springboot、Mybatis 等框架在软件项目中的使用</li>
+<li>熟悉 SpringCloud 微服务组件：Nacos、Gateway、Feign，了解分布式事务</li>
+<li>熟悉 Linux、Git、Docker、Maven、Gradle 常用指令，运用 Jenkins、Sonar 等工具管理项目</li>
+<li>熟悉掌握 Redis NoSQL 基本命令及高级特性，熟悉基于 Redission 实现的分布式锁原理，了解 Guava 多级缓存技术</li>
+<li>熟悉消息中间件 RabbitMQ，了解 Kafka、SOFAMQ，了解 MQ 常见问题处理方案</li>
+<li>熟悉 Mockito、Junit 等单元测试框架，服务器基本运维、分支管理</li>
+<li>了解 vue、react、js、h5、css 等前端技术</li>
+<li>具有一年项目组长、带领 3 人小组团队经验</li>
+</ol>
+<hr>
+<ol>
+<li>有扎实的 Java 基础，熟悉集合、多线程、JVM 等相关知识，具备良好的编程习惯及代码规范</li>
+<li>熟悉 Spring、SpringBoot、SpringMVC、MyBatis、MyBatis-Plus 等开源框架，对 Spring 的源码有一定了解</li>
+<li>熟悉 Redis 常见数据结构、持久化机制、淘汰策略等，掌握缓存、分布式锁、限流等使用场景</li>
+<li>熟悉 MySQL 的底层原理，对于索引、事务、锁机制等有一定理解，具有一定的 SQL 调优能力</li>
+<li>熟悉 RocketMQ、RabbitMQ 消息组件，对消息的可靠性、顺序性、零拷贝有一定理解</li>
+<li>熟悉 ElasticSearch 的查询规则及其使用场景，了解其底层数据结构</li>
+<li>熟悉 SpringCloud、Dubbo 等微服务框架，理解微服务架构设计</li>
+<li>掌握分布式相关问题的解决方案，如分布式锁、分布式事务、分布式任务调度</li>
+<li>熟悉常见设计模式，例如：单例模式、工厂模式、策略模式、适配器模式、责任链模式等</li>
+<li>熟悉 Linux 系统下的常用命令、服务部署、日志分析</li>
+</ol>
+<hr>
+<p>1、 熟悉常见的数据结构，如:数组、链表、队列、栈、二叉树，能够熟练运用哈希表、动态规划、贪心算法、回溯算法2、熟悉 Java ，阅读过部分 JDK 源码，熟悉常用 Java 集合类，多线程，线程池，反射，Java 泛型，异常<br>3、熟悉并发编程，熟悉 CAS、AQS、synchronized、ThreadLocal、volatile、ReentrantLock、CompleableFuture<br>4、熟悉 SpringBoot ，Springcloud，阅读过 IOC 和 AOP 底层源码，能够基于 Spring 内置扩展点进行业务扩展5、熟悉 MySQL，熟悉索引底层原理，索引失效的场景， MVCC 原理、事务隔离级别、锁、日志，有多次 sql 性能优化经验<br>6、熟悉 Redis，熟悉其底层数据结构 ，分布式锁 ， Redis 高可用模式和持久化策略，内存淘汰策略<br>7、熟练使用开发中常用组件:XXL-JOB、Cat、RabbitMQ、Redis、Apollo、Nacos、Gateway、Nginx、Canal<br>8、理解微服务架构设计: 服务注册发现、配置中心、限流、熔断、降级、网关路由等<br>9、了解 arthas 命令使用，能够在构建包含 arthas 的镜像，并生产环境中进行 JVM 诊断排查和接口分析<br>10、了解服务器搭建、熟悉 Docker、k8s，熟悉使用 docker 搭建各种工具:MO、Redis、Jenkins、ELK、ES<br>11、了解 JM的 GC 机制、类加载机制、对 JMM 有理解，了解 JVM基本调优技巧<br>12、了解常见设计模式:如单例模式、工厂模式、策略模式、责任链模式、代理模式、模板方法模式等<br>13、了解常见的 linux命令，熟悉常见的业务监控组件，Cat、ELK、TLog<br>14、注重代码质量，有良好的编码习惯，严格遵守阿里开发规范</p>
+<hr>
+<p>具备扎实的Java基础，拥有良好的编码习惯和良好的API文档写作;<br>主流框架:熟练使用SpringBoot、SpringMVC、MyBatisPlus;<br>熟练使用MySQL，包括安装、配置、SQL调优、备份和恢复;<br>数据库:熟悉Redis、MongoDB、Elasticsearch等NoSQL数据库;<br>熟悉微服务技术架构，三年微服务项目经验，擅长SpringCloud全套微服务落地解决方案;<br>擅长分布式相关技术:redisson、SpringSession、XXL-JOB;<br>熟练掌握Linux系统及Docker容器常用命令，熟练编写shell脚本以及jenkinsfile流水线脚本:<br>熟悉RabbitMQ，熟悉异步通信、延迟消息、消息可靠性、重复消费等解决方案;<br>精通对接支付宝、微信支付解决方案，包括不限于:多种支付渠道、支付方式、退款、财务对账等业务流程。<br>熟练对接三方服务，如:短信服务、邮件服务、地图服务等;</p>
+<hr>
+<p>熟悉java编程语言，具有3年java一线开发经验，擅长分布式、微服务相关技术栈;<br>熟练掌握Java JUC、IO&#x2F;NI0、网络编程、JDK8&#x2F;17新特性、反射等高级知识，阅读过集合、AQS等底层源码:<br>熟悉JVM内存结构，了解GC回收算法、G1、ZGC、CMS等垃圾回收器，了解Arthas服务状态监控;<br>熟练掌握Spring、SpringMVc、SpringBoot、Mybatis等开源框架，阅读过核心流程源码;<br>熟悉分布式微服务相关理论，熟练掌握SpringCloudAlibaba系列微服务组件:Nacos、0penFeign、Gateway、Skywalking、Sentinel、seata;<br>熟练掌握MySQL关系型数据库，熟悉分库分表、索引优化、线上慢SQ排查，了解MVCC、事务底层原理;<br>熟练掌握Redis数据结构、布隆过滤器、GEOHASH、位图等应用技术，熟悉高可用、缓存问题相关解决方案;<br>熟悉MongoDB、Elasticsearch等常见的NOSOL产品及其应用场景;<br>熟悉 RabbitMQ、 Kafka 中间件产品，并了解它们的特性、高可用及适用业务场合;<br>熟练掌握Linux、Docker、Jenkins、Nginx常见运维命令及运维部署方案，能自定义镜像发布微服务系统;<br>熟悉Elk技术栈搭建高可用分布式微服务系统日志监控平台;<br>了解Kubernetes容器编排技术以及Prometheus监控工具;<br>熟悉HTML、CSS、JavaScript、Es6、Vue全家桶、Uniapp、Typescript等前端技术;<br>可以使用前端组件库 Vant、 Elementui、 uview、echarts等进行开发。熟悉鸿蒙开发语言ArkIs的使用;</p>
+<h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><p>上海中软华腾软件系统有限公司 Java 2023.04-至今<br>1.参与项目重构、优化和核心开发工作，提升项目可用性。<br>2.参与后端业务 API 、数据库设计、性能优化、接口文档编写等工作。<br>3.编写单元测试，配合测试测试。<br>4.编写投产脚本，参与测试环境系统运维，解决生产问题</p>
+<p>成都康赛信息技术有限公司 Java 2021.04-2023.03+<br>1.参与项目的前期需求讨论、分析、设计<br>2.负责公司项目核心功能模块的业务代码开发<br>3.后期承担项目维护工作<br>4.自测及配合测试人员测试</p>
+<p>2021.07-2024.05 深圳金斧子网络科技有限公司 Java开发工程师<br>1.参与系统功能需求分析，需求评审提出实现问题及解决方案，负责相关技术文档的编写。<br>2.充分理解项目需求，根据任务功能 ，设计高质量解决方案并进行代码编写。<br>3.负责公募相关系统的线上问题排查及解决，进行系统的功能选代，保证项目的稳定运行。<br><span style="color:red"><br>#建议 写一写 负责过哪些项目，并且体现:重点负责、核心开发、重要的成绩等等，可以在这部分体现一下。这部分3-5行就可以了。<br></span></p>
+<p>2020.07-至今 某某科技服务有限公司 Java开发程序员<br>参与需求分析、合理的技术选型以及后端接口程序编码实现；<br>及时解决业务难点以及生产及开发环境遇到的各种bug;<br>持续对项目进行优化，包括不限于:业务代码、技术方案、慢SQL调优等方式；<br>负责与第三方服务提供商的技术团队进行沟通和协调，解决技术对接中的问题；<br>编写和技术文档，确保团队成员和相关利益相关者对第三方服务的集成有清晰的理解</p>
+<h2 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h2><p>项目描述，技术栈，个人职责，技术设计</p>
+<blockquote>
+<p>项目背景 项目的职责 项目的技术亮点</p>
+</blockquote>
+<blockquote>
+<p>通过怎么做的，不一定说用了什么技术，可以说是什么逻辑，什么思想，什么技术实现的</p>
+</blockquote>
+<p>企业级架构-通用组件(ComponentManagement)Java后端 2023.05-至今<br>项目技术:<br>SpringCloud+SOFAMQ+MySQL+Mybatis+Jenkins+Sonar+Gradle<br>项目简介:本项目531个人信贷系统重构后的一个微服务项目。通用组件主要包括提款、还款、放款中心等各种贷款通用内容，负责新系统各种贷款的提款、还款业务。支持手机银行、开放银行、小程序、h5等多渠道放款还款。项目接入Jenkins、Sonar等项目管理软件、项目已于23年11月成功上线。</p>
+<p>●负责模块: 提款准入、规则预审、查询交易对手、放款卡、影像加签、利率计算、放款、二代支付<br>●还款: 逾期还款、提前还款<br>●线下放款: 当客户不满足某些条件，提款进入线下审核阶段，由客户经理进行放款审核，完成最终放款</p>
+<p>项目亮点：</p>
+<p>●系统优化:异步等方法优化原有逻辑、sql优化，优化接口响应速度(突出一下过程或者获得的结果)。<br>●批量任务:车贷经销商返佣，保证正常返佣，采用夜间批量的形式保证任务不丢失<br>·接口幕等性设计:避免重复放款、还款(突出一下怎么做得到)<br>·系统分布式事务设计:提款失败时，回滚合同、额度等信息。(突出一下怎么做得到)</p>
+<p>531个人信贷系统(PLIS) Java后端 2023.05-至今<br>项目技术:SpringBoot+SOFAMQ+DB2+Mybatis +行方自研工作流+Maven<br>项目简介:交通银行个人信贷系统，是交通银行一直迭代的一个大型的单体项目，其中包含了房贷、惠民贷、线上抵押贷、线下抵押贷等多种产品从贷前到贷后的全生命周期，项目使用工作流把对应的任务分发给目标支行目标岗位，确保贷款流程的正确推进，生产数据量百万级别。<br>负责模块:<br>线上抵押贷模块，抵押贷分为贷前:客户申请、客户经理核实、房产二次评估、后督、支行行长复核、分行审查复核、授信出额、中介岗房产入库、放款中心，贷后:年审、无还本续贷。</p>
+<p>2022.10-2024.03 EA智能投顾系统<br>技术选型:<br>SpringBoot+ SpringCloud +SpringSecurity+MyBatisPlus+Redis+MysQL+ClickHouse<br>项目描述:<br>由于公司基金业务开展缺乏展业系统支持，业务层使用ppt对接客户的形式，使得服务单个客户人力成本较高，并且专业度方面也有所欠缺 ，于是在公司需求推动下研发EA智能投顾系统 ，方便理财师对客户展开资产分析 ，提供资产配置方案，系统主要模块包括资产概览、资产配置、研报中心和产品中心四大模块。<br>个人职责:<br><span style="color:red"><br>#这块个人职责写的很好，很对我胃口，:做过什么项目、做过什么工作、取得过什么成绩<br></span><br>1.负责资产概览，资产配置模块的整体设计，进行技术选型，库表设计，实现核心功能落地<br>2.对千万级用户资产数据表进行水平拆分，整合ShardingSphere进行分表操作，提升数据查询效率<br>3.对于产品经理提供的组合收益的业务算法进行优化，降低算法复杂度，简化开发逻辑<br>4.基于poi +PPT的模版实现用户方案PPT的导出<br>5.利用工厂模式 +策略模式优化组合收益的计算代码 ，消除大量if-else ，提升代码可读性<br>6.利用Redis的zset缓存热点基金净值，实现基金净值的范围查询，提升整体收益数据计算性能30%<br>7.针对慢SQL，通过构建索引、语句优化、字段冗余等方式、将平均查询耗时从2000ms降至100ms</p>
+<span style="color:red">
+# but，3年经验，一定是有一些比较好的设计，前面说了用了很多技术，虽然实际工作你肯定不会天天各种技术，但是面试的时候，咱也知道，造火箭!所以，针对一些可能不常用的，但是我们要突出这部分比较牛的设计方案。即便不是你做的，但是你能分析明白，让你讲能将明白，那就是你做的。
+</span>
+
+<p>技术设计:</p>
+<span style="color:red">
+# 针对技术应用场景，比较复杂的(反例:使用redis缓存了xx数据，者太简单了就不要写了)，在这里写几条。
+比如:XX场景面对日增1T，且非结构化数据，使用CickHouse进行存储，后续基于xx方案进行数据清洗重新入库;
+</span>
+
+
+<p>2022.05-2022.09 FAS后台系统<br>技术选型:<br>SpringBoot+SpringCloud+MyBatisPlus+MysQL+ElasticSearch +RabbitMQ+EasyExcel<br>项目描述:<br>公司旧版的公募后台系统功能单一 ，且和其他系统调合，于是单独设计了新的FAS后台系统，使得app的资源配置更加方便 ，并且增加客户资产信息维护，异常数据监控，客户持仓统计等功能，方便理财师对于客户的维护和管理</p>
+<span style="color:red">
+#本项目为集团及附属公司理财师服务，用于维护客户、相关线索管理，同时对其他分布式平行系统提供公募后台相
+关业务功能支持。项目核心业务:集中化管理App资源配置、客户资产信息维护、异常数据监控、客户持仓统计等。#这块很明显业务不需要微服务，但是你可以说，这是公司平台统一的技术架构，我这个项目属于整个大型系统中的个子项目，所以也是微服务项目，只是其中的一个微服务，单独作为一个排期、研发的。
+</span>
+
+<p>个人职责:<br><span style="color:red"># 前面加几个，我独立负责，这种项目不大，可以说自己独立负责，从0-1，自己做的</span><br>1，使用ElasticSearch优化用户多条件查询接口，使接口性能优化到600ms内<br>2.基于AOP 以及xxl-job注解改造历史定时任务触发接口 ，实现xx-job对定时任务触发接口的管理<br>3.完成线上系统OOM，数据库死锁等问题定位排查及解决  <span style="color:red">#添加使用什么工具发现那些参数异常、死锁、XX场景</span><br>4引入TransmittableThread Local解决ThreadLocal线程无法共享的问题 ，实现日志链路追踪<br>5.使用RabbitMQ +线程池分段扫表提升客户交易信息推送定时任务执行效率，解决扫表延迟问题<br>6.基于EasyExcel实现10w+客户数据的异步导出</p>
+<p>2021.09-2024.05 小金伴投app<br>技术选型:<br>SpringBoot+SpringCloud +SpringSecurity+MyBatisPlus+MySQL+Redis+Click House<br>项目描述:<br>小金伴投app是一个公募基金交易平台，旨在方便 ，简洁的前提下为用户提供专业的投资理财服务 ，例如基金交易、市场热点数据、投顾服务等。app主要包括基金交易，基金排行、热门数据、投顾组合、资产管理、个人中心、收益分析等模块<br>个人职责:<br>1，引入xx-job替代@Scheduled管理定时任务 ，改造调度中心源码，修改任务阻塞报警策略<br>2.将资产计算的定时任务优化为分布式任务，成功将3小时的定时任务优化到1小时内<br>3.使用责任链设计模式优化首页弹窗功能代码，提升代码的简洁性和业务的可扩展性<br>4.使用ClickHouse存储用户持仓数据，定时任务导入T+1数据，提升聚合计算效率<br>5.基于AOP + 自定义注解实现日志打印、性能统计、签名校验，减少冗余代码<br>6.基于Redis + Lua脚本对重要接口进行滑动窗口限流，防止接口恶意调用<br>7.设计金额对账流程，编写异常数据检测SQL，保证生产数据的准确性<br>8.完成线上环境日常巡检，及时排查故障问题，保证生产系统的正常运行</p>
+<span style="color:red">
+#不管什么公司，一定是围绕公司的某一个范围经营，软件是为实际服务的，那么一定是围绕相关需求张开的。就像这个老弟的简历，都是围绕投资理财相关的，专业、业务就很聚焦，很熟悉。对于相关领域的其他公司来说，就是比较认可吧。
+当然，话说回来，你这个投资理财相关的业务，在整个市场来看，肯定是比较小众的。
+但是这个无所谓，因为大部分公司，也不可能去招聘特别对口的，那样太难了。
+</span>
+
+
+<hr>
+<p>项目经验<br>项目一:某某租车App<br>技术采用:Spring Cloud Alibaba、MySQL、Redis 、RabbitMQ、MyBatisPlus、Redis、Redisson、Quartz、三方服务(微信，支付宝)<br>项目描述:<br>联友租车App为用户提供便捷租车服务。<br>用户通过联友租车可实现线上订车、线上签约(对接e签宝)、线下门店取车一站式用车体验。<br>核心业务:租车管理、积分商城系统、加盟商支持、车辆&amp;门店管理、营销系统、订单管理、支1块、优惠券模块。<br>岗位职责:<br>负责后端业务需求分析、技术选型、编码实现；<br>重点负责:支付、订单、车辆日历、优惠券、积分商城业务开发<br>技术选型：<br>使用RocketMQ缓冲了对网点订单异步处理，提升接口响应速度;<br>负责数据埋点，前端App上报足迹、后端基于ELK收集日志，并统一存储在ElasticSearch，基于定时任务以及Kafka Stream流式编程实现离线推荐及准实时推荐的功能;<br>充分利用Redis特性满足项目业务实现，如:GEO HASH计算用户及网点距离范围、基于Redisson解决取消订单、限时抢购等业务场景;<br>使用Quartz实现定时统计违章、定时报表统计等定时任务相关需求;<br>负责对接快递鸟物流香询服务、阿里内容鉴黄接口审核、百度OCR识别用户身份证等功能，并封装独立的工具类使得功能更加通用;</p>
+<hr>
+<p>诸葛到家技术选型:<br>基于springcloud构建微服务系统，拆分:30+业务服务，使用组件:Nacos、Sentinel、Gateway、skywalking;SpringBoot、MyBatis-Plus、Redis、Rabbitmq、Kafka、MongoDB、Elasticsearch、XXL-J0B、 MySOL, MinIO、Canal、ShardingSphere;<br>部署平台:Kubernetes、Docker、Harbor、Helm、ELK、Prometheus、Grafana;</p>
+<p>项目介绍:<br>诸葛到家兴起于湖南，是国内新兴头部的一家一站式家政服务提供商，公司通过社区团购的方式给用户提供保姆、月嫂、育婴师、保洁卫生、家电清洗等一站式到家服务，具有低成本、去中介的优势。<br>并基于线下业务，扩展了线上业务支持，包含:一对一视频私教、音视频生活课程以及其他电子类型家政服务资源及教程。<br>本人在职期间，主要参与了线上类目业务从0-1的研发工作，深入理解并掌握O2O相关类目的业务及全流程pevops开发和分布式微服务技术解决方案。</p>
+<p>系统组成:用户端(小程序)、服务端( APP)、机构端( Pc)和运营管理端(PC)</p>
+<p>岗位职责:<br>担任核心开发，主要完成了:优惠券、订单、派单、线上音视频课程(专辑管理、订单、支付)、线上直播(腾讯云TRTC)等业务模块:<br>按时完成周期内的研发工作，编写优质代码，保证代码可读性、稳定性，迅速通过测试和验收;<br>负责日常相关业务模块的线上错误日志分析，针对问题进行修复或优化:</p>
+<p>工作亮点:<br>定时任务:活动的自动开启与结束、缓存预热、订单迁移到历史订单表等;<br>缓存设计:优惠券库存信息、用户session信息、热点数据、排行榜、订单临时数据、点赞评论数据缓存:<br>MO异步任务:定时关单、MySOL&#x3D;&gt;ES数据同步、分布式事务解决方案:<br>Kafka:同步数据播放量、Kafkastream实现准实时热度计算;<br>Elasticsearch:构建高性能多种数据索引，作为检索服务的支撑组件，如:附近人査找、关键字检索等:<br>其他三方技术:腾讯云直播TRTC、微信支付、微信录、高德地图定位:<br>其他分布式相关技术:shardingsphere分库分表、Redis+Lua脚本防重提交、Redisson分布式锁;</p>
+<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>有较好的学习能力，对于新知识能快速吸收并运用<br>拥有良好的团队合作意识和协作能力，和团队成员能够相处融治<br>够简单阅读并理解英文相关技术文档</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Java%E7%AE%80%E5%8E%86/">Java简历</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"Haq24NRgHl4QheEi7oVqtAsM-gzGzoHsz","appKey":"kGbxzGaSiqqlFPxg24Tk3dVN","placeholder":"来都来了, 不留下点啥吗?","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":"https://valinecdn.bili33.top","emojiMaps":{"Tieba-New2":"/Tieba-New/image_emoticon.png","Tieba-New3":"/Tieba-New/image_emoticon10.png","Tieba-New4":"/Tieba-New/image_emoticon100.png","Tieba-New5":"/Tieba-New/image_emoticon101.png","Tieba-New6":"/Tieba-New/image_emoticon102.png","Tieba-New7":"/Tieba-New/image_emoticon103.png","Tieba-New8":"/Tieba-New/image_emoticon104.png","Tieba-New9":"/Tieba-New/image_emoticon105.png","Tieba-New10":"/Tieba-New/image_emoticon106.png","Tieba-New11":"/Tieba-New/image_emoticon107.png","Tieba-New12":"/Tieba-New/image_emoticon108.png","Tieba-New13":"/Tieba-New/image_emoticon109.png","Tieba-New14":"/Tieba-New/image_emoticon11.png","Tieba-New15":"/Tieba-New/image_emoticon110.png","Tieba-New16":"/Tieba-New/image_emoticon111.png","Tieba-New17":"/Tieba-New/image_emoticon112.png","Tieba-New18":"/Tieba-New/image_emoticon113.png","Tieba-New19":"/Tieba-New/image_emoticon114.png","Tieba-New20":"/Tieba-New/image_emoticon115.png","Tieba-New21":"/Tieba-New/image_emoticon116.png","Tieba-New22":"/Tieba-New/image_emoticon117.png","Tieba-New23":"/Tieba-New/image_emoticon118.png","Tieba-New24":"/Tieba-New/image_emoticon119.png","Tieba-New25":"/Tieba-New/image_emoticon12.png","Tieba-New26":"/Tieba-New/image_emoticon120.png","Tieba-New27":"/Tieba-New/image_emoticon121.png","Tieba-New28":"/Tieba-New/image_emoticon122.png","Tieba-New29":"/Tieba-New/image_emoticon123.png","Tieba-New30":"/Tieba-New/image_emoticon124.png","Tieba-New31":"/Tieba-New/image_emoticon13.png","Tieba-New32":"/Tieba-New/image_emoticon14.png","Tieba-New33":"/Tieba-New/image_emoticon15.png","Tieba-New34":"/Tieba-New/image_emoticon16.png","Tieba-New35":"/Tieba-New/image_emoticon17.png","Tieba-New36":"/Tieba-New/image_emoticon18.png","Tieba-New37":"/Tieba-New/image_emoticon19.png","Tieba-New38":"/Tieba-New/image_emoticon2.png","Tieba-New39":"/Tieba-New/image_emoticon20.png","Tieba-New40":"/Tieba-New/image_emoticon21.png","Tieba-New41":"/Tieba-New/image_emoticon22.png","Tieba-New42":"/Tieba-New/image_emoticon23.png","Tieba-New43":"/Tieba-New/image_emoticon24.png","Tieba-New44":"/Tieba-New/image_emoticon25.png","Tieba-New45":"/Tieba-New/image_emoticon26.png","Tieba-New46":"/Tieba-New/image_emoticon27.png","Tieba-New47":"/Tieba-New/image_emoticon28.png","Tieba-New48":"/Tieba-New/image_emoticon29.png","Tieba-New49":"/Tieba-New/image_emoticon3.png","Tieba-New50":"/Tieba-New/image_emoticon30.png","Tieba-New51":"/Tieba-New/image_emoticon31.png","Tieba-New52":"/Tieba-New/image_emoticon32.png","Tieba-New53":"/Tieba-New/image_emoticon33.png","Tieba-New54":"/Tieba-New/image_emoticon34.png","Tieba-New55":"/Tieba-New/image_emoticon35.png","Tieba-New56":"/Tieba-New/image_emoticon36.png","Tieba-New57":"/Tieba-New/image_emoticon37.png","Tieba-New58":"/Tieba-New/image_emoticon38.png","Tieba-New59":"/Tieba-New/image_emoticon39.png","Tieba-New60":"/Tieba-New/image_emoticon4.png","Tieba-New61":"/Tieba-New/image_emoticon40.png","Tieba-New62":"/Tieba-New/image_emoticon41.png","Tieba-New63":"/Tieba-New/image_emoticon42.png","Tieba-New64":"/Tieba-New/image_emoticon43.png","Tieba-New65":"/Tieba-New/image_emoticon44.png","Tieba-New66":"/Tieba-New/image_emoticon45.png","Tieba-New67":"/Tieba-New/image_emoticon46.png","Tieba-New68":"/Tieba-New/image_emoticon47.png","Tieba-New69":"/Tieba-New/image_emoticon48.png","Tieba-New70":"/Tieba-New/image_emoticon49.png","Tieba-New71":"/Tieba-New/image_emoticon5.png","Tieba-New72":"/Tieba-New/image_emoticon50.png","Tieba-New73":"/Tieba-New/image_emoticon6.png","Tieba-New74":"/Tieba-New/image_emoticon66.png","Tieba-New75":"/Tieba-New/image_emoticon67.png","Tieba-New76":"/Tieba-New/image_emoticon68.png","Tieba-New77":"/Tieba-New/image_emoticon69.png","Tieba-New78":"/Tieba-New/image_emoticon7.png","Tieba-New79":"/Tieba-New/image_emoticon70.png","Tieba-New80":"/Tieba-New/image_emoticon71.png","Tieba-New81":"/Tieba-New/image_emoticon72.png","Tieba-New82":"/Tieba-New/image_emoticon73.png","Tieba-New83":"/Tieba-New/image_emoticon74.png","Tieba-New84":"/Tieba-New/image_emoticon75.png","Tieba-New85":"/Tieba-New/image_emoticon76.png","Tieba-New86":"/Tieba-New/image_emoticon77.png","Tieba-New87":"/Tieba-New/image_emoticon78.png","Tieba-New88":"/Tieba-New/image_emoticon79.png","Tieba-New89":"/Tieba-New/image_emoticon8.png","Tieba-New90":"/Tieba-New/image_emoticon80.png","Tieba-New91":"/Tieba-New/image_emoticon81.png","Tieba-New92":"/Tieba-New/image_emoticon82.png","Tieba-New93":"/Tieba-New/image_emoticon83.png","Tieba-New94":"/Tieba-New/image_emoticon84.png","Tieba-New95":"/Tieba-New/image_emoticon85.png","Tieba-New96":"/Tieba-New/image_emoticon86.png","Tieba-New97":"/Tieba-New/image_emoticon87.png","Tieba-New98":"/Tieba-New/image_emoticon88.png","Tieba-New99":"/Tieba-New/image_emoticon89.png","Tieba-New100":"/Tieba-New/image_emoticon9.png","Tieba-New101":"/Tieba-New/image_emoticon90.png","Tieba-New102":"/Tieba-New/image_emoticon91.png","Tieba-New103":"/Tieba-New/image_emoticon92.png","Tieba-New104":"/Tieba-New/image_emoticon93.png","Tieba-New105":"/Tieba-New/image_emoticon94.png","Tieba-New106":"/Tieba-New/image_emoticon95.png","Tieba-New107":"/Tieba-New/image_emoticon96.png","Tieba-New108":"/Tieba-New/image_emoticon97.png","Tieba-New109":"/Tieba-New/image_emoticon98.png","Tieba-New110":"/Tieba-New/image_emoticon99.png"},"enableQQ":true,"requiredFields":["nick","mail"]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>

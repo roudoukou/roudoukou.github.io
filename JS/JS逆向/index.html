@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>JS逆向 - 肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 70vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/bg.jpg') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="JS逆向">
+				  
+				</span>
+
+				
+				  <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      肉豆蔻吖
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-07-13 12:28" pubdate>
+        2024年7月13日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      22
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+				
+			  </div>
+
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">JS逆向</h1>
+            
+            <div class="markdown-body">
+              <p>代码片段:<br><img src="/assets/2024-07-13-12-28-24.png" srcset="/img/loading.gif" lazyload></p>
+<p>常见断点含义:<br>卡住断点之后, 表示放行<br>… 见图<br><img src="/assets/2024-07-13-12-37-22.png" srcset="/img/loading.gif" lazyload></p>
+<p>勾选常见的一些设置<br><img src="/assets/2024-07-13-12-40-40.png" srcset="/img/loading.gif" lazyload></p>
+<p>给xhr打断点, 在发送请求的时候, 将请求的uri记录下来, 填写到xhr&#x2F;fetch breakpoints中, 当再次发送相同的uri请求的时候, 就会卡进去断点<br><img src="/assets/2024-07-13-14-24-50.png" srcset="/img/loading.gif" lazyload></p>
+<p>常见的一些加密方式<br>取盐校验    不可逆<br>md5 md2 md4 带密码的md5(hmac)</p>
+<p>md5<br>    16位 32位 40位的<br>    123456 49ba59abbe56e057 e10adc3949ba59abbe56e057f20f883e</p>
+<p>sha1 sha256 sha512<br>40位 64位 128位<br>123456 7c4a8d09ca3762af61e59520943dc26494f8941b</p>
+<p>对称加密<br>AES DES 3DES</p>
+<p>非对称加密<br>RSA (私钥 公钥) 同一个明文可以生成不同密文</p>
+<p>1.16进制的 0-9 A-F<br>2.base64 AL5riQzgwmMhXZX+5MtU0A&#x3D;&#x3D;<br>    A-Z a-z 0-9 + - &#x3D;</p>
+<p>常见可以搜索的md5的关键词, 以搜狐账号密码登录为例<br><img src="/assets/2024-07-13-20-00-58.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-07-13-20-01-05.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>password</code> <code>.password</code> <code>password =</code> <code>[&#39;password&#39;]</code> <code>[&quot;password&quot;]</code><br><code>userid</code> <code>persistentCookie</code> <code>123456789</code> <code>i/login/116005</code> <code>abcdef</code><br><code>1732584193</code> <code>271733879</code> <code>1732584194</code> <code>271733878</code></p>
+<p>案例1: 搜狐登录密码加密<br><a target="_blank" rel="noopener" href="https://www.sohu.com/">https://www.sohu.com/</a><br>方式1:<br>把p, 挂载到window全局对象身上<br><img src="/assets/2024-07-13-20-17-56.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里是定义对象, 直接给f一个var, 然后把定义好的p丢给window身上</p>
+<p>方式2:<br>拷贝整个p对象出来<br><img src="/assets/2024-07-13-20-19-29.png" srcset="/img/loading.gif" lazyload></p>
+<p>方式3:<br>单独拷贝一个md5函数出来<br><img src="/assets/2024-07-13-20-20-13.png" srcset="/img/loading.gif" lazyload></p>
+<p>eval混淆</p>
+<p>btoa() 加密<br>atob() 解密</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-comment">/*</span><br><span class="hljs-comment">var xxx = [&quot;emhpeXVhbg==&quot;, &quot;MTI=&quot;]</span><br><span class="hljs-comment">function x1(id) &#123;</span><br><span class="hljs-comment">    return atob(xxx[id]);</span><br><span class="hljs-comment">&#125;</span><br><span class="hljs-comment">var zhiyuan = &quot;1&quot;</span><br><span class="hljs-comment">var BCM = &quot;2&quot; </span><br><span class="hljs-comment">console.log(window[x1(0)])</span><br><span class="hljs-comment">*/</span><br><span class="hljs-comment">// 1. 常量的值和名混淆</span><br><span class="hljs-comment">// 2. 代码执行流程</span><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">x</span>(<span class="hljs-params">b</span>) &#123;<br>    <span class="hljs-keyword">var</span> xxx = [<span class="hljs-string">&quot;emhpeXVhbg==&quot;</span>, <span class="hljs-string">&quot;MTI=&quot;</span>]<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">x1</span>(<span class="hljs-params">id</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-title function_">atob</span>(xxx[id]);<br>    &#125;<br>    <span class="hljs-variable language_">window</span>[<span class="hljs-title function_">x1</span>(<span class="hljs-number">0</span>)] = atob;<br>&#125;<br><br><span class="hljs-comment">// eval(&quot;function xx() &#123;return atob(&#x27;MTI=&#x27;)&#125; xx()&quot;)</span><br><span class="hljs-comment">// 直接对function进行btoa()</span><br><span class="hljs-comment">// eval(atob(&quot;ZnVuY3Rpb24geHgoKSB7cmV0dXJuIGF0b2IoJ01UST0nKX0geHgoKQ==&quot;))</span><br><br><span class="hljs-comment">// 对整个eavl进行btoa()</span><br><span class="hljs-built_in">eval</span>(<span class="hljs-title function_">atob</span>(<span class="hljs-string">&quot;ZXZhbCgiZnVuY3Rpb24geHgoKSB7cmV0dXJuIGF0b2IoJ01UST0nKX0geHgoKSIp&quot;</span>))<br><br></code></pre></div></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.sojson.com/">https://www.sojson.com/</a></p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-built_in">eval</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<span class="hljs-keyword">debugger</span>;&#125;<br><span class="hljs-title class_">Function</span>() = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<span class="hljs-keyword">debugger</span>;&#125;<br></code></pre></div></td></tr></table></figure>
+
+
+<p>aa oo jj fuckjs 常见混淆</p>
+<h2 id="伪造基本功"><a href="#伪造基本功" class="headerlink" title="伪造基本功:"></a>伪造基本功:</h2><p>渲染 DOM<br>所有浏览器相同的功能 BOM<br>执行js脚本 JavaScript 文本处理 正则<br>不同浏览器会实现自己相应的属性 BOM</p>
+<p>DOM(渲染引擎) BOM JS引擎 &#x3D; 浏览器</p>
+<p>hxml 超集 xml变种 </br></p>
+<p>1.html增删改查api<br>2.html 数据格式<br>3.渲染 canvas</p>
+<p>BOM<br>1.浏览器自己实现的一些类 location navigator<br>2.open ssl btoa AES DES MD5</p>
+<p>JS引擎(解释器) es5 es6 js解释型语言(官方没有解释器)<br>谷歌v8 微软查克拉 ffg quickjs<br>JSON</p>
+<p>HTTPS<br>The connection to this site is using a valid, trusted server certificate issued by GlobalSign RSA OV SSL CA 2018.</p>
+<p>DOM BOM 都是js对象</p>
+<p>所有js引擎都有一个功能, 这个功能是: 可以给js添加任意对象 删除任意对象关联本地代码</p>
+<p>直接在js里面声明对象</p>
+<p>浏览器去实现的对象 会添加一个特性 只读属性<br>我们不想去改变他源代码js</p>
+<p>支持多线程 爬取速度快<br>扣取js 删除环境的一些代码<br>伪造环境 伪造环境代码</p>
+<p>简单网站 扣就可以了<br>复杂的网站 伪造环境能解决</p>
+<p>检测是否在调试<br>    键盘监听<br>    检测浏览器内外的高度差值<br>    检测开发者人员工具变量会否为 true<br>    利用console<br>    利用代码运行时间差<br>    利用toString<br>    检测栈的层数 caller<br>    检测非浏览器</p>
+<p>分类<br>    显性<br>        debugger<br>            非虚拟机<br>                右键设置false<br>                直接替换代码<br>                    谷歌内核浏览器默认提供 ?_t&#x3D;1601111121<br>                    浏览器的插件 油猴<br>                    代理替换 小提琴(Fiddler)<br>            虚拟机(eval Function) 瑞数<br>                eval Function</p>
+<div class="hljs code-wrapper"><pre><code>    循环语句 无限递归 两个方法互相调用
+    死循环(打开新页面, 写你的历史记录, url)
+    for(;;)
+    while(true)
+
+隐性(暗桩)
+    引向错误的逻辑
+
+    浏览器正常堆栈
+</code></pre></div>
+<p>不知道为啥都不执行, 他妈的</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-keyword">let</span> aa = createLocalRequire;<br>createLocalRequire.<span class="hljs-property">toString</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;你把鼠标放到我上面了&#x27;</span>); <span class="hljs-keyword">return</span> <span class="hljs-title function_">aa</span>();&#125;<br></code></pre></div></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">_0xf02824 = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;&#125;<br>xhs_0x424438 = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;&#125;<br><br><span class="hljs-keyword">var</span> <span class="hljs-variable constant_">AAA</span> = <span class="hljs-title class_">Function</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">constructor</span><br><span class="hljs-title class_">Function</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">constructor</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">X</span>) &#123;<br>    <span class="hljs-keyword">if</span> (X != <span class="hljs-string">&quot;debugger&quot;</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-title function_">AAA</span>(X);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;&#125;;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+<p>极验滑块验证码:<br><a target="_blank" rel="noopener" href="https://www.geetest.com/demo/">https://www.geetest.com/demo/</a></p>
+<p>点击完成验证之后, 再直接在canvas下一个断点<br><img src="/assets/2024-07-19-21-49-47.png" srcset="/img/loading.gif" lazyload></p>
+<p>关键的代码, 这里我怎么找到的我也不记得了哈哈哈</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-title class_">Ut</span>[_] % <span class="hljs-number">26</span> * <span class="hljs-number">12</span> + <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure>
+
+<p>Ut数组还原回去就是拼图正确的顺序</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-string">&#x27;[39,38,48,49,41,40,46,47,35,34,50,51,33,32,28,29,27,26,36,37,31,30,44,45,43,42,12,13,23,22,14,15,21,20,8,9,25,24,6,7,3,2,0,1,11,10,4,5,19,18,16,17]&#x27;</span><br></code></pre></div></td></tr></table></figure>
+
+
+<p>极验逆向案例…<br>待补充</p>
+<p>websocket抓包流程</p>
+<p>蝌蚪聊天室: <a target="_blank" rel="noopener" href="http://i.shuiyes.com/web/rumpetroll/">http://i.shuiyes.com/web/rumpetroll/</a><br>链接可能会失效, 直接谷歌随便搜一个吧, 具体长如下这个样子<br><img src="/assets/2024-07-29-22-40-17.png" srcset="/img/loading.gif" lazyload></p>
+<p>F5刷新页面, 筛选 ws, 可以看到只有一个包了, 注意直接看time的是 <code>pending</code> , 只有这个状态才说明ws的链接是正常的</p>
+<p><img src="/assets/2024-07-29-22-56-47.png" srcset="/img/loading.gif" lazyload></p>
+<p>点进去<br><img src="/assets/2024-07-29-22-41-49.png" srcset="/img/loading.gif" lazyload></p>
+<p>可以看到ws的声明创建的过程</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">webSocket = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WebSocket</span>(model.<span class="hljs-property">settings</span>.<span class="hljs-property">socketServer</span>);<br>webSocket.<span class="hljs-property">onopen</span> = app.<span class="hljs-property">onSocketOpen</span>;<br>webSocket.<span class="hljs-property">onclose</span> = app.<span class="hljs-property">onSocketClose</span>;<br>webSocket.<span class="hljs-property">onmessage</span> = app.<span class="hljs-property">onSocketMessage</span>;<br></code></pre></div></td></tr></table></figure>
+
+<p>对着这里 onopen 下一个断点, 再次刷新浏览器, 成功卡入断点, 这个断点就是 ws建立链接的时候</p>
+<p>Ctrl Shift F 打开搜索, 搜索 <code>.send(</code> , 找到WebSocketService.js<br><img src="/assets/2024-07-29-22-47-55.png" srcset="/img/loading.gif" lazyload></p>
+<p>给三个地方都下断点, 其中发现, 每当鼠标移入的时候都会进入一次, 107行的断点, 直接把107行的断点给取消得了</p>
+<p><img src="/assets/2024-07-29-22-50-06.png" srcset="/img/loading.gif" lazyload></p>
+<p>按下空格, 发送一个 <code>你好</code> , 进入了123行断点</p>
+<p>undefined是对象没有创建<br>null是对象创建了, 但是没有值</p>
+<p>hook</p>
+<p>链接服务器 拿回资源 渲染(解析)资源 (js执行流程)初始化(自执行) 页面逻辑 等待用户输入<br>加密数据 提交数据</p>
+<p>在上面流程任意环节 插入自己的代码 让浏览器先执行自己的代码 然后再执行原本网站的代码</p>
+<p>作用域 -&gt; 变量所生效的位置<br>上下文 -&gt; 一个环境(js V8虚拟机) (浏览器 新页面)</p>
+<p>在不是全局作用域下<br>    写了一个变量 没有用var定义 直接赋值<br>    (先看当前和上级作用域有没有这个变量 有直接赋值 没有的话给全局作用域定义这个变量并赋值)</p>
+<p>this指向问题<br>    全局作用域 this&#x3D;window<br>    方法作用域 this&#x3D;调用者<br>    类的方法里面 this &#x3D; 类自己</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">!(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// 自执行函数</span><br>    <span class="hljs-keyword">var</span> bb = <span class="hljs-number">2</span>;<br>&#125;)()<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bb);<span class="hljs-comment">// 拿不到里面的bb</span><br></code></pre></div></td></tr></table></figure>
+
+<p>hook &#x3D; 改变原方法或原代码执行流程<br>    覆盖原方法<br>    ES6 语法 Object.defineProperty<br>        给对象重新定义属性<br>        监听属性的设置值 和 获取值<br>    Proxy<br>        给对象整体监听<br>            属性初始化<br>            设置值和获取值<br>            构造函数</p>
+<p>hook</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-title class_">XMLHttpRequest</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">send_</span> = <span class="hljs-title class_">XMLHttpRequest</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">send</span>;<br><span class="hljs-title class_">XMLHttpRequest</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">send</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<span class="hljs-keyword">debugger</span>;&#125;<br></code></pre></div></td></tr></table></figure>
+
+<p>这个hook可以在刷新完成之后, 手动点击页面触发的某些请求</p>
+<p>HOOK时机?<br>    只影响hook完成后的操作<br>    整个页面初始化初始化想进行hook<br>    (油猴[浏览器插件] FD插件[代理]) 修改原数据</p>
+<p>AST 修改值的demo<br><img src="/assets/2024-08-21-23-07-06.png" srcset="/img/loading.gif" lazyload></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/JS/">JS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/JS/">JS</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"Haq24NRgHl4QheEi7oVqtAsM-gzGzoHsz","appKey":"kGbxzGaSiqqlFPxg24Tk3dVN","placeholder":"来都来了, 不留下点啥吗?","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":"https://valinecdn.bili33.top","emojiMaps":{"Tieba-New2":"/Tieba-New/image_emoticon.png","Tieba-New3":"/Tieba-New/image_emoticon10.png","Tieba-New4":"/Tieba-New/image_emoticon100.png","Tieba-New5":"/Tieba-New/image_emoticon101.png","Tieba-New6":"/Tieba-New/image_emoticon102.png","Tieba-New7":"/Tieba-New/image_emoticon103.png","Tieba-New8":"/Tieba-New/image_emoticon104.png","Tieba-New9":"/Tieba-New/image_emoticon105.png","Tieba-New10":"/Tieba-New/image_emoticon106.png","Tieba-New11":"/Tieba-New/image_emoticon107.png","Tieba-New12":"/Tieba-New/image_emoticon108.png","Tieba-New13":"/Tieba-New/image_emoticon109.png","Tieba-New14":"/Tieba-New/image_emoticon11.png","Tieba-New15":"/Tieba-New/image_emoticon110.png","Tieba-New16":"/Tieba-New/image_emoticon111.png","Tieba-New17":"/Tieba-New/image_emoticon112.png","Tieba-New18":"/Tieba-New/image_emoticon113.png","Tieba-New19":"/Tieba-New/image_emoticon114.png","Tieba-New20":"/Tieba-New/image_emoticon115.png","Tieba-New21":"/Tieba-New/image_emoticon116.png","Tieba-New22":"/Tieba-New/image_emoticon117.png","Tieba-New23":"/Tieba-New/image_emoticon118.png","Tieba-New24":"/Tieba-New/image_emoticon119.png","Tieba-New25":"/Tieba-New/image_emoticon12.png","Tieba-New26":"/Tieba-New/image_emoticon120.png","Tieba-New27":"/Tieba-New/image_emoticon121.png","Tieba-New28":"/Tieba-New/image_emoticon122.png","Tieba-New29":"/Tieba-New/image_emoticon123.png","Tieba-New30":"/Tieba-New/image_emoticon124.png","Tieba-New31":"/Tieba-New/image_emoticon13.png","Tieba-New32":"/Tieba-New/image_emoticon14.png","Tieba-New33":"/Tieba-New/image_emoticon15.png","Tieba-New34":"/Tieba-New/image_emoticon16.png","Tieba-New35":"/Tieba-New/image_emoticon17.png","Tieba-New36":"/Tieba-New/image_emoticon18.png","Tieba-New37":"/Tieba-New/image_emoticon19.png","Tieba-New38":"/Tieba-New/image_emoticon2.png","Tieba-New39":"/Tieba-New/image_emoticon20.png","Tieba-New40":"/Tieba-New/image_emoticon21.png","Tieba-New41":"/Tieba-New/image_emoticon22.png","Tieba-New42":"/Tieba-New/image_emoticon23.png","Tieba-New43":"/Tieba-New/image_emoticon24.png","Tieba-New44":"/Tieba-New/image_emoticon25.png","Tieba-New45":"/Tieba-New/image_emoticon26.png","Tieba-New46":"/Tieba-New/image_emoticon27.png","Tieba-New47":"/Tieba-New/image_emoticon28.png","Tieba-New48":"/Tieba-New/image_emoticon29.png","Tieba-New49":"/Tieba-New/image_emoticon3.png","Tieba-New50":"/Tieba-New/image_emoticon30.png","Tieba-New51":"/Tieba-New/image_emoticon31.png","Tieba-New52":"/Tieba-New/image_emoticon32.png","Tieba-New53":"/Tieba-New/image_emoticon33.png","Tieba-New54":"/Tieba-New/image_emoticon34.png","Tieba-New55":"/Tieba-New/image_emoticon35.png","Tieba-New56":"/Tieba-New/image_emoticon36.png","Tieba-New57":"/Tieba-New/image_emoticon37.png","Tieba-New58":"/Tieba-New/image_emoticon38.png","Tieba-New59":"/Tieba-New/image_emoticon39.png","Tieba-New60":"/Tieba-New/image_emoticon4.png","Tieba-New61":"/Tieba-New/image_emoticon40.png","Tieba-New62":"/Tieba-New/image_emoticon41.png","Tieba-New63":"/Tieba-New/image_emoticon42.png","Tieba-New64":"/Tieba-New/image_emoticon43.png","Tieba-New65":"/Tieba-New/image_emoticon44.png","Tieba-New66":"/Tieba-New/image_emoticon45.png","Tieba-New67":"/Tieba-New/image_emoticon46.png","Tieba-New68":"/Tieba-New/image_emoticon47.png","Tieba-New69":"/Tieba-New/image_emoticon48.png","Tieba-New70":"/Tieba-New/image_emoticon49.png","Tieba-New71":"/Tieba-New/image_emoticon5.png","Tieba-New72":"/Tieba-New/image_emoticon50.png","Tieba-New73":"/Tieba-New/image_emoticon6.png","Tieba-New74":"/Tieba-New/image_emoticon66.png","Tieba-New75":"/Tieba-New/image_emoticon67.png","Tieba-New76":"/Tieba-New/image_emoticon68.png","Tieba-New77":"/Tieba-New/image_emoticon69.png","Tieba-New78":"/Tieba-New/image_emoticon7.png","Tieba-New79":"/Tieba-New/image_emoticon70.png","Tieba-New80":"/Tieba-New/image_emoticon71.png","Tieba-New81":"/Tieba-New/image_emoticon72.png","Tieba-New82":"/Tieba-New/image_emoticon73.png","Tieba-New83":"/Tieba-New/image_emoticon74.png","Tieba-New84":"/Tieba-New/image_emoticon75.png","Tieba-New85":"/Tieba-New/image_emoticon76.png","Tieba-New86":"/Tieba-New/image_emoticon77.png","Tieba-New87":"/Tieba-New/image_emoticon78.png","Tieba-New88":"/Tieba-New/image_emoticon79.png","Tieba-New89":"/Tieba-New/image_emoticon8.png","Tieba-New90":"/Tieba-New/image_emoticon80.png","Tieba-New91":"/Tieba-New/image_emoticon81.png","Tieba-New92":"/Tieba-New/image_emoticon82.png","Tieba-New93":"/Tieba-New/image_emoticon83.png","Tieba-New94":"/Tieba-New/image_emoticon84.png","Tieba-New95":"/Tieba-New/image_emoticon85.png","Tieba-New96":"/Tieba-New/image_emoticon86.png","Tieba-New97":"/Tieba-New/image_emoticon87.png","Tieba-New98":"/Tieba-New/image_emoticon88.png","Tieba-New99":"/Tieba-New/image_emoticon89.png","Tieba-New100":"/Tieba-New/image_emoticon9.png","Tieba-New101":"/Tieba-New/image_emoticon90.png","Tieba-New102":"/Tieba-New/image_emoticon91.png","Tieba-New103":"/Tieba-New/image_emoticon92.png","Tieba-New104":"/Tieba-New/image_emoticon93.png","Tieba-New105":"/Tieba-New/image_emoticon94.png","Tieba-New106":"/Tieba-New/image_emoticon95.png","Tieba-New107":"/Tieba-New/image_emoticon96.png","Tieba-New108":"/Tieba-New/image_emoticon97.png","Tieba-New109":"/Tieba-New/image_emoticon98.png","Tieba-New110":"/Tieba-New/image_emoticon99.png"},"enableQQ":true,"requiredFields":["nick","mail"]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+::selection {
+    color: unset;
+    padding: 0px;
+    background: rgb(209, 234, 254);
+}
+
+.navbar .dropdown-collapse, .top-nav-collapse, .navbar-col-show {
+    background: #7fadc8ba;
+}
+
+.code pre span::selection {
+    background: #d1eafe;
+    color: #ff645d;
+}
+
+#board {
+    z-index: 0;
+}
+
+figure.highlight td.gutter {
+    user-select: none;
+}
+
+/* 全局吸底音乐标签 */
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+/* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+
+/* 全局吸底音乐标签 */
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+left: 0 !important;
+/* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+}

@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>debian整活 - 肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 70vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/bg.jpg') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="debian整活">
+				  
+				</span>
+
+				
+				  <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      肉豆蔻吖
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-04-03 14:45" pubdate>
+        2024年4月3日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      54
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+				
+			  </div>
+
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">debian整活</h1>
+            
+            <div class="markdown-body">
+              <h2 id="0-服务器准备"><a href="#0-服务器准备" class="headerlink" title="0.服务器准备"></a>0.服务器准备</h2><p>或者vmware + iso镜像自己搭建<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/shoujoai/article/details/131991752">https://blog.csdn.net/shoujoai/article/details/131991752</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/networkTalent/article/details/123375048">https://blog.csdn.net/networkTalent/article/details/123375048</a></p>
+<p><a target="_blank" rel="noopener" href="https://university.aliyun.com/">https://university.aliyun.com/</a></p>
+<p><img src="/assets/2024-04-03-14-46-52.png" srcset="/img/loading.gif" lazyload></p>
+<p>阿里云送了三百块钱代金券, 可以购买一台 2G 512M 三年服务器, 流量选择按量付费</p>
+<h2 id="更换软件源"><a href="#更换软件源" class="headerlink" title="更换软件源"></a>更换软件源</h2><p>国内的软件源网速比较慢, 更新会比较慢<br>一般情况下，将 &#x2F;etc&#x2F;apt&#x2F;sources.list 文件中 Debian 默认的源地址 <a target="_blank" rel="noopener" href="http://deb.debian.org/">http://deb.debian.org/</a> 替换为国内源即可。</p>
+<p><a target="_blank" rel="noopener" href="https://www.offersloc.com/archives/6">换源</a></p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">sudo cp <span class="hljs-regexp">/etc/</span>apt<span class="hljs-regexp">/sources.list /</span>etc<span class="hljs-regexp">/apt/</span>sources.list_bak<br><br>sudo sed -i <span class="hljs-string">&#x27;s/deb.debian.org/mirrors.aliyun.com/g&#x27;</span> <span class="hljs-regexp">/etc/</span>apt/sources.list<br><br>sudo apt-get update<br></code></pre></div></td></tr></table></figure>
+
+<h2 id="Prometheus-amp-Grafana"><a href="#Prometheus-amp-Grafana" class="headerlink" title="Prometheus &amp; Grafana"></a>Prometheus &amp; Grafana</h2><h3 id="0-准备SpringBoot工程"><a href="#0-准备SpringBoot工程" class="headerlink" title="0.准备SpringBoot工程"></a>0.准备SpringBoot工程</h3><h3 id="1-Prometheus"><a href="#1-Prometheus" class="headerlink" title="1.Prometheus"></a>1.Prometheus</h3><p>下载地址: <a target="_blank" rel="noopener" href="https://prometheus.io/download/">https://prometheus.io/download/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs zsh">wget https://github.com/prometheus/prometheus/releases/download/v2.45.4/prometheus-2.45.4.linux-amd64.tar.gz<br><br># 如果网速慢, 就先在别的地方下载, 然后再scp传递过去<br>scp .\prometheus-2.45.4.linux-amd64.tar.gz root@192.168.1.100:/opt/software<br><br>sha256sum prometheus-2.45.4.linux-amd64.tar.gz<br>14bb6eb9db49c5dcbf1d6412e96a229444a39e13dc97a9aca7fadaa3ca5ef981  prometheus-2.45.4.linux-amd64.tar.gz<br># 生成校验码, 看是否下载完整<br></code></pre></div></td></tr></table></figure>
+
+<p><img src="/assets/2024-04-23-10-45-17.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 解压</span><br>$ tar -zxvf prometheus-2.45.4.linux-amd64.tar.gz -C /opt/module/<br><br><span class="hljs-comment"># 修改配置, 主要是最后一段</span><br>$ vim prometheus.yml<br><br><span class="hljs-comment"># my global config</span><br>global:<br>  scrape_interval: 15s <span class="hljs-comment"># Set the scrape interval to every 15 seconds. Default is every 1 minute.</span><br>  evaluation_interval: 15s <span class="hljs-comment"># Evaluate rules every 15 seconds. The default is every 1 minute.</span><br>  <span class="hljs-comment"># scrape_timeout is set to the global default (10s).</span><br><br><span class="hljs-comment"># Alertmanager configuration</span><br>alerting:<br>  alertmanagers:<br>    - static_configs:<br>        - targets:<br>          <span class="hljs-comment"># - alertmanager:9093</span><br><br><span class="hljs-comment"># Load rules once and periodically evaluate them according to the global &#x27;evaluation_interval&#x27;.</span><br>rule_files:<br>  <span class="hljs-comment"># - &quot;first_rules.yml&quot;</span><br>  <span class="hljs-comment"># - &quot;second_rules.yml&quot;</span><br><br><span class="hljs-comment"># A scrape configuration containing exactly one endpoint to scrape:</span><br><span class="hljs-comment"># Here it&#x27;s Prometheus itself.</span><br>scrape_configs:<br>  <span class="hljs-comment"># The job name is added as a label `job=&lt;job_name&gt;` to any timeseries scraped from this config.</span><br>  - job_name: <span class="hljs-string">&quot;prometheus&quot;</span><br><br>    <span class="hljs-comment"># metrics_path defaults to &#x27;/metrics&#x27;</span><br>    <span class="hljs-comment"># scheme defaults to &#x27;http&#x27;.</span><br>    <span class="hljs-comment"># 暴露路径</span><br>    metrics_path: /actuator/prometheus<br>    static_configs:<br>      <span class="hljs-comment"># SpringBoot的ip和端口号</span><br>      - targets: [<span class="hljs-string">&quot;192.168.108.85:8080&quot;</span>]<br></code></pre></div></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">./prometheus<br><br><span class="hljs-comment"># 后台运行</span><br>./prometheus &amp;<br><br><span class="hljs-comment"># 后台运行, 带文件输出</span><br>./prometheus &gt; prometheus.log 2&gt;&amp;1 &amp;<br><span class="hljs-built_in">nohup</span> ./prometheus &gt; prometheus.out 2&gt;&amp;1 &amp;<br></code></pre></div></td></tr></table></figure>
+<p>我的服务器ip是192.168.1.100, prometheus安装在服务器上</p>
+<p>访问: <a target="_blank" rel="noopener" href="http://192.168.1.100:9090/">http://192.168.1.100:9090/</a></p>
+<h3 id="2-Grafana"><a href="#2-Grafana" class="headerlink" title="2.Grafana"></a>2.Grafana</h3><p>下载地址：<a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/grafana/">https://mirrors.huaweicloud.com/grafana/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 查看自己的linux发行版, 我这里是el7.x86_64, 所以是x86_64版本的</span><br><span class="hljs-built_in">uname</span> -a<br>Linux xiamu 3.10.0-1160.114.2.el7.x86_64 <span class="hljs-comment">#1 SMP Wed Mar 20 15:54:52 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux</span><br><br><span class="hljs-built_in">cd</span> /opt/software<br>wget https://mirrors.huaweicloud.com/grafana/10.0.11/grafana-enterprise-10.0.11-1.x86_64.rpm<br><br><span class="hljs-comment"># 安装</span><br>sudo rpm -ivh grafana-enterprise-10.0.11-1.x86_64.rpm<br>sudo /bin/systemctl daemon-reload<br>sudo /bin/systemctl <span class="hljs-built_in">enable</span> grafana-server.service<br>sudo /bin/systemctl start grafana-server.service<br><br><span class="hljs-comment"># 查看状态</span><br>systemctl status grafana-server.service<br><br></code></pre></div></td></tr></table></figure>
+
+<p>浏览器输入: <a target="_blank" rel="noopener" href="http://192.168.1.100:3000/login">http://192.168.1.100:3000/login</a><br>默认账号密码: admin admin</p>
+<p>整合数据源<br><img src="/assets/2024-04-23-12-27-16.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-23-12-28-02.png" srcset="/img/loading.gif" lazyload></p>
+<p>Name随便填写一个, url填写prometheus的请求url<br><img src="/assets/2024-04-23-12-45-02.png" srcset="/img/loading.gif" lazyload></p>
+<p>保存<br><img src="/assets/2024-04-23-12-37-12.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-23-12-45-53.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-23-12-46-25.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-23-12-46-37.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-23-12-48-52.png" srcset="/img/loading.gif" lazyload></p>
+<p>切换图标<br><img src="/assets/2024-04-23-12-49-36.png" srcset="/img/loading.gif" lazyload></p>
+<p>记得要点击Query inspector<br><img src="/assets/2024-04-23-12-50-30.png" srcset="/img/loading.gif" lazyload></p>
+<p>参考: <a target="_blank" rel="noopener" href="https://github.com/Rodert/spring-boot-prometheus-grafana">https://github.com/Rodert/spring-boot-prometheus-grafana</a></p>
+<h2 id="nvim"><a href="#nvim" class="headerlink" title="nvim"></a>nvim</h2><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage<br><span class="hljs-built_in">chmod</span> u+x nvim.appimage &amp;&amp; ./nvim.appimage<br>sudo <span class="hljs-built_in">ln</span> -s /opt/software/nvim.appimage /usr/local/bin/nvim<br><br>☁  ~  <span class="hljs-built_in">mkdir</span> -p .config/nvim<br>☁  ~  <span class="hljs-built_in">cd</span> .config/nvim<br>☁  nvim<br>☁  nvim  <span class="hljs-built_in">touch</span> init.lua<br><span class="hljs-comment"># 编辑如下内容: </span><br>☁  nvim  nvim init.lua<br><br>vim.opt.relativenumber = <span class="hljs-literal">true</span><br>vim.opt.number = <span class="hljs-literal">true</span><br><br>☁  nvim  <span class="hljs-built_in">mkdir</span> lua<br>☁  nvim  <span class="hljs-built_in">cd</span> lua<br>☁  lua  <span class="hljs-built_in">mkdir</span> core<br>☁  lua  <span class="hljs-built_in">cd</span> core<br>☁  core  <span class="hljs-built_in">touch</span> options.lua<br></code></pre></div></td></tr></table></figure>
+
+<h2 id="YCM"><a href="#YCM" class="headerlink" title="YCM"></a>YCM</h2><h3 id="0-linuxlogo"><a href="#0-linuxlogo" class="headerlink" title="0.linuxlogo"></a>0.linuxlogo</h3><figure class="highlight cmake"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs cmake">apt <span class="hljs-keyword">install</span> linuxlogo<br><br>linuxlogo<br>或者<br>linux_logo<br></code></pre></div></td></tr></table></figure>
+
+<p><img src="/assets/2024-04-22-22-25-46.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="1-1-neofetch"><a href="#1-1-neofetch" class="headerlink" title="1.1.neofetch"></a>1.1.neofetch</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/123319724">https://zhuanlan.zhihu.com/p/123319724</a></p>
+<figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">sudo yum install epel-release<br>curl -o /etc/yum.repos.d/konimex-neofetch-epel-<span class="hljs-number">7.</span>repo https:<span class="hljs-comment">//copr.fedorainfracloud.org/coprs/konimex/neofetch/repo/epel-7/konimex-neofetch-epel-7.repo</span><br>sudo yum install neofetch<br></code></pre></div></td></tr></table></figure>
+
+
+<h3 id="1-Nginx"><a href="#1-Nginx" class="headerlink" title="1.Nginx"></a>1.Nginx</h3><figure class="highlight n1ql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs n1ql">sudo apt <span class="hljs-keyword">update</span> &amp;&amp; sudo apt upgrade<br><br>sudo apt install nginx<br><br>systemctl status nginx<br><br>systemctl <span class="hljs-keyword">start</span> nginx<br></code></pre></div></td></tr></table></figure>
+
+<p>测试是否安装成功: </p>
+<figure class="highlight ebnf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">curl localhost</span><br></code></pre></div></td></tr></table></figure>
+
+<h3 id="2-Git"><a href="#2-Git" class="headerlink" title="2.Git"></a>2.Git</h3><figure class="highlight sas"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sas">sudo apt <span class="hljs-keyword">update</span> <span class="hljs-variable">&amp;&amp;</span> sudo apt upgrade<br><br>sudo apt install git<br></code></pre></div></td></tr></table></figure>
+
+<p>测试是否安装成功</p>
+<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-comment"># git version</span><br><span class="hljs-attribute">git</span> version <span class="hljs-number">2</span>.<span class="hljs-number">30</span>.<span class="hljs-number">2</span><br></code></pre></div></td></tr></table></figure>
+
+<h3 id="3-准备v2"><a href="#3-准备v2" class="headerlink" title="3.准备v2"></a>3.准备v2</h3><p>以下是centos可以直接使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs zsh"><br># 安装内核<br>yum clean all<br>yum makecache<br>yum -y update &amp;&amp; yum -y upgrade &amp;&amp; yum -y install unzip &amp;&amp; yum -y install wget<br><br>mkdir -p /opt/software /opt/module<br>wget -O /opt/software/v2ray-linux-64.zip https://github.com/v2fly/v2ray-core/releases/download/v5.16.1/v2ray-linux-64.zip<br>unzip /opt/software/v2ray-linux-64.zip -d /usr/local/v2ray-core<br><br># 直接装的x86_64<br>wget -O /opt/software/installer_redhat_x64_2.2.5.8.rpm https://github.com/v2rayA/v2rayA/releases/download/v2.2.5.8/installer_redhat_x64_2.2.5.8.rpm<br>rpm -ivh installer_redhat_x64_2.2.5.8.rpm<br><br>echo &quot;V2RAYA_V2RAY_BIN=/usr/local/v2ray-core/v2ray&quot; &gt;&gt; /etc/default/v2raya<br>echo &quot;V2RAYA_V2RAY_CONFDIR=/usr/local/v2ray-core&quot; &gt;&gt; /etc/default/v2raya<br>vim /etc/default/v2raya<br><br>V2RAYA_V2RAY_BIN=/usr/local/v2ray-core/v2ray<br>V2RAYA_V2RAY_CONFDIR=/usr/local/v2ray-core<br><br>systemctl restart v2raya<br>systemctl status v2raya<br># 开机自启动(可选)<br># systemctl enable v2raya<br></code></pre></div></td></tr></table></figure>
+
+<p>另外再补充一个debian的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs zsh"><br># 安装内核<br>$ sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt install unzip<br>$ mkdir -p /opt/software /opt/module<br>$ wget -O /opt/software/v2ray-linux-64.zip https://github.com/v2fly/v2ray-core/releases/download/v5.14.1/v2ray-linux-64.zip<br>$ sudo unzip /opt/software/v2ray-linux-64.zip -d /usr/local/v2ray-core<br><br># 自己啥版本的自己去找要安装啥版本的, 我这里就是安装的 debian x64<br>$ uname -m<br>x86_64<br><br>$ wget -O /opt/software/installer_debian_x64_2.2.5.deb https://github.com/v2rayA/v2rayA/releases/download/v2.2.5/installer_debian_x64_2.2.5.deb<br><br># 顺带再提供一个redhat版本, <br># wget -O /opt/software/installer_redhat_x64_2.2.5.rpm https://github.com/v2rayA/v2rayA/releases/download/v2.2.5/installer_redhat_x64_2.2.5.rpm<br># rpm -ivh installer_redhat_x64_2.2.5.rpm<br><br>$ sudo apt install /opt/software/installer_debian_x64_2.2.5.deb<br><br>$ vi /etc/default/v2raya<br><br># 添加配置两行配置<br>V2RAYA_V2RAY_BIN=/usr/local/v2ray-core/v2ray<br>V2RAYA_V2RAY_CONFDIR=/usr/local/v2ray-core<br><br><br>$ systemctl restart v2raya<br>$ systemctl status v2raya<br># 开机自启动(可选)<br># systemctl enable v2raya<br></code></pre></div></td></tr></table></figure>
+
+<p>安全组开发2017端口<br><img src="/assets/2024-04-03-14-57-42.png" srcset="/img/loading.gif" lazyload></p>
+<p>进入 ip:2017 页面进行配置订阅链接, 这里进入Web页面可能要等好几分钟, 可以先去抽根烟?</p>
+<p><img src="/assets/2024-04-06-00-27-08.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-06-00-28-14.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/assets/2024-04-06-00-29-24.png" srcset="/img/loading.gif" lazyload></p>
+<p>测试是否成功了</p>
+<figure class="highlight nginx"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">curl</span> www.google.com<br></code></pre></div></td></tr></table></figure>
+
+
+<p>如果网络不好, 先试试想办法弄到windows再用scp命令试试? Linux网好就直接忽略</p>
+<figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs elixir">scp .\v2ray-linux<span class="hljs-number">-64</span>.zip root<span class="hljs-variable">@8</span>.<span class="hljs-number">134.39</span>.<span class="hljs-number">201</span><span class="hljs-symbol">:/opt/software</span><br></code></pre></div></td></tr></table></figure>
+
+<p>安装教程: <a target="_blank" rel="noopener" href="https://www.pengtech.net/network/v2rayA_install.html#7-%E7%9B%B8%E5%85%B3%E9%98%85%E8%AF%BB">https://www.pengtech.net/network/v2rayA_install.html#7-%E7%9B%B8%E5%85%B3%E9%98%85%E8%AF%BB</a><br>官网: <a target="_blank" rel="noopener" href="https://v2raya.org/docs/prologue/introduction/">https://v2raya.org/docs/prologue/introduction/</a></p>
+<h3 id="4-Oh-My-Zsh"><a href="#4-Oh-My-Zsh" class="headerlink" title="4.Oh My Zsh"></a>4.Oh My Zsh</h3><figure class="highlight powershell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs powershell"><br><span class="hljs-variable">$</span> sh <span class="hljs-literal">-c</span> <span class="hljs-string">&quot;<span class="hljs-variable">$</span>(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)&quot;</span><br>Zsh is not installed. Please install zsh first.<br><span class="hljs-comment"># 这个提示好几把诡异啊, 换条命令再试试</span><br><br><span class="hljs-variable">$</span> sudo apt<span class="hljs-literal">-get</span> install zsh <br><span class="hljs-variable">$</span> zsh<br><br><span class="hljs-comment"># 再次执行这条命令试试</span><br><span class="hljs-variable">$</span> sh <span class="hljs-literal">-c</span> <span class="hljs-string">&quot;<span class="hljs-variable">$</span>(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)&quot;</span><br><br></code></pre></div></td></tr></table></figure>
+
+<p>zsh安装成功效果如下: </p>
+<p><img src="/assets/2024-04-03-15-28-53.png" srcset="/img/loading.gif" lazyload></p>
+<p>简单整几个插件和样式吧</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><br><span class="hljs-built_in">which</span> zsh<br><br><span class="hljs-comment"># 修改用户的默认shell, 可忽略, 随意, 看个人喜好</span><br>chsh -s /usr/bin/zsh<br><span class="hljs-comment"># 还原回去</span><br><span class="hljs-comment"># echo $SHELL</span><br><span class="hljs-comment"># chsh -s /bin/bash</span><br><br><span class="hljs-comment"># 设置主题</span><br>vim /root/.zshrc<br>ZSH_THEME=<span class="hljs-string">&quot;cloud&quot;</span><br><br><span class="hljs-built_in">source</span> ~/.zshrc<br><br><br><br><span class="hljs-built_in">cd</span> ~/.oh-my-zsh/custom/plugins<br>git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git<br>git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git<br><br>vim ~/.zshrc<br>plugins=(git zsh-syntax-highlighting zsh-autosuggestions)<br><br>zsh<br><span class="hljs-built_in">source</span> <span class="hljs-variable">$ZSH</span>/oh-my-zsh.sh<br><br><span class="hljs-built_in">source</span> ~/.zshrc<br></code></pre></div></td></tr></table></figure>
+
+<h3 id="5-Golang"><a href="#5-Golang" class="headerlink" title="5.Golang"></a>5.Golang</h3><figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk"><span class="hljs-comment"># 安装goland</span><br>$ wget -O <span class="hljs-regexp">/opt/</span>software<span class="hljs-regexp">/go1.22.1.linux-amd64.tar.gz https:/</span><span class="hljs-regexp">/go.dev/</span>dl/go1.<span class="hljs-number">22.1</span>.linux-amd64.tar.gz<br><br><span class="hljs-comment"># 删除之前安装过的, 并且解压</span><br>$ rm -rf <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/go &amp;&amp; tar -C /u</span>sr<span class="hljs-regexp">/local -xzf /</span>opt<span class="hljs-regexp">/software/g</span>o1.<span class="hljs-number">22.1</span>.linux-amd64.tar.gz<br><br><span class="hljs-comment"># 临时配置环境变量</span><br>$ export PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/go/</span>bin<br><br><br>$ 查看是否安装成功<br><span class="hljs-comment"># go version</span><br><br><span class="hljs-comment"># 这是默认的位置，也可以按照需求指定到其他目录</span><br>$ mkdir -p <span class="hljs-variable">$HOME</span><span class="hljs-regexp">/go/</span>&#123;bin,pkg,src&#125;<br><br><span class="hljs-comment"># 将环境变量写入文件</span><br>$ vim <span class="hljs-regexp">/etc/</span>profile.d/my_env.sh<br>export GOPATH=<span class="hljs-variable">$HOME</span>/go<br>export GOROOT=<span class="hljs-regexp">/usr/</span>local/go<br>export PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$GOROOT</span><span class="hljs-regexp">/bin:$GOPATH/</span>bin<br><br><br>$ source <span class="hljs-regexp">/etc/</span>profile &amp;&amp; source ~/.zshrc<br>$ 查看配置是否正确<br><span class="hljs-comment"># go version</span><br><br></code></pre></div></td></tr></table></figure>
+
+<p>参考: <a target="_blank" rel="noopener" href="https://learnku.com/articles/24924?order_by=vote_count">https://learnku.com/articles/24924?order_by=vote_count</a></p>
+<h3 id="6-vim9"><a href="#6-vim9" class="headerlink" title="6.vim9"></a>6.vim9</h3><figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk"><br><span class="hljs-comment"># 查看旧版本vim版本</span><br>vim -version<br><br><span class="hljs-comment"># 如果有旧版8</span><br>sudo apt remove vim vim-runtime gvim<br><br>sudo apt install libncurses5-dev libgtk2.<span class="hljs-number">0</span>-dev libatk1.<span class="hljs-number">0</span>-dev \<br>libcairo2-dev libx11-dev libxpm-dev libxt-dev python2-dev \<br>python3-dev ruby-dev lua5.<span class="hljs-number">2</span> liblua5.<span class="hljs-number">2</span>-dev libperl-dev git<br><br><br>git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/vim/</span>vim.git <span class="hljs-regexp">/opt/</span>software/vim<br>cd <span class="hljs-regexp">/opt/</span>software/vim<br>./configure --with-features=huge \<br>--enable-multibyte \<br>--enable-rubyinterp=yes \<br>--enable-python3interp=yes \<br>--with-python3-config-dir=<span class="hljs-regexp">/usr/</span>lib<span class="hljs-regexp">/python3.9/</span>config-<span class="hljs-number">3.6</span>m-x86_64-linux-gnu \<br>--enable-perlinterp=yes \<br>--enable-luainterp=yes \<br>--enable-gui=gtk2 \<br>--enable-cscope \<br>--enable-multibyte \<br>--prefix=<span class="hljs-regexp">/usr/</span>local<br><br>make VIMRUNTIMEDIR=<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/share/</span>vim/vim91<br><br>make install<br><br><span class="hljs-comment">## 值得注意的是</span><br><span class="hljs-regexp">/usr/i</span>nclude<span class="hljs-regexp">/gtk-2.0/g</span>tk/gtktooltips.h:<span class="hljs-number">73</span>:<span class="hljs-number">3</span>: warning: ‘GTimeVal’ is deprecated: Use <span class="hljs-string">&#x27;GDateTime&#x27;</span> instead [-Wdeprecated-declarations]<br>   <span class="hljs-number">73</span> |   GTimeVal last_popdown;<br>      |   ^~~~~~~~<br>这里可能会抽风<br><br>$ vim <span class="hljs-regexp">/usr/i</span>nclude<span class="hljs-regexp">/gtk-2.0/g</span>tk/gtktooltips.h<br>定位到<span class="hljs-number">73</span>行, 修改源码<br>  GDateTime last_popdown;<br>  <span class="hljs-regexp">//</span> GTimeVal last_popdown;<br><br>然后再执行这些<br>./configure --with-features=huge \<br>--enable-multibyte \<br>--enable-rubyinterp=yes \<br>--enable-python3interp=yes \<br>--with-python3-config-dir=<span class="hljs-regexp">/usr/</span>lib<span class="hljs-regexp">/python3.9/</span>config-<span class="hljs-number">3.6</span>m-x86_64-linux-gnu \<br>--enable-perlinterp=yes \<br>--enable-luainterp=yes \<br>--enable-gui=gtk2 \<br>--enable-cscope \<br>--enable-multibyte \<br>--prefix=<span class="hljs-regexp">/usr/</span>local<br><br><span class="hljs-comment"># 这个得自己琢磨一下你安装的是啥版本, 最好写对, 不然对后面的一些配置有问题, 大不了错了重来</span><br>make VIMRUNTIMEDIR=<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/share/</span>vim/vim91<br><br>make<br></code></pre></div></td></tr></table></figure>
+
+<p>参考: </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source">https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ycm-core/YouCompleteMe">https://github.com/ycm-core/YouCompleteMe</a></li>
+</ul>
+<h3 id="7-vim-go"><a href="#7-vim-go" class="headerlink" title="7.vim-go"></a>7.vim-go</h3><p>一个小报错, 如果没有这个报错就忽略, 我这里缺失了公钥: </p>
+<figure class="highlight smali"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs smali">☁  autoload  sudo apt update<br>sudo apt install vim<br>Hit:1 http://mirrors.cloud.aliyuncs.com/debian bullseye InRelease<br>Hit:2 http://mirrors.cloud.aliyuncs.com/debian-security bullseye-security InRelease<br>Hit:3 http://mirrors.cloud.aliyuncs.com/debian bullseye-updates InRelease<br>Hit:4 http://mirrors.cloud.aliyuncs.com/debian bullseye-backports InRelease<br>Get:5 https://apt.v2raya.org v2raya InRelease [9,794 B]<br>Err:5 https://apt.v2raya.org v2raya InRelease<br>  The following signatures couldn&#x27;t be verified because the<span class="hljs-keyword"> public</span> key is<span class="hljs-built_in"> not </span>available: NO_PUBKEY 354E516D494EF95F<br>Reading package lists... Done<br>W: GPG error: https://apt.v2raya.org v2raya InRelease: The following signatures couldn&#x27;t be verified because the<span class="hljs-keyword"> public</span> key is<span class="hljs-built_in"> not </span>available: NO_PUBKEY 354E516D494EF95F<br>E: The repository &#x27;https://apt.v2raya.org v2raya InRelease&#x27; is<span class="hljs-built_in"> not </span>signed.<br>N: Updating from such a repository can&#x27;t be done securely,<span class="hljs-built_in"> and </span>is therefore disabled by default.<br>N: See apt-secure(8) manpage for repository creation<span class="hljs-built_in"> and </span>user configuration details.<br>Reading package lists... Done<br>Building dependency tree... Done<br>Reading state information... Done<br>vim is already the newest version (2:8.2.2434-3+deb11u1).<br>0 upgraded, 0 newly installed, 0 to remove<span class="hljs-built_in"> and </span>0<span class="hljs-built_in"> not </span>upgraded.<br><br><span class="hljs-comment"># 检查这个目录 https://bbs.deepin.org/zh/post/266156</span><br>☁  trusted.gpg.d  ls /etc/apt/sources.list.d/<br>v2raya.list<br>☁  trusted.gpg.d  rm /etc/apt/sources.list.d/v2raya.list<br><br></code></pre></div></td></tr></table></figure>
+
+
+<p>vim基本配置</p>
+<figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim">$ <span class="hljs-keyword">vim</span> ~/.vimrc<br><br><br><span class="hljs-comment">&quot;==============================================================================</span><br><span class="hljs-comment">&quot; vim 内置配置 </span><br><span class="hljs-comment">&quot;==============================================================================</span><br><br><span class="hljs-comment">&quot; 设置 vimrc 修改保存后立刻生效，不用在重新打开</span><br><span class="hljs-comment">&quot; 建议配置完成后将这个关闭</span><br><span class="hljs-keyword">autocmd</span> BufWritePost $MYVIMRC <span class="hljs-keyword">source</span> $MYVIMRC<br><br><span class="hljs-comment">&quot; 关闭兼容模式</span><br><span class="hljs-keyword">set</span> nocompatible<br><br><span class="hljs-keyword">set</span> <span class="hljs-keyword">nu</span> <span class="hljs-comment">&quot; 设置行号</span><br><span class="hljs-keyword">set</span> cursorline <span class="hljs-comment">&quot;突出显示当前行</span><br><span class="hljs-string">&quot; set cursorcolumn &quot;</span> 突出显示当前列<br><span class="hljs-keyword">set</span> showmatch <span class="hljs-comment">&quot; 显示括号匹配</span><br><br><span class="hljs-comment">&quot; tab 缩进</span><br><span class="hljs-keyword">set</span> tabstop=<span class="hljs-number">4</span> <span class="hljs-comment">&quot; 设置Tab长度为4空格</span><br><span class="hljs-keyword">set</span> <span class="hljs-built_in">shiftwidth</span>=<span class="hljs-number">4</span> <span class="hljs-comment">&quot; 设置自动缩进长度为4空格</span><br><span class="hljs-keyword">set</span> autoindent <span class="hljs-comment">&quot; 继承前一行的缩进方式，适用于多行注释</span><br><br><span class="hljs-comment">&quot; 定义快捷键的前缀，即&lt;Leader&gt;</span><br><span class="hljs-keyword">let</span> mapleader=<span class="hljs-string">&quot;;&quot;</span> <br><br><span class="hljs-comment">&quot; ==== 系统剪切板复制粘贴 ====</span><br><span class="hljs-comment">&quot; v 模式下复制内容到系统剪切板</span><br><span class="hljs-keyword">vmap</span> <span class="hljs-symbol">&lt;Leader&gt;</span><span class="hljs-keyword">c</span> <span class="hljs-comment">&quot;+yy</span><br><span class="hljs-comment">&quot; n 模式下复制一行到系统剪切板</span><br><span class="hljs-keyword">nmap</span> <span class="hljs-symbol">&lt;Leader&gt;</span><span class="hljs-keyword">c</span> <span class="hljs-comment">&quot;+yy</span><br><span class="hljs-comment">&quot; n 模式下粘贴系统剪切板的内容</span><br><span class="hljs-keyword">nmap</span> <span class="hljs-symbol">&lt;Leader&gt;</span>v <span class="hljs-comment">&quot;+p</span><br><br><span class="hljs-comment">&quot; 开启实时搜索</span><br><span class="hljs-keyword">set</span> incsearch<br><span class="hljs-comment">&quot; 搜索时大小写不敏感</span><br><span class="hljs-keyword">set</span> ignorecase<br><span class="hljs-keyword">syntax</span> enable<br><span class="hljs-keyword">syntax</span> <span class="hljs-keyword">on</span>                    <span class="hljs-comment">&quot; 开启文件类型侦测</span><br><span class="hljs-keyword">filetype</span> plugin <span class="hljs-built_in">indent</span> <span class="hljs-keyword">on</span>    <span class="hljs-comment">&quot; 启用自动补全</span><br><br><span class="hljs-comment">&quot; 退出插入模式指定类型的文件自动保存</span><br><span class="hljs-keyword">au</span> InsertLeave *.<span class="hljs-keyword">go</span>,*.<span class="hljs-keyword">sh</span>,*.php <span class="hljs-keyword">write</span><br></code></pre></div></td></tr></table></figure>
+
+<p>安装插件</p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">$ curl -fLo ~<span class="hljs-regexp">/.vim/</span>autoload/plug.vim --create-dirs \<br>https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/junegunn/</span>vim-plug<span class="hljs-regexp">/master/</span>plug.vim<br><br></code></pre></div></td></tr></table></figure>
+
+<p>修改配置</p>
+<figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim">$ <span class="hljs-keyword">vim</span> ~/.vimrc<br><br><span class="hljs-comment">&quot; 插件开始的位置</span><br><span class="hljs-keyword">call</span> plug#begin(<span class="hljs-string">&#x27;~/.vim/plugged&#x27;</span>)<br><br><span class="hljs-comment">&quot; Shorthand notation; fetches https://github.com/junegunn/vim-easy-align</span><br><span class="hljs-comment">&quot; 可以快速对齐的插件</span><br>Plug <span class="hljs-string">&#x27;junegunn/vim-easy-align&#x27;</span><br><br><span class="hljs-comment">&quot; 用来提供一个导航目录的侧边栏</span><br>Plug <span class="hljs-string">&#x27;scrooloose/nerdtree&#x27;</span><br><br><span class="hljs-comment">&quot; 可以使 nerdtree 的 tab 更加友好些</span><br>Plug <span class="hljs-string">&#x27;jistr/vim-nerdtree-tabs&#x27;</span><br><br><span class="hljs-comment">&quot; 可以在导航目录中看到 git 版本信息</span><br>Plug <span class="hljs-string">&#x27;Xuyuanp/nerdtree-git-plugin&#x27;</span><br><br><span class="hljs-comment">&quot; 查看当前代码文件中的变量和函数列表的插件，</span><br><span class="hljs-comment">&quot; 可以切换和跳转到代码中对应的变量和函数的位置</span><br><span class="hljs-comment">&quot; 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持</span><br>Plug <span class="hljs-string">&#x27;majutsushi/tagbar&#x27;</span><br><br><span class="hljs-comment">&quot; 自动补全括号的插件，包括小括号，中括号，以及花括号</span><br>Plug <span class="hljs-string">&#x27;jiangmiao/auto-pairs&#x27;</span><br><br><span class="hljs-comment">&quot; Vim状态栏插件，包括显示行号，列号，文件类型，文件名，以及Git状态</span><br>Plug <span class="hljs-string">&#x27;vim-airline/vim-airline&#x27;</span><br><br><span class="hljs-comment">&quot; 有道词典在线翻译</span><br>Plug <span class="hljs-string">&#x27;ianva/vim-youdao-translater&#x27;</span><br><br><span class="hljs-comment">&quot; 代码自动完成，安装完插件还需要额外配置才可以使用</span><br>Plug <span class="hljs-string">&#x27;Valloric/YouCompleteMe&#x27;</span><br><br><span class="hljs-comment">&quot; 可以在文档中显示 git 信息</span><br>Plug <span class="hljs-string">&#x27;airblade/vim-gitgutter&#x27;</span><br><br><br><span class="hljs-comment">&quot; 下面两个插件要配合使用，可以自动生成代码块</span><br>Plug <span class="hljs-string">&#x27;SirVer/ultisnips&#x27;</span><br>Plug <span class="hljs-string">&#x27;honza/vim-snippets&#x27;</span><br><br><span class="hljs-comment">&quot; 可以在 vim 中使用 tab 补全</span><br><span class="hljs-comment">&quot;Plug &#x27;vim-scripts/SuperTab&#x27;</span><br><br><span class="hljs-comment">&quot; 可以在 vim 中自动完成</span><br><span class="hljs-comment">&quot;Plug &#x27;Shougo/neocomplete.vim&#x27;</span><br><br><br><span class="hljs-comment">&quot; 配色方案</span><br><span class="hljs-comment">&quot; colorscheme neodark</span><br>Plug <span class="hljs-string">&#x27;KeitaNakamura/neodark.vim&#x27;</span><br><span class="hljs-comment">&quot; colorscheme monokai</span><br>Plug <span class="hljs-string">&#x27;crusoexia/vim-monokai&#x27;</span><br><span class="hljs-comment">&quot; colorscheme github </span><br>Plug <span class="hljs-string">&#x27;acarapetis/vim-colors-github&#x27;</span><br><span class="hljs-comment">&quot; colorscheme one </span><br>Plug <span class="hljs-string">&#x27;rakr/vim-one&#x27;</span><br><br><span class="hljs-comment">&quot; go 主要插件</span><br>Plug <span class="hljs-string">&#x27;fatih/vim-go&#x27;</span>, &#123; <span class="hljs-string">&#x27;tag&#x27;</span>: <span class="hljs-string">&#x27;*&#x27;</span> &#125;<br><span class="hljs-comment">&quot; go 中的代码追踪，输入 gd 就可以自动跳转</span><br>Plug <span class="hljs-string">&#x27;dgryski/vim-godef&#x27;</span><br><br><span class="hljs-comment">&quot; markdown 插件</span><br>Plug <span class="hljs-string">&#x27;iamcco/mathjax-support-for-mkdp&#x27;</span><br>Plug <span class="hljs-string">&#x27;iamcco/markdown-preview.vim&#x27;</span><br><br><span class="hljs-comment">&quot; 插件结束的位置，插件全部放在此行上面</span><br><span class="hljs-keyword">call</span> plug#end()<br></code></pre></div></td></tr></table></figure>
+
+<p>然后输入</p>
+<figure class="highlight clojure"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs clojure"><span class="hljs-symbol">:w</span><br><span class="hljs-symbol">:PlugInstall</span><br></code></pre></div></td></tr></table></figure>
+<p>插件会自动下载安装，看见上面显示 Finishing … Done 的内容，插件安装成功</p>
+<p><strong>插件删除</strong><br>如果想要删除插件，只要将不需要的插件注释或者删除，执行 :PlugClean 就可以自动清理了</p>
+<figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><br>sudo apt <span class="hljs-keyword">update</span> &amp;&amp; sudo apt upgrade<br>sudo apt install clang<br># 确保clang版本是<span class="hljs-number">7</span>版本以上<br><br><span class="hljs-keyword">cd</span> ~/.<span class="hljs-keyword">vim</span>/plugged/YouCompleteMe<br>ulimit -v <span class="hljs-number">100000</span> &amp;&amp; <span class="hljs-keyword">python3</span> install.<span class="hljs-keyword">py</span> --<span class="hljs-keyword">all</span> --force-sudo<br><br><span class="hljs-keyword">python3</span> install.<span class="hljs-keyword">py</span> --clangd-completer<br><br></code></pre></div></td></tr></table></figure>
+
+<p>linux教程: <a target="_blank" rel="noopener" href="https://github.com/dunwu/linux-tutorial">https://github.com/dunwu/linux-tutorial</a></p>
+<p>由第三章可得: http代理端口是20171</p>
+<p>vim-go 教程: <a target="_blank" rel="noopener" href="https://learnku.com/articles/24924?order_by=vote_count">https://learnku.com/articles/24924?order_by=vote_count</a></p>
+<h2 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h2><p>自己看着改吧, 反正有些目录要对应上, 不会就问gpt4</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 以下是我的java环境和maven环境</span><br>🍓  ~  <span class="hljs-built_in">cat</span> /etc/profile.d/my_env.sh<br><span class="hljs-comment"># JAVA_HOME</span><br><span class="hljs-built_in">export</span> JAVA_HOME=/opt/module/jdk-17.0.10<br><br><span class="hljs-comment"># MAVEN_HOME</span><br><span class="hljs-built_in">export</span> MAVEN_HOME=/opt/module/apache-maven-3.9.6<br><br><span class="hljs-comment"># PATH</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$MAVEN_HOME</span>/bin<br><br>docker stop jenkins &amp;&amp; docker <span class="hljs-built_in">rm</span> jenkins <br><br>docker run -u root \<br>--name jenkins \<br>-d -p 88:8080 -p 50000:50000 \<br>-v /etc/localtime:/etc/localtime:ro \<br>-v /opt/module/jdk-17.0.10:/usr/local/jdk \<br>-v /opt/module/apache-maven-3.9.6:/usr/local/maven \<br>-v /var/jenkins_home:/var/jenkins_home \<br>-v /var/run/docker.sock:/var/run/docker.sock \<br>-v /usr/bin/docker:/usr/bin/docker \<br>-e JAVA_HOME=/usr/local/jdk \<br>-e MAVEN_HOME=/usr/local/maven \<br>-e PATH=<span class="hljs-variable">$PATH</span>:/usr/local/jdk/bin:/usr/local/maven/bin \<br>jenkins/jenkins:2.426.1-lts-jdk17<br><br><span class="hljs-comment"># 查看临时密码</span><br>docker logs Jenkins<br>2eac0ae1cce8492c9fbff1d79f61bf5e<br><br></code></pre></div></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/debian/">debian</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"Haq24NRgHl4QheEi7oVqtAsM-gzGzoHsz","appKey":"kGbxzGaSiqqlFPxg24Tk3dVN","placeholder":"来都来了, 不留下点啥吗?","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":"https://valinecdn.bili33.top","emojiMaps":{"Tieba-New2":"/Tieba-New/image_emoticon.png","Tieba-New3":"/Tieba-New/image_emoticon10.png","Tieba-New4":"/Tieba-New/image_emoticon100.png","Tieba-New5":"/Tieba-New/image_emoticon101.png","Tieba-New6":"/Tieba-New/image_emoticon102.png","Tieba-New7":"/Tieba-New/image_emoticon103.png","Tieba-New8":"/Tieba-New/image_emoticon104.png","Tieba-New9":"/Tieba-New/image_emoticon105.png","Tieba-New10":"/Tieba-New/image_emoticon106.png","Tieba-New11":"/Tieba-New/image_emoticon107.png","Tieba-New12":"/Tieba-New/image_emoticon108.png","Tieba-New13":"/Tieba-New/image_emoticon109.png","Tieba-New14":"/Tieba-New/image_emoticon11.png","Tieba-New15":"/Tieba-New/image_emoticon110.png","Tieba-New16":"/Tieba-New/image_emoticon111.png","Tieba-New17":"/Tieba-New/image_emoticon112.png","Tieba-New18":"/Tieba-New/image_emoticon113.png","Tieba-New19":"/Tieba-New/image_emoticon114.png","Tieba-New20":"/Tieba-New/image_emoticon115.png","Tieba-New21":"/Tieba-New/image_emoticon116.png","Tieba-New22":"/Tieba-New/image_emoticon117.png","Tieba-New23":"/Tieba-New/image_emoticon118.png","Tieba-New24":"/Tieba-New/image_emoticon119.png","Tieba-New25":"/Tieba-New/image_emoticon12.png","Tieba-New26":"/Tieba-New/image_emoticon120.png","Tieba-New27":"/Tieba-New/image_emoticon121.png","Tieba-New28":"/Tieba-New/image_emoticon122.png","Tieba-New29":"/Tieba-New/image_emoticon123.png","Tieba-New30":"/Tieba-New/image_emoticon124.png","Tieba-New31":"/Tieba-New/image_emoticon13.png","Tieba-New32":"/Tieba-New/image_emoticon14.png","Tieba-New33":"/Tieba-New/image_emoticon15.png","Tieba-New34":"/Tieba-New/image_emoticon16.png","Tieba-New35":"/Tieba-New/image_emoticon17.png","Tieba-New36":"/Tieba-New/image_emoticon18.png","Tieba-New37":"/Tieba-New/image_emoticon19.png","Tieba-New38":"/Tieba-New/image_emoticon2.png","Tieba-New39":"/Tieba-New/image_emoticon20.png","Tieba-New40":"/Tieba-New/image_emoticon21.png","Tieba-New41":"/Tieba-New/image_emoticon22.png","Tieba-New42":"/Tieba-New/image_emoticon23.png","Tieba-New43":"/Tieba-New/image_emoticon24.png","Tieba-New44":"/Tieba-New/image_emoticon25.png","Tieba-New45":"/Tieba-New/image_emoticon26.png","Tieba-New46":"/Tieba-New/image_emoticon27.png","Tieba-New47":"/Tieba-New/image_emoticon28.png","Tieba-New48":"/Tieba-New/image_emoticon29.png","Tieba-New49":"/Tieba-New/image_emoticon3.png","Tieba-New50":"/Tieba-New/image_emoticon30.png","Tieba-New51":"/Tieba-New/image_emoticon31.png","Tieba-New52":"/Tieba-New/image_emoticon32.png","Tieba-New53":"/Tieba-New/image_emoticon33.png","Tieba-New54":"/Tieba-New/image_emoticon34.png","Tieba-New55":"/Tieba-New/image_emoticon35.png","Tieba-New56":"/Tieba-New/image_emoticon36.png","Tieba-New57":"/Tieba-New/image_emoticon37.png","Tieba-New58":"/Tieba-New/image_emoticon38.png","Tieba-New59":"/Tieba-New/image_emoticon39.png","Tieba-New60":"/Tieba-New/image_emoticon4.png","Tieba-New61":"/Tieba-New/image_emoticon40.png","Tieba-New62":"/Tieba-New/image_emoticon41.png","Tieba-New63":"/Tieba-New/image_emoticon42.png","Tieba-New64":"/Tieba-New/image_emoticon43.png","Tieba-New65":"/Tieba-New/image_emoticon44.png","Tieba-New66":"/Tieba-New/image_emoticon45.png","Tieba-New67":"/Tieba-New/image_emoticon46.png","Tieba-New68":"/Tieba-New/image_emoticon47.png","Tieba-New69":"/Tieba-New/image_emoticon48.png","Tieba-New70":"/Tieba-New/image_emoticon49.png","Tieba-New71":"/Tieba-New/image_emoticon5.png","Tieba-New72":"/Tieba-New/image_emoticon50.png","Tieba-New73":"/Tieba-New/image_emoticon6.png","Tieba-New74":"/Tieba-New/image_emoticon66.png","Tieba-New75":"/Tieba-New/image_emoticon67.png","Tieba-New76":"/Tieba-New/image_emoticon68.png","Tieba-New77":"/Tieba-New/image_emoticon69.png","Tieba-New78":"/Tieba-New/image_emoticon7.png","Tieba-New79":"/Tieba-New/image_emoticon70.png","Tieba-New80":"/Tieba-New/image_emoticon71.png","Tieba-New81":"/Tieba-New/image_emoticon72.png","Tieba-New82":"/Tieba-New/image_emoticon73.png","Tieba-New83":"/Tieba-New/image_emoticon74.png","Tieba-New84":"/Tieba-New/image_emoticon75.png","Tieba-New85":"/Tieba-New/image_emoticon76.png","Tieba-New86":"/Tieba-New/image_emoticon77.png","Tieba-New87":"/Tieba-New/image_emoticon78.png","Tieba-New88":"/Tieba-New/image_emoticon79.png","Tieba-New89":"/Tieba-New/image_emoticon8.png","Tieba-New90":"/Tieba-New/image_emoticon80.png","Tieba-New91":"/Tieba-New/image_emoticon81.png","Tieba-New92":"/Tieba-New/image_emoticon82.png","Tieba-New93":"/Tieba-New/image_emoticon83.png","Tieba-New94":"/Tieba-New/image_emoticon84.png","Tieba-New95":"/Tieba-New/image_emoticon85.png","Tieba-New96":"/Tieba-New/image_emoticon86.png","Tieba-New97":"/Tieba-New/image_emoticon87.png","Tieba-New98":"/Tieba-New/image_emoticon88.png","Tieba-New99":"/Tieba-New/image_emoticon89.png","Tieba-New100":"/Tieba-New/image_emoticon9.png","Tieba-New101":"/Tieba-New/image_emoticon90.png","Tieba-New102":"/Tieba-New/image_emoticon91.png","Tieba-New103":"/Tieba-New/image_emoticon92.png","Tieba-New104":"/Tieba-New/image_emoticon93.png","Tieba-New105":"/Tieba-New/image_emoticon94.png","Tieba-New106":"/Tieba-New/image_emoticon95.png","Tieba-New107":"/Tieba-New/image_emoticon96.png","Tieba-New108":"/Tieba-New/image_emoticon97.png","Tieba-New109":"/Tieba-New/image_emoticon98.png","Tieba-New110":"/Tieba-New/image_emoticon99.png"},"enableQQ":true,"requiredFields":["nick","mail"]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>

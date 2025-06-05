@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>page.title - 肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 60vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/default.png') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="page.title">
+				  
+				</span>
+
+				
+			  </div>
+
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  <div class="container nopadding-x-md">
+			<div class="py-5" id="board"
+			  >
+			  
+			  <div class="container">
+				<div class="row">
+				  <div class="col-12 col-md-10 m-auto">
+					
+
+<article class="page-content">
+  <!-- # 夏珑桂 - Java后端开发工程师 -->
+
+<p>icon:info 夏珑桂  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;  男  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;  22 岁<br>icon:school 在职，两周内到岗  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;  软考证书 软件设计师  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;  期望薪资 面议<br>icon:email2 <a href="mailto:&#120;&#x69;&#x61;&#x6c;&#111;&#110;&#103;&#x67;&#117;&#105;&#x40;&#102;&#111;&#120;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#120;&#x69;&#x61;&#x6c;&#111;&#110;&#103;&#x67;&#117;&#105;&#x40;&#102;&#111;&#120;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; 17369330936  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; 个人博客 <a href="https://xiamu.icu/">https://xiamu.icu</a></p>
+<h2 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h2><p>:::left<br><strong>吉首大学张家界学院 软件工程 二本</strong><br>:::<br>:::right<br><strong>2020.09 - 2024.06</strong><br>:::<br>GPA 3.3 &#x2F; 4.0。成绩优异，专业排名前 10%。连续三年获取二等奖学金。<br>主修课程：Java 语言、Linux 操作系统、计算机网络、数据库原理、数据结构和算法等。</p>
+<h2 id="个人技能"><a href="#个人技能" class="headerlink" title="个人技能"></a>个人技能</h2><p>1、熟悉 Java 编程语言，具有良好的面向对象程序设计思想，熟悉常见的设计模式。<br>2、了解 JVM，JUC，NIO 等 Java 底层基础知识。<br>3、熟悉 SpringBoot、MyBatis&#x2F;Plus、SpringData Jpa 等常用框架，熟悉 Spring 核心流程并阅读过部分源码。<br>4、熟悉 SpringCloud 微服务技术栈：Eureka、Ribbon、Hystrix、OpenFeign、Gateway、Nacos、SkyWalking、Sentinel 等。<br>5、熟悉 MySQL 数据库，熟悉数据库隔离级别、MVCC、索引结构底层原理，擅长 SQL 语句编写以及索引优化。<br>6、熟悉 Redis，掌握常用数据类型，熟悉持久化、缓存相关问题、分布式锁等业务方案。<br>7、熟悉使用 RabbitMQ，熟悉多种投递、消息幂等、重复消费等机制。<br>8、熟悉掌握 Docker、Linux 常用命令，能快速实现项目的安装部署。<br>9、了解 HTML、CSS、JavaScript、JQuery、Thymeleaf、Vue、Uniapp 等前端开发技术。<br>10、了解自动化测试、Python 的基础知识，可以使用 Python 编写自动化脚本和网络爬虫。<br>11、使用过 Nginx、MongoDB、ElasticSearch、Jenkins 中间件。<br>12、了解 Kubernetes 容器编排以及 Prometheus 监控工具。</p>
+<!-- 1、具有扎实的软件编程功底，熟悉 Java、C 开发语言，熟练掌握 Java SE 高级知识，泛型、反射、通信协议等知识。
+2、了解 JVM，JUC，NIO 等 Java 底层基础知识。
+3、熟悉掌握 Spring、Spring Boot、MyBatis 等主流框架。
+4、了解分布式、微服务理论，熟悉 SpringCloud Alibaba 系列组件。
+5、熟练掌握 MySQL 数据库，熟练编写多种复杂 SQL 语句，理解 <span style="/*color: red;*/ font-weight: bold;">SQL 调优，索引结构</span> 等。
+6、熟练掌握 Redis 常用的数据类型，了解 Redis 适用场景。
+7、了解 RabbitMQ 消息队列，交换机、死信队列、延迟消息、消息一致性解决方案等。
+8、熟悉 JavaScript，ES6，Axios，NodeJs 等前端开发技术。
+9、熟悉 Vue 全家桶、Element-UI 组件，熟练掌握 uni-app、ECharts 开源技术。
+10、熟悉掌握 Linux 操作系统常用命令，熟悉 Docker 容器化部署。
+11、熟练使用 Git 管理项目以及 Postman，Jmeter 等测试工具。
+12、了解 Nginx、Tomcat 等 Web 服务器。
+13、了解 Python 爬虫，能够使用 Request，Selenium，Scrapy 工具进行数据的爬取。 -->
+<!-- 14、了解 Hadoop 生态圈技术：MR、HDFS、Yarn、Hive、HBase、Flume、Spark。 -->
+<!-- 15、学习过js逆向，能对混淆，补环境 -->
+
+
+
+<!-- 
+1、具有扎实的软件编程功底，熟悉 Java、C 开发语言，熟练掌握 Java SE 高级知识，集合、泛型、反射、通信协议等知识。
+2、了解 JVM，JUC，NIO 等 Java 底层基础知识。
+3、熟悉 Spring、Spring Boot、MyBatis 等主流框架，并熟练掌握这套主流框架的开发。
+4、了解分布式、微服务理论，熟悉 SpringCloud Alibaba 系列组件，如 Nacos、Gateway、OpenFeign 等。
+5、熟练掌握 MySQL 数据库，对 MySQL 的 <span style="/*color: red;*/ font-weight: bold;">SQL 调优，索引结构</span> 等底层原理深入的学习。
+6、熟练掌握 Redis 常用的数据类型，了解 Redis 适用场景。
+7、熟悉掌握 Linux 操作系统常用命令，熟悉 Docker 容器化部署，Kubernetes 容器编排。
+8、使用过 Nginx、MongoDB、ElasticSearch、RabbitMQ 中间件。
+9、能够使用 HTML，CSS，JavaScript，Vue 以及 Element-UI 组件。 
+-->
+
+
+<!-- 1、熟悉Java编程语言，具有良好的面向对象程序设计思想，熟悉常见的设计模式。
+2、熟练掌握：JUC、集合、IO/NIO、JDK新特性，了解JVM模型及GC机制，阅读过JUC、JDK核心类部分源码。
+3、熟悉SpringBoot、MyBatis/Plus、SpringData Jpa等常用框架，熟悉Spring核心流程并阅读过部分源码。
+4、熟悉SpringCloud微服务技术栈：Eureka、Ribbon、Hystrix、OpenFeign、Gateway、Nacos、SkyWalking、Sentinel、Seata等。
+5、熟悉MySQL数据库，熟悉数据库隔离级别、MVCC、索引结构底层原理，擅长SQL语句编写以及索引优化。
+6、熟悉Redis，掌握常用数据类型，熟悉持久化、缓存相关问题、高可用、分布式锁等业务方案。
+7、熟悉使用RabbitMQ，熟悉多种投递、消息幂等、高可用、重复消费等机制。
+8、了解HTML、CSS、JavaScript、JQuery、Thymeleaf、Vue、React等前端开发技术。
+9、熟悉掌握Docker、Linux常用命令，能快速实现单体项目的安装部署。
+10、了解自动化测试、Python的基础知识，可以使用Python编写自动化脚本。
+11、使用过 Nginx、MongoDB、ElasticSearch、Jenkins 中间件。
+ -->
+
+
+<!-- 
+1、熟悉 Java 编程语言，具有 1 年 Java 开发经验，熟悉分布式、微服务相关技术栈。
+2、熟练掌握 JUC、IO/NIO、网络编程、JDK8/17 新特性、反射等高级知识，阅读过集合、AQS 等底层源码。
+3、熟悉 JVM 内存结构，了解 GC 回收算法、G1、ZGC、CMS 等垃圾回收器，了解 Arthas 服务状态监控。
+4、熟练掌握 Spring、SpringMVC、SpringBoot、Mybatis 等开源框架，阅读过核心流程源码。
+5、熟悉分布式微服务相关理论，熟练掌握 SpringCloudAlibaba 系列微服务组件：Nacos、OpenFeign、Gateway、Skywalking、Sentinel、Seata。
+6、熟练掌握 MySQL 关系型数据库，熟悉分库分表、索引优化、线上慢 SQL 排查，了解MVCC、事务底层原理。
+7、熟练掌握 Redis 数据结构、布隆过滤器、GEOHASH、位图等应用技术，熟悉高可用、缓存问题相关解决方案。
+8、熟悉 MongoDB、ElasticSearch 等常见的 NoSOL 产品及其应用场景。
+9、熟悉 RabbitMQ、 Kafka 中间件产品，并了解它们的特性、高可用及适用业务场合。
+10、熟练掌握 Linux、Docker、Jenkins、Nginx 常见运维命令及运维部署方案，能自定义镜像发布微服务系统。
+11、熟悉 ELK 技术栈搭建高可用分布式微服务系统日志监控平台。
+12、了解 Kubernetes 容器编排技术以及 Prometheus 监控工具。
+13、熟悉 HTML、CSS、JavaScript、Es6、Vue全家桶、Uniapp、Typescript 等前端技术。
+14、可以使用前端组件库 Vant、Elementui、uView、ECharts 等进行开发。熟悉鸿蒙开发语言 ArkTS 的使用。
+15、了解自动化测试、Python 的基础知识，可以使用 Python 编写自动化脚本以及网络爬虫。
+ -->
+
+<h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><p>:::left</p>
+<h4 id="京北方信息技术股份有限公司-云测产品部"><a href="#京北方信息技术股份有限公司-云测产品部" class="headerlink" title="京北方信息技术股份有限公司 云测产品部"></a><strong>京北方信息技术股份有限公司 云测产品部</strong></h4><p>:::</p>
+<p>:::right<br><strong>2023.07 - 至今</strong><br>:::</p>
+<p>1、参与需求分析、合理的技术选型以及后端接口程序编码实现。<br>2、编写和技术文档，以及生产及测试环境遇到的各种 Bug 缺陷。<br>3、持续对项目进行优化，包括不限于：业务代码、技术方案、慢 SQL 调优等方式。</p>
+<h2 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h2><p>:::left</p>
+<h4 id="盘庚测试云（京北方自研）"><a href="#盘庚测试云（京北方自研）" class="headerlink" title="盘庚测试云（京北方自研）"></a><strong>盘庚测试云（京北方自研）</strong></h4><p>:::</p>
+<p>:::right<br><strong>2023.07 - 至今</strong><br>:::</p>
+<ul>
+<li><strong>项目地址</strong>：<a target="_blank" rel="noopener" href="https://cctp.northking.net/">https://cctp.northking.net/</a></li>
+<li><strong>项目描述</strong>：<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;京北方盘庚测试管理平台是一个旨在提升软件测试效率和管理水平的SaaS平台。该平台支持自定义测试流程，集成常用测试工具，并具备一定的自动化测试能力，旨在帮助用户更好地管理测试生命周期。平台主要功能：<ul>
+<li>支持资产复用的用例和业务要素库。</li>
+<li>提升测试执行和缺陷管理效率的自动化流程。</li>
+<li>统计报表功能，可自定义配置测试质量度量指标。</li>
+</ul>
+</li>
+<li><strong>项目技术</strong>：<br>  SpringBoot、SpringCloud Alibaba（Nacos、OpenFeign、Gateway）、MyBatis、MySQL、Redis、Flowable工作流引擎、RabbitMQ、MinIO、Jenkins、Nginx、Docker</li>
+<li><strong>个人职责</strong>：<ul>
+<li>负责所属模块的技术方案设计、功能开发、单元测试和代码优化工作。</li>
+<li>按时完成分配的开发任务，交付符合规范的高质量代码，并配合处理项目中遇到的各类Bug。</li>
+<li>负责平台指标库与雷达图以及AI小助手、质量抽检、风险管理、任务管理、质量门禁扫描等模块的后端开发，参与需求分析、方案设计和代码实现。</li>
+</ul>
+</li>
+<li><strong>工作内容</strong>：<ul>
+<li>构建并维护基于 触发器+MQ 的准实时数据同步链路，支持自定义及周期性报表生成。</li>
+<li>编写定时任务和触发器，通过 RabbitMQ 消息传递，同步数据到数据仓库，统计用例、缺陷的个数，实现业务报表的统计。</li>
+<li>使用 Redis 做分布式锁，默认风险模板初始化创建的时候，防止在分布式环境下模板的重复创建。</li>
+<li>使用 Jenkin 构建项目、并部署到测试环境，提升部署效率 56%。</li>
+<li>熟练掌握国产达梦数据库，主导完成多个微服务项目 MySQL 迁移到国产达梦数据库，并对复杂 SQL 进行改写、优化。</li>
+<li>参与并成功迁移 120 万+条测试用例步骤历史数据至新表，采用分批方案，提升查询效率 21%。</li>
+<li>整合 Spring Cache&#x2F;Redis 实现缓存策略，显著提升读效率 33%，降低数据库负载。</li>
+</ul>
+</li>
+</ul>
+<!-- 
+云测安装: 云测安装”是微服务组件快速部署系统，提供服务器管理、安装计划配置、应用批量部署等功能。支持通过Shell脚本实现中间件自动化安装，方便在客户现场快速部署。
+    - 通过策略模式与模板方法模式实现多类型中间件部署，方便部署模块快速扩展
+    - 支持国产化系统，实现跨平台适配，如：麒麟，centos，redhat等，通过Shell指令特征码识别系统类型。
+    - 性能优化：对H2数据库慢查询日志分析，通过复合索引优化使关键接口响应时间从800ms降至200ms
+    - 轻量级部署：采用嵌入式H2数据库，构建单体可执行JAR包（<50MB），降低运维复杂度
+    - 实现Shell脚本的批量导出，实际环境中，仅一行命令即可轻松部署多个中间件
+ -->
+
+<h2 id="自我评价"><a href="#自我评价" class="headerlink" title="自我评价"></a>自我评价</h2><p>1、三观正、无不良嗜好。<br>2、热爱分享技术、代码洁癖、具备团队合作能力。<br>3、拥有快速学习能力，喜欢用博客的形式记录学习心得: <a href="https://xiamu.icu/">https://xiamu.icu</a></p>
+
+
+  
+</article>
+
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+  <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>

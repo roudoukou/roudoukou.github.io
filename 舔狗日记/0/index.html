@@ -1,0 +1,847 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>0 - 肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 70vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/bg.jpg') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="0">
+				  
+				</span>
+
+				
+				  <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      肉豆蔻吖
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2025-03-23 23:55" pubdate>
+        2025年3月23日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      7.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      78
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+				
+			  </div>
+
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">0</h1>
+            
+            <div class="markdown-body">
+              <!-- > 这个世界写得比你好的人多的是，但是你的世界只有你才能写出来。
+ -->
+
+<h2 id="1-那场疫情让我一落千丈"><a href="#1-那场疫情让我一落千丈" class="headerlink" title="1 那场疫情让我一落千丈"></a>1 那场疫情让我一落千丈</h2><h3 id="0"><a href="#0" class="headerlink" title="0"></a>0</h3><p>高三期末成绩单发下来时，老妈正在做饭。我举着手机截图冲进厨房：“妈！我考了第一！”屏幕上的班级排名像一道圣旨，连灶台上粘着的老鼠屎都显得神圣起来。</p>
+<p>母亲用围裙擦着手，眯眼看屏幕：“第一？这么厉害啊，怎么考到的……”<br>我：“要不要去看看是不是咱家的祖坟是不是冒青烟了？”<br>大姐从里屋探出头：“怎么说话的，我服了”</p>
+<p>我翻了个白眼，心里却炸开烟花。<br>那时的我天真以为，人生和《五年高考三年模拟》一样，只要按参考答案写满，就能拿满分。</p>
+<h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>疫情来得比班主任的突击检查还突然。<br>网课第一天，我特意把家里唯一一张木椅搬到客厅——这里能蹭到隔壁邻居家的WiFi，信号格在“死亡”与“诈尸”间反复横跳。</p>
+<p>数学老师的声音从手机扬声器里飘出，夹杂着炒菜声和父亲看抗日神剧的枪响：“同学们，这道导数题是高考重点……”<br>我缩在椅子上啃冷馒头，突然发现：<br>没有同桌偷塞的零食、没有班主任的后窗凝视，连导数都变得像村口二狗子的脸一样模糊。</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>自律是穷人的奢侈品。<br>当我第13次把早读时间用来补觉时，班主任在班级群里@我：“夏同学，摄像头对着天花板是什么意思？”<br>我秒回：“老师，我家屋顶漏雨，在修房梁。”<br>——其实我只是用晾衣架把手机支在了被窝上。</p>
+<p>母亲塞给我一张电话卡：“一个月20G流量，省着用。”她不知道，这卡后来成了我的“免死金牌”：<br>老师提问时，我对着黑屏喊“网卡了”；早读点名时，我放录音假装在背《滕王阁序》；甚至月考交卷前，我都虔诚地把手机举高半寸：“求信号之神保佑！”</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>成绩滑坡比过山车还快。<br>从班级第一跌到第十，我安慰自己“瘦死的骆驼比马大”；从第十跌到二十，我骂“疫情毁我青春”；等到跌出前三十时，我连借口都懒得找了。</p>
+<p>父亲蹲在门槛上抽烟：“你大伯说，今年经济不好，生意都难做了。”<br>我盯着钉在墙上的“高考倒计时”日历——被疫情硬生生撕掉的那页，如今用胶带歪歪扭扭粘了回去，像一道永远结不了痂的疤。</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p>高考延期通知下来那天，村里大喇叭在循环播放防疫口号。<br>我蹲在茅坑刷手机，看到微博热搜#这届高三是最惨一代#，评论区有人写：“建议给03年非典考生和24年新冠考生组个殉道者联盟。”<br>屎拉完了，我提裤子时突然悲从中来：<br>我的青春和这坨屎有什么区别？憋了三年，最后冲进下水道的姿势都狼狈不堪。</p>
+<h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><p>返校那天，班主任把我叫到办公室。<br>他指着成绩曲线图叹气：“你这滑坡速度，放股市能熔断三次。”又抽出一沓师范提前批资料：“考虑过当老师吗？稳定，适合你这种……”<br>他咽下了“农村孩子”四个字，但我听见了。</p>
+<p>我攥着资料往家走，路过县网吧时，橱窗贴着新海报——“Python培训，包教包会，学成月入过万！”<br>海报上的程序员西装革履，手里咖啡杯印着星巴克logo。我摸摸兜里只剩三块钱的公交卡，突然笑出声：<br>咖啡我喝不起，但代码总能复制粘贴吧？</p>
+<h3 id="6"><a href="#6" class="headerlink" title="6"></a>6</h3><p>高考放榜那晚，我家没放鞭炮。<br>父亲盯着比模拟考低50分的成绩，烟头烫穿了志愿草稿纸：“计算机？这分够得上？”<br>我盯着纸上被烧穿的“年入20万”字样，想起黄毛表弟的嘲讽：“读什么大学？跟我混华强北啊！”</p>
+<p>母亲在灶台边煮粥，锅沿噗噗冒着泡。<br>——那些曾以为能煮沸人生的理想，最终也不过是一锅糊了的稀饭。</p>
+<h2 id="2-高考出分-报考计算机"><a href="#2-高考出分-报考计算机" class="headerlink" title="2 高考出分 报考计算机"></a>2 高考出分 报考计算机</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1"></a><strong>1</strong></h3><p>查分系统像一台年久失修的机器，卡顿了足足半小时，才勉强吐出了我的成绩——443分。这个数字像一盆冰冷的污水，兜头浇下，瞬间让我手脚冰凉，大脑一片空白。全省12万名，这意味什么？去年二本线是445，今年恐怕连三本的门槛都够不着。</p>
+<p>大伯抽着烟，把表哥拉过来“参谋”。表哥熟练地滑动着手机屏幕，浏览着各大院校的招生信息：“计算机？那就报软件工程、电子信息之类的，名字越花哨越好，听起来高大上！”父亲蹲在门槛上，沉默地抽着烟，突然闷声插了一句：“别出省，车费贵。”</p>
+<p>我紧紧攥着那张写满志愿草稿的纸，脑海里回响起朱昊鲲公众号里那句“靠自己，因为最好的志愿只有八个字：终身学习，终身努力。”。然而，当我颤抖着在贴吧搜索“三本计算机就业”时，映入眼帘的却是一片劝退的哀嚎：</p>
+<p>“三本计算机？不如进厂打螺丝”</p>
+<p>““三本毕业生真实工资””</p>
+<p>我像一只迷途的羔羊，在绝望的海洋里挣扎。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>实招人数</th>
+<th>最低分数线</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>树院</td>
+<td>685</td>
+<td>444</td>
+<td></td>
+</tr>
+<tr>
+<td>张院</td>
+<td>996</td>
+<td>418</td>
+<td>√</td>
+</tr>
+<tr>
+<td>广院</td>
+<td>56</td>
+<td>447</td>
+<td></td>
+</tr>
+<tr>
+<td>城院</td>
+<td>718</td>
+<td>445</td>
+<td></td>
+</tr>
+<tr>
+<td>兴院</td>
+<td>750</td>
+<td>441</td>
+<td></td>
+</tr>
+<tr>
+<td>船院</td>
+<td>837</td>
+<td>427</td>
+<td>√</td>
+</tr>
+<tr>
+<td>兴院</td>
+<td>676</td>
+<td>419</td>
+<td>√</td>
+</tr>
+<tr>
+<td>南院</td>
+<td>798</td>
+<td>421</td>
+<td>√</td>
+</tr>
+<tr>
+<td>芙院</td>
+<td>665</td>
+<td>421</td>
+<td>√</td>
+</tr>
+<tr>
+<td>株院</td>
+<td>732</td>
+<td>423</td>
+<td>√</td>
+</tr>
+<tr>
+<td>潇院</td>
+<td>645</td>
+<td>435</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>看着表格上密密麻麻的数字，我的目光最终停留在“船院”那一栏。837个招生名额，427分的最低分数线，而且离家也近，就在隔壁市。或许，这真的是一个不错的选择。我心里默默地想着，或许，这艘“船”能载着我驶向未知的彼岸。</p>
+<h3 id="2-1"><a href="#2-1" class="headerlink" title="2"></a><strong>2</strong></h3><p>父亲对填报志愿一窍不通，只好请来大伯和表哥给我“指导”。我毫不犹豫地说想学计算机，表哥立刻给我列出了一串专业：软件工程、计算机科学与技术、电子信息技术、信息工程。父亲的意见很简单：留在省内就好。</p>
+<p>网络上的声音更是五花八门。我记得当时看到两个网友的对话：</p>
+<p>网友1：“学法学可以当法师吗？”</p>
+<p>网友2：“可别听别人瞎说选啥专业，就选自己喜欢的，反正最后无论选择什么专业你都会后悔。”</p>
+<p>我陷入了前所未有的迷茫和焦虑。以我的分数，几乎没有心仪的学校可以选择。我甚至开始考虑，是不是直接报个大专更划算？学费更省，以后还能专升本？</p>
+<p>提交志愿的前一天晚上，我在县城的网吧里花了五块钱查资料。我的搜索记录触目惊心：</p>
+<ul>
+<li>“末流三本和顶级大专怎么选？”</li>
+<li>“计算机的就业前景如何？”</li>
+<li>“计算机、人工智能都火热，应该选择什么专业？”</li>
+<li>“张院的毕业生就业率如何？”</li>
+<li>“XX院校的宿舍环境、食堂、厕所怎么样？”</li>
+</ul>
+<p>为了摸清这些情况，我疯狂地在贴吧里搜索，把所有可能报考的院校的QQ群都加了一遍。十个院校，就是十个群，我每天都在群里潜水，看学长学姐们聊天，看他们发各种食堂宿舍的真实照片。群里每加一个新生，管理员就会冒出来一句：“新人爆照！”</p>
+<p>最终，在出分数线的那天下午，我的志愿成功地滑进了张院。</p>
+<p><img src="/images/image.png" srcset="/img/loading.gif" lazyload alt="宿舍1"></p>
+<p><img src="/images/image-1.png" srcset="/img/loading.gif" lazyload alt="实际宿舍"></p>
+<p>我当时最担心的，就是选错专业。我甚至去问了村里的大表哥，张院到底怎么样？大表哥的一番话，像一盆冷水浇在我头上：</p>
+<p>“你要考虑清楚，现在难受的是一年，将来难受的是一辈子。”</p>
+<p>“毕业就失业在家。”</p>
+<p>“继承家族产业。”</p>
+<p>“和医学、土木、机械不一样，我们学的这些东西在小地方也有人要，在大地方也有人要，就业范围广、就业门槛低。”</p>
+<p>“计算机不一样，你觉得小地方会需要计算机专业吗？好地方会需要差的计算机专业吗？答案是否定的！”</p>
+<p>“当然，就业也不是关键。关键是大学你没选好专业就算了，你还去了个小地方。你去了一个跟宜县差不多地方有什么用？本来你学不了什么专业知识就算了，你还可以到外面看看外面的世界，你去了个小地方，那一点都沾不上边。”</p>
+<p>“本来学不到东西还可以到外面看看世界，这现在又学不到，又看不到世界，而且还没文凭。转公务员希望基本为零。”</p>
+<p>“总结：没去好地方见世面、学不到东西、毕业即失业、没有好文凭、没有好的朋友圈。”</p>
+<p>大表哥的话，像一把锋利的刀，剖开了我内心深处的恐惧。我意识到，我即将面临的，不仅仅是选择一个学校，而是选择一种人生。</p>
+<h3 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h3><p>连续几个晚上，我都在纠结和焦虑中度过。我疯狂地在网上搜索各种关于专业和大学的视频和评论，试图找到一丝方向。</p>
+<p>既然决定要去张院，那就要做好准备。开学前，我最担心的就是遇到不合拍的室友。为了避免这种情况，我决定主动出击，在新生班群里“约室友”。</p>
+<p>很快，我认识了一个叫杨萧龙的同学。当时我简直惊呆了，这人简直是个大神！还没开学，就已经自学了C语言，能熟练地写出九九乘法表、求水仙花数、算质数。数组、循环、函数、文件，他都玩得溜溜的，就差指针还没完全摸透。</p>
+<p>杨萧龙还给我分享了他自己写的一个小程序代码，据说是个“病毒娱乐代码”。运行起来，可以直接把电脑搞蓝屏！我看着那段简洁却又充满力量的代码，心里充满了敬佩。</p>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;malloc.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> &#123;<br>    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) <br>    &#123;<br>        <span class="hljs-type">int</span> *p = (<span class="hljs-type">int</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-number">100</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+<p>我当时对这段代码还理解不深，但是知道这段代码的含义：不断申请内存，直到系统崩溃。</p>
+<p>杨萧龙，杨总的存在，就像一盏明灯，照亮了我前方的路。我意识到，即使在末流的三本院校，也有像他这样热爱技术、充满才华的人。和这样的人做室友，我的大学生活或许会充满惊喜和挑战。我开始期待，在张院的日子里，能和杨萧龙一起学习，一起进步，一起探索计算机世界的奥秘。</p>
+<h2 id="3-代码的敲门砖，我在B站学编程"><a href="#3-代码的敲门砖，我在B站学编程" class="headerlink" title="3 代码的敲门砖，我在B站学编程"></a>3 代码的敲门砖，我在B站学编程</h2><h3 id="0-1"><a href="#0-1" class="headerlink" title="0"></a>0</h3><p>带着对大学生活的憧憬，我开始了在张院的计算机学习之旅。我给自己制定了详细的学习计划，准备攻克《C语言程序设计》（谭浩强版）和《数据结构》（严蔚敏版）这两座大山。</p>
+<p>然而，现实很快给我上了一课。我发现，书上的代码就像天书一样，我根本看不懂。更让我崩溃的是，我连最简单的“Hello World”程序都运行不了。</p>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c">井inclkude &lt;stdio.h&gt;<br><br><span class="hljs-type">int</span> mian（）&#123;<br>    <span class="hljs-built_in">printf</span>(“hello word\n<span class="hljs-string">&quot;)；</span><br><span class="hljs-string">    retiur 0;</span><br><span class="hljs-string">&#125;</span><br></code></pre></div></td></tr></table></figure>
+
+<p>上机课上，我好不容易安装好了Dev-C++，迫不及待地按下F5编译运行。然而，屏幕上却弹出了一堆红色的错误提示。我对着PPT上的代码改了一遍又一遍，还是找不到问题所在。无奈之下，我只好举手向老师求助。</p>
+<p>老师看着我的代码，顿时无语了：“同学，你能不能仔细一点？你这代码打得全都不对。”</p>
+<p>老师的批评让我瞬间失去了信心。放学后，我心情沮丧地跑到图书馆，一个人打开了B站，搜索“黑马C语言教学视频”。</p>
+<p>视频开头，熟悉的广告词响起：“零基础，学IT，月薪过万，就来黑马程序员，黑马程序员，成就IT黑马！”</p>
+<p>我仿佛抓住了救命稻草，开始跟着视频学习。黑马的老师讲得很细致，从最基础的语法开始，一步一步地讲解。我跟着视频敲代码，一遍又一遍地调试，终于成功地运行了第一个“Hello World”程序。</p>
+<p>那一刻，我心中的喜悦难以言表。我意识到，编程并不是遥不可及的，只要找到正确的方法，付出足够的努力，就一定能学会。</p>
+<p>然而，我也明白，这只是开始。前面的路还很长，还有更多的困难等着我去克服。但我不再害怕，因为我已经找到了学习的方法，也找到了前进的动力。</p>
+<h3 id="1-2"><a href="#1-2" class="headerlink" title="1"></a>1</h3><p>第二节上机课，老师给我们PPT展示了for循环怎么使用的，甚至PPT贴出了陈年代码，跟我们神秘的说，有同学照着敲一遍看看运行出来会是什么效果？？</p>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">float</span> y = <span class="hljs-number">1.5f</span>; y &gt; <span class="hljs-number">-1.5f</span>; y -= <span class="hljs-number">0.1f</span>) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">float</span> x = <span class="hljs-number">-1.5f</span>; x &lt; <span class="hljs-number">1.5f</span>; x += <span class="hljs-number">0.05f</span>) &#123;<br>            <span class="hljs-type">float</span> a = x * x + y * y - <span class="hljs-number">1</span>;<br>            <span class="hljs-built_in">putchar</span>(a * a * a - x * x * y * y * y &lt;= <span class="hljs-number">0.0f</span> ? <span class="hljs-string">&#x27;*&#x27;</span> : <span class="hljs-string">&#x27; &#x27;</span>);<br>        &#125;<br>        <span class="hljs-built_in">putchar</span>(<span class="hljs-string">&#x27;\n&#x27;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+<p>这段代码，杨总三下五除二就敲完了，卧槽简直太牛逼了。我当时放学课后，敲了整整一个晚上才敲出来。</p>
+<p>敲完之后，激动的拿着手机对着黑乎乎的命令行拍了张照片，发给了我女神。</p>
+<p>女神说她在洗澡。</p>
+<p>虽然女神的回复有些敷衍，但我仍然感到很开心。我意识到，编程不仅仅是枯燥的代码，它也可以创造出美丽的东西。就像这个爱心图案，它是我努力的成果，也是我对女神的一份心意。</p>
+<h3 id="2-2"><a href="#2-2" class="headerlink" title="2"></a>2</h3><p>自从那天在B站学会了Hello World，我便对编程产生了浓厚的兴趣。然而，真正让我入坑算法的是老师的一句话：“LeetCode刷得多的，可以去试试蓝桥杯。”</p>
+<p>蓝桥杯？听起来就很厉害的样子！我决定挑战一下自己。于是，我打开了LeetCode，选择了第一道简单题：“两数之和”。</p>
+<p>题目描述很简单：给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出和为目标值 target 的那两个整数，并返回它们的数组下标。</p>
+<p>我盯着题目看了半小时，脑子里一片空白。心想，“这他妈是简单题？”</p>
+<p>我随手点开了评论区，想看看有没有什么提示。结果，我看到一条评论：“有人相爱，有人夜里开车看海，有人leetcode第一题都做不出来。”</p>
+<p>这句话像一根针一样扎在我心上。卧槽，不行，我一定要写出来！</p>
+<p>我开始研究题解。先这样，然后那样，最后再这样……我一步一步地跟着题解敲代码，一遍又一遍地调试。</p>
+<p>提交！</p>
+<p>Wrong Answer！</p>
+<p>再提交！</p>
+<p>还是Wrong Answer！</p>
+<p>我不知道提交了多少次，屏幕上爆红的“Wrong Answer”几乎要刺瞎我的眼睛。但我没有放弃，我一遍又一遍地检查代码，寻找错误。</p>
+<p>终于，在经历了无数次的失败之后，我看到了那个绿色的“Accepted”。</p>
+<p>我激动地跳了起来，大声欢呼。我终于做出来了！我终于AC了！</p>
+<p>那一刻，我感觉自己像一个征服了高山的勇士，充满了成就感。我意识到，算法并不是那么遥不可及，只要付出足够的努力，就一定能攻克它。</p>
+<p>我开始沉迷于刷LeetCode。每天晚上，我都会花几个小时刷题，研究各种算法。我不再害怕那些看似复杂的题目，反而充满了挑战的欲望。</p>
+<p>我发现，算法不仅仅是一种技能，更是一种思维方式。它教会我如何分析问题、如何寻找最优解、如何优化代码。</p>
+<p>我开始享受刷题的过程，享受那种不断挑战自我、不断进步的感觉。我意识到，我正在一步一步地接近我的目标：成为一名优秀的程序员。</p>
+<h2 id="4-女神只爱算法王：我的ACM省赛“打酱油”之旅"><a href="#4-女神只爱算法王：我的ACM省赛“打酱油”之旅" class="headerlink" title="4 女神只爱算法王：我的ACM省赛“打酱油”之旅"></a>4 女神只爱算法王：我的ACM省赛“打酱油”之旅</h2><h3 id="0-2"><a href="#0-2" class="headerlink" title="0"></a>0</h3><p>“大一你们可以考虑搞搞蓝桥杯，等你们算法刷好了，到学期末就可以带你们去参加湖南省赛的ACM了。”老师的话像一颗种子，在我心里生根发芽。</p>
+<p>经过日复一日的LeetCode刷题，我居然在校赛中混了个二等奖。按照老师的说法，只要通过校赛，学校就出钱帮忙报名省赛。我暗自窃喜，觉得自己离ACM的梦想更近了一步。</p>
+<h3 id="1-3"><a href="#1-3" class="headerlink" title="1"></a>1</h3><p>通过校赛后，我开始有些飘飘然。每天都在刷水题凑数，准备蓝桥杯省赛。省赛的结果也算“幸运”，拿了个三等奖。</p>
+<p>之后，我顺利地被选入参加ACM省赛的队伍。比赛地点在益市，就在张院隔壁市。学校报销高铁票，这让我感觉自己像个“正规军”。</p>
+<p>当时正值疫情封校，进出校门都困难，除了爬墙走后门。我心里暗暗庆幸，还好有比赛，不然都没机会出校门。</p>
+<h3 id="2-3"><a href="#2-3" class="headerlink" title="2"></a>2</h3><p>每个队伍三人，我被分配和两个同班同学（杨总、花同学）组队。据说我们学校ACM省赛从来没拿过奖。</p>
+<p>到了比赛现场，我才意识到自己有多“菜”。</p>
+<p>比赛题目大概十道，ABCDEFGHIJK，有中文有英文。每道题AC（通过所有测试数据），会有监考老师送来对应颜色的气球。</p>
+<p>一般来说，越简单的题目越靠前，A题基本是签到题，送分题那种。</p>
+<p>但我们三人拿着英文字典，吭哧吭哧地翻译题目。比赛还没开始十分钟，已经有队伍拿到了A题的气球。而我们，才刚把A题翻译完，还在研究Dev-C++和Eclipse怎么编译运行代码。</p>
+<p>杨总学的是Java，平时用IDEA，根本没用过Eclipse。我们琢磨了好一会儿才搞清楚。</p>
+<p>我们决定一人负责一道题：杨总A题，花同学B题，我C题。每人一个小时敲代码。</p>
+<h3 id="3-2"><a href="#3-2" class="headerlink" title="3"></a>3</h3><p>然而，我们太“菜”了，一道题都没AC。</p>
+<p>两个小时过去了，轮到我上机。我对着C题一顿暴力搜索，尝试了一个多小时无果。后来才知道，这题要用二分法。</p>
+<p>比赛五个小时，中间有漂亮小姐姐送水、汉堡、水果。但我们组一直没AC。</p>
+<p>眼看着时间一分一秒流逝，我心急如焚。这时，我注意到花同学的眼神，她一直紧紧盯着杨总的屏幕，眼里闪烁着崇拜的光芒。</p>
+<p>花同学是我们隔壁班的班花，长得文文静静，人美声甜，是许多男生心中的女神。我也不例外，一直默默喜欢着她。然而，我知道，她更喜欢的是像杨总这样的算法大佬。</p>
+<p>杨总，全名杨萧龙，是我们班的算法大神。他平时话不多，但一到编程就如同换了一个人，手指在键盘上飞舞，代码如行云流水。</p>
+<h3 id="4-1"><a href="#4-1" class="headerlink" title="4"></a>4</h3><p>“杨总，A题有思路了吗？”花同学轻声问道，声音温柔得能掐出水来。</p>
+<p>“嗯，差不多了。”杨总头也不抬，手指不停地敲击着键盘。</p>
+<p>接下来，我目睹了杨总的“个人秀”。他如同一个孤独的战士，在代码的战场上奋勇杀敌。他时而眉头紧锁，时而嘴角上扬，每一次敲击键盘都仿佛在敲击我的心脏。</p>
+<p>而我和花同学，只能在一旁默默地看着，偶尔递上一瓶水，或者小声地讨论一下题目。我们就像两个小跟班，完全插不上手。</p>
+<h3 id="5-1"><a href="#5-1" class="headerlink" title="5"></a>5</h3><p>时间一分一秒地过去，杨总的屏幕上不断跳出绿色的“Accepted”。一个，两个，三个……他如同一个气球收集者，不断地为我们队伍赢得气球。</p>
+<p>我和花同学的眼神里充满了崇拜和激动。我们知道，杨总正在创造张院的历史。</p>
+<h3 id="6-1"><a href="#6-1" class="headerlink" title="6"></a>6</h3><p>比赛结束的哨声响起，我们队伍一共获得了五个气球，其中四个都是杨总的功劳。</p>
+<p>带队老师走过来，看到我们队伍的气球，脸上露出了惊讶和欣慰的笑容。</p>
+<p>“杨萧龙，不错啊！”老师拍了拍杨总的肩膀，“这次省赛，你们是我们学校有史以来最好的成绩了！”</p>
+<p>杨总淡淡一笑，没有说话。</p>
+<p>花同学的眼睛里闪烁着泪花，她激动地对杨总说：“杨总，你太厉害了！你就是我的偶像！”</p>
+<p>我看着他们，心里充满了失落。我意识到，我和杨总之间的差距，不仅仅是算法，还有花同学的目光。</p>
+<h3 id="7"><a href="#7" class="headerlink" title="7"></a>7</h3><p>最终，杨总成功拿到了银牌，创造了张院史无前例的首次获得ACM奖项。</p>
+<p>而我，只能默默地收拾着自己的东西，心里充满了苦涩。我明白，我的ACM梦碎了，而我的舔狗生涯，或许才刚刚开始。</p>
+<h2 id="C语言大作业，银行管理系统"><a href="#C语言大作业，银行管理系统" class="headerlink" title="C语言大作业，银行管理系统"></a>C语言大作业，银行管理系统</h2><h3 id="0-3"><a href="#0-3" class="headerlink" title="0"></a>0</h3><p>学期末，我们迎来了校企合作的“噩梦”——C++大作业。这次的课设要求是用C语言编写一个银行转账系统，界面就用黑乎乎的CMD窗口，自己用文件做数据库，存储账户信息。</p>
+<h3 id="1-4"><a href="#1-4" class="headerlink" title="1"></a>1</h3><p>杨总交出的作品简直是“神作”。他用QT写了一个界面优美的图形化版本，程序严谨好用，甚至用上了MySQL数据库。</p>
+<p>课设老师在课堂上毫不吝啬地夸赞杨总：“杨萧龙同学的这份作品，无论是界面设计、功能实现还是代码质量，都堪称完美。他充分展现了扎实的编程功底和出色的创新能力。这样的作品，即使放在专业的软件公司，也毫不逊色。”</p>
+<p>“尤其值得一提的是，杨萧龙同学还用上了MySQL数据库，这充分说明了他对数据库知识的掌握程度。这种精益求精的态度，值得我们所有同学学习。”</p>
+<p>花同学坐在前排，眼睛里闪烁着崇拜的光芒，她看着杨总的眼神，充满了爱慕和欣赏。</p>
+<h3 id="2-4"><a href="#2-4" class="headerlink" title="2"></a>2</h3><p>而我，最后交出的作品就是一个笨重又丑陋的CMD命令行窗口。</p>
+<p>我战战兢兢地演示着我的系统：</p>
+<p>存款500，转账1000元，余额变成了-500。<br>存款500，转账-0.1元，余额变成了499.99999999999999元。<br>存款500，转账NULL元，余额变成了“烫烫烫烫烫烫烫”。<br>演示过程中，我能感受到老师和同学们投来的异样目光。我恨不得找个地缝钻进去。</p>
+<h3 id="3-3"><a href="#3-3" class="headerlink" title="3"></a>3</h3><p>下课后，花同学走到杨总身边，轻轻地问：“杨总，你的系统能不能借我学习一下？”</p>
+<p>杨总点了点头，把他的代码发给了花同学。</p>
+<p>花同学高兴地道谢，然后转身离开了教室。</p>
+<p>我看着花同学的背影，心里充满了失落。我明白，我和杨总之间的差距，不仅仅是技术上的，还有花同学的选择。</p>
+<h3 id="4-2"><a href="#4-2" class="headerlink" title="4"></a>4</h3><p>我默默地收拾着自己的东西，心里充满了苦涩。我意识到，我的技术不如杨总，颜值不如杨总，就连舔狗的技巧，也不如杨总。</p>
+<p>我开始反思自己。我意识到，我应该努力提升自己的技术水平，让自己变得更优秀。</p>
+<h3 id="5-2"><a href="#5-2" class="headerlink" title="5"></a>5</h3><p>期末考试结束后，我没有像往常一样放松，而是开始认真地学习C语言和数据库知识。</p>
+<p>我买了许多相关的书籍和视频教程，每天都花大量的时间学习和练习。</p>
+<p>我希望有一天，我也能像杨总一样，写出优秀的作品，赢得花同学的青睐。</p>
+<p>然而，我也明白，这需要付出巨大的努力和时间。但我相信，只要我坚持下去，总有一天会实现自己的目标。</p>
+<h2 id="那场计算机网络考试毁了我的GPA"><a href="#那场计算机网络考试毁了我的GPA" class="headerlink" title="那场计算机网络考试毁了我的GPA"></a>那场计算机网络考试毁了我的GPA</h2><p>转眼就来到了大二，学校开设了计算机网络，教学老师是朱强，人送外号叫强哥</p>
+<p>考完试的当晚，强哥微信甚至是换了个头像，也不知道是哪个同学恶搞，往下面加了行字，变成了，复读吧，好孩子</p>
+<h2 id="广州一日“约会”"><a href="#广州一日“约会”" class="headerlink" title="广州一日“约会”"></a>广州一日“约会”</h2><h3 id="0-4"><a href="#0-4" class="headerlink" title="0"></a>0</h3><p>毕业三个月后，我接到了花同学的电话。她轻快的声音从电话那头传来：“喂，夏同学，还记得我吗？”</p>
+<p>我愣了一下，才反应过来是花同学。花同学毕业后在上海一家互联网公司工作，她告诉我，因为公司在广州有项目，她有机会来广州出差，想顺便来找我玩。</p>
+<p>我欣喜若狂，连忙答应。</p>
+<p>高铁站门口，花同学拖着行李箱，笑着向我走来。她穿着一件淡蓝色的连衣裙，显得格外清新动人。</p>
+<p>“给，路上买的。”她从包里掏出一瓶冰镇饮料递给我。</p>
+<p>我接过饮料，心里暖暖的。</p>
+<h3 id="1-5"><a href="#1-5" class="headerlink" title="1"></a>1</h3><p>我们先去了一家地道的广州早茶店，品尝了虾饺、烧麦、肠粉等特色美食。</p>
+<p>“广州的早茶真好吃！”花同学一边吃着虾饺，一边赞叹道。</p>
+<p>“那是，广州可是美食之都。”我笑着说。</p>
+<p>吃完早茶，我们便前往长隆欢乐世界。</p>
+<p>我们一起坐了垂直过山车，在冲刺下滑时，我们都忍不住尖叫起来。花同学紧紧抓住我的手臂，脸色有些发白，但眼中却闪烁着兴奋的光芒。</p>
+<p>“太刺激了！”花同学兴奋地说，声音还有些颤抖。</p>
+<p>我们还玩了漂流过山车，在冲刺下滑的时候，摄影师给我们拍了照。照片上，我们都笑得很开心。</p>
+<p>“这张照片拍得真好！”花同学看着照片说，但当她看到40元一张的价格时，顿时倒吸一口凉气，“这也太贵了吧！”</p>
+<p>然而，为了留住这份美好的回忆，我们最终还是咬牙买了三张。</p>
+<h3 id="2-5"><a href="#2-5" class="headerlink" title="2"></a>2</h3><p>中午，我们在游乐园里随便吃了点东西——一个热乎乎的鸡蛋仔和两杯冰镇奶茶，还有两根烤肠，便继续在游乐园里玩。</p>
+<p>我们还一起看了魔术表演。魔术师精湛的技艺让我们目瞪口呆，花同学更是看得目不转睛，连连惊叹。</p>
+<p>“太神奇了！他是怎么做到的？”花同学好奇地问。</p>
+<p>“这就是魔术的魅力。”我笑着说。</p>
+<p>晚上，我们一起去珠江夜游。我们定的是顶层的座位，可以欣赏到珠江两岸的美景。</p>
+<p>船上放着悠扬的音乐，广州塔在灯光的映衬下，显得格外美丽。</p>
+<p>“广州的夜景真好看！”花同学感叹道。</p>
+<p>“是啊，这里的晚风也很舒服。”我说。</p>
+<h3 id="3-4"><a href="#3-4" class="headerlink" title="3"></a>3</h3><p>坐完船，我们顺着商场上了二楼。看到一家海底捞，我们便走了进去。</p>
+<p>我们点了很多菜，一边吃一边聊天。</p>
+<p>“时间过得真快啊，一转眼都毕业三个月了。”花同学感慨地说。</p>
+<p>“是啊，感觉就像昨天一样。”我说。</p>
+<p>我们聊了很多大学时的趣事，也聊了彼此的工作和生活。</p>
+<h3 id="4-3"><a href="#4-3" class="headerlink" title="4"></a>4</h3><p>吃完饭，我们已经很晚了。我送花同学回酒店，然后自己打车回家。</p>
+<p>回到家，我躺在床上，回忆着今天和花同学一起度过的美好时光。</p>
+<p>这是我们毕业后第一次单独出来玩，也是我们第一次在广州一起玩。</p>
+<p>我感觉，今天一天，我和花同学都非常的开心。</p>
+<hr>
+<p>那天分开之后，各回各家各找各妈了，<br>再也没啥交集了<br>我也市场在深夜emo，<br>“你终于说出口 我疑心病 有一些重<br>可能 因为性格 对爱情不懂<br>不让你等太久 不让你难受<br>请允许 我把你带走</p>
+<p>让你爱上我 要多久<br>我已经 爱上你 已走不动<br>想拉你的手 想吻你额头<br>我沉默太久</p>
+<p>这一句 我爱你 说出口<br>我会用这一生 为你守候<br>给不了感动 不要跟我分手”<br>。<br>翻看花同学的朋友圈，她最近也去了很多的城市旅行。<br>哈尔滨，北京，厦门，大理等等（再编几个城市出来）</p>
+<p>杨总毕业三年后，每天都不用怎么干活，就做做咨询，月薪三万，在某大厂成功当上了技术经理，但是因为家里人都是带编制的公务员，铁饭碗，家里人还是想让杨总考一个<br>杨总也成功的从私企考公务员考回家里去了</p>
+<p>大三期末，为了更快的找到工作，写了一个稍微烂的简历就开始投，卧槽，没想到美团给我面试了。<br>不知道黄袍加身的那种。<br>当时太菜了，一到面试就问，同学请先做个自我介绍？简单说说什么是自旋锁？简单说说什么是HashMap底层原理？什么是红黑树？<br>卧槽，这尼玛问的都是些什么？<br>，校企合作不放实习？</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/">舔狗日记</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/">舔狗日记</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"Haq24NRgHl4QheEi7oVqtAsM-gzGzoHsz","appKey":"kGbxzGaSiqqlFPxg24Tk3dVN","placeholder":"来都来了, 不留下点啥吗?","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":"https://valinecdn.bili33.top","emojiMaps":{"Tieba-New2":"/Tieba-New/image_emoticon.png","Tieba-New3":"/Tieba-New/image_emoticon10.png","Tieba-New4":"/Tieba-New/image_emoticon100.png","Tieba-New5":"/Tieba-New/image_emoticon101.png","Tieba-New6":"/Tieba-New/image_emoticon102.png","Tieba-New7":"/Tieba-New/image_emoticon103.png","Tieba-New8":"/Tieba-New/image_emoticon104.png","Tieba-New9":"/Tieba-New/image_emoticon105.png","Tieba-New10":"/Tieba-New/image_emoticon106.png","Tieba-New11":"/Tieba-New/image_emoticon107.png","Tieba-New12":"/Tieba-New/image_emoticon108.png","Tieba-New13":"/Tieba-New/image_emoticon109.png","Tieba-New14":"/Tieba-New/image_emoticon11.png","Tieba-New15":"/Tieba-New/image_emoticon110.png","Tieba-New16":"/Tieba-New/image_emoticon111.png","Tieba-New17":"/Tieba-New/image_emoticon112.png","Tieba-New18":"/Tieba-New/image_emoticon113.png","Tieba-New19":"/Tieba-New/image_emoticon114.png","Tieba-New20":"/Tieba-New/image_emoticon115.png","Tieba-New21":"/Tieba-New/image_emoticon116.png","Tieba-New22":"/Tieba-New/image_emoticon117.png","Tieba-New23":"/Tieba-New/image_emoticon118.png","Tieba-New24":"/Tieba-New/image_emoticon119.png","Tieba-New25":"/Tieba-New/image_emoticon12.png","Tieba-New26":"/Tieba-New/image_emoticon120.png","Tieba-New27":"/Tieba-New/image_emoticon121.png","Tieba-New28":"/Tieba-New/image_emoticon122.png","Tieba-New29":"/Tieba-New/image_emoticon123.png","Tieba-New30":"/Tieba-New/image_emoticon124.png","Tieba-New31":"/Tieba-New/image_emoticon13.png","Tieba-New32":"/Tieba-New/image_emoticon14.png","Tieba-New33":"/Tieba-New/image_emoticon15.png","Tieba-New34":"/Tieba-New/image_emoticon16.png","Tieba-New35":"/Tieba-New/image_emoticon17.png","Tieba-New36":"/Tieba-New/image_emoticon18.png","Tieba-New37":"/Tieba-New/image_emoticon19.png","Tieba-New38":"/Tieba-New/image_emoticon2.png","Tieba-New39":"/Tieba-New/image_emoticon20.png","Tieba-New40":"/Tieba-New/image_emoticon21.png","Tieba-New41":"/Tieba-New/image_emoticon22.png","Tieba-New42":"/Tieba-New/image_emoticon23.png","Tieba-New43":"/Tieba-New/image_emoticon24.png","Tieba-New44":"/Tieba-New/image_emoticon25.png","Tieba-New45":"/Tieba-New/image_emoticon26.png","Tieba-New46":"/Tieba-New/image_emoticon27.png","Tieba-New47":"/Tieba-New/image_emoticon28.png","Tieba-New48":"/Tieba-New/image_emoticon29.png","Tieba-New49":"/Tieba-New/image_emoticon3.png","Tieba-New50":"/Tieba-New/image_emoticon30.png","Tieba-New51":"/Tieba-New/image_emoticon31.png","Tieba-New52":"/Tieba-New/image_emoticon32.png","Tieba-New53":"/Tieba-New/image_emoticon33.png","Tieba-New54":"/Tieba-New/image_emoticon34.png","Tieba-New55":"/Tieba-New/image_emoticon35.png","Tieba-New56":"/Tieba-New/image_emoticon36.png","Tieba-New57":"/Tieba-New/image_emoticon37.png","Tieba-New58":"/Tieba-New/image_emoticon38.png","Tieba-New59":"/Tieba-New/image_emoticon39.png","Tieba-New60":"/Tieba-New/image_emoticon4.png","Tieba-New61":"/Tieba-New/image_emoticon40.png","Tieba-New62":"/Tieba-New/image_emoticon41.png","Tieba-New63":"/Tieba-New/image_emoticon42.png","Tieba-New64":"/Tieba-New/image_emoticon43.png","Tieba-New65":"/Tieba-New/image_emoticon44.png","Tieba-New66":"/Tieba-New/image_emoticon45.png","Tieba-New67":"/Tieba-New/image_emoticon46.png","Tieba-New68":"/Tieba-New/image_emoticon47.png","Tieba-New69":"/Tieba-New/image_emoticon48.png","Tieba-New70":"/Tieba-New/image_emoticon49.png","Tieba-New71":"/Tieba-New/image_emoticon5.png","Tieba-New72":"/Tieba-New/image_emoticon50.png","Tieba-New73":"/Tieba-New/image_emoticon6.png","Tieba-New74":"/Tieba-New/image_emoticon66.png","Tieba-New75":"/Tieba-New/image_emoticon67.png","Tieba-New76":"/Tieba-New/image_emoticon68.png","Tieba-New77":"/Tieba-New/image_emoticon69.png","Tieba-New78":"/Tieba-New/image_emoticon7.png","Tieba-New79":"/Tieba-New/image_emoticon70.png","Tieba-New80":"/Tieba-New/image_emoticon71.png","Tieba-New81":"/Tieba-New/image_emoticon72.png","Tieba-New82":"/Tieba-New/image_emoticon73.png","Tieba-New83":"/Tieba-New/image_emoticon74.png","Tieba-New84":"/Tieba-New/image_emoticon75.png","Tieba-New85":"/Tieba-New/image_emoticon76.png","Tieba-New86":"/Tieba-New/image_emoticon77.png","Tieba-New87":"/Tieba-New/image_emoticon78.png","Tieba-New88":"/Tieba-New/image_emoticon79.png","Tieba-New89":"/Tieba-New/image_emoticon8.png","Tieba-New90":"/Tieba-New/image_emoticon80.png","Tieba-New91":"/Tieba-New/image_emoticon81.png","Tieba-New92":"/Tieba-New/image_emoticon82.png","Tieba-New93":"/Tieba-New/image_emoticon83.png","Tieba-New94":"/Tieba-New/image_emoticon84.png","Tieba-New95":"/Tieba-New/image_emoticon85.png","Tieba-New96":"/Tieba-New/image_emoticon86.png","Tieba-New97":"/Tieba-New/image_emoticon87.png","Tieba-New98":"/Tieba-New/image_emoticon88.png","Tieba-New99":"/Tieba-New/image_emoticon89.png","Tieba-New100":"/Tieba-New/image_emoticon9.png","Tieba-New101":"/Tieba-New/image_emoticon90.png","Tieba-New102":"/Tieba-New/image_emoticon91.png","Tieba-New103":"/Tieba-New/image_emoticon92.png","Tieba-New104":"/Tieba-New/image_emoticon93.png","Tieba-New105":"/Tieba-New/image_emoticon94.png","Tieba-New106":"/Tieba-New/image_emoticon95.png","Tieba-New107":"/Tieba-New/image_emoticon96.png","Tieba-New108":"/Tieba-New/image_emoticon97.png","Tieba-New109":"/Tieba-New/image_emoticon98.png","Tieba-New110":"/Tieba-New/image_emoticon99.png"},"enableQQ":true,"requiredFields":["nick","mail"]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>

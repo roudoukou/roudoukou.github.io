@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/smile.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#96c0d3cc">
+  <meta name="description" content="">
+  <meta name="author" content="肉豆蔻吖">
+  <meta name="keywords" content="">
+  
+     <meta name="referrer" content="no-referrer"/> 
+  
+  <title>路飞逆向 - 肉豆蔻吖</title>
+
+  
+<link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+<link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+
+
+
+  
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+
+
+
+
+<link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+<script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiamu.icu","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0,"placement":"right"},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"follow_dnt":true},"search_path":"/local-search.xml"};
+  </script>
+  
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+  
+    <script  src="/js/jquery.pjax.min.js" ></script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="ajaxD">
+	  <header style="height: 70vh;">
+		<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>肉豆蔻吖</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<div class="banner" id="banner" parallax=true
+			 style="background: url('/img/bg.jpg') no-repeat center center;
+			   background-size: cover;">
+		  <div class="full-bg-img">
+			<div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+			  <div class="page-header text-center fade-in-up">
+				<span class="h2" id="subtitle" title="路飞逆向">
+				  
+				</span>
+
+				
+				  <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      肉豆蔻吖
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2025-02-23 00:05" pubdate>
+        2025年2月23日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      39
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+				
+			  </div>
+
+			  
+			</div>
+		  </div>
+		</div>
+	  </header>
+
+	  <main>
+		
+		  
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">路飞逆向</h1>
+            
+            <div class="markdown-body">
+              <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="1-adb-的使用"><a href="#1-adb-的使用" class="headerlink" title="1. adb 的使用"></a>1. adb 的使用</h3><p>安卓调试工具: Android Debug Bridge</p>
+<p>下载地址：<br><a target="_blank" rel="noopener" href="https://developer.android.com/tools/releases/platform-tools">https://developer.android.com/tools/releases/platform-tools</a></p>
+<p>解压，将adb.exe所处位置添加环境变量</p>
+<p>查看版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">adb --version<br>Android Debug Bridge version 1.0.41<br>Version 35.0.2-12147458<br>Installed as D:\xiamu\module\adb\platform-tools\adb.exe<br>Running on Windows 10.0.26100<br></code></pre></div></td></tr></table></figure>
+
+<p>手机投屏到电脑软件：<br><a target="_blank" rel="noopener" href="https://github.com/Genymobile/scrcpy">https://github.com/Genymobile/scrcpy</a></p>
+<p>配置环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 查看版本</span><br>scrcpy --version<br><br><span class="hljs-comment"># 投屏</span><br>scrcpy<br></code></pre></div></td></tr></table></figure>
+
+
+<p>上传下载文件名不要有中文</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 至此，咱们就可以在cmd中通过adb命令，操作手机了</span><br><br><span class="hljs-comment"># 知道的命令：</span><br><span class="hljs-comment"># 1 开启和关闭adb服务（可以不开启，敲任意一个adb命令，就会自动开启）</span><br>adb start-server     启动ADB<br>adb kill-server		   关闭ADB<br><br><span class="hljs-comment"># 2 列出电脑上链接的手机</span><br>adb devices<br><span class="hljs-comment"># List of devices attached</span><br><span class="hljs-comment"># 801KPUU1367574  device</span><br><br><span class="hljs-comment"># 3 上传下载文件（了解 ）</span><br><span class="hljs-comment"># 把电脑文件传到手机上</span><br>adb -s 设备<span class="hljs-built_in">id</span>号 push C:\demo.txt  /sdcard/download<br>adb -s 801KPUU1367574 push  电脑上文件的路径  /手机上的路径<br>adb push D:\爬虫逆向10期\day02\软件\apps\Magisk-v26.4.apk /sdcard/download<br><br><span class="hljs-comment"># 把手机上文件下载到电脑上</span><br>adb pull /sdcard/download/boot.img ./<br><br><span class="hljs-comment"># 4 在手机上安装和卸载软件</span><br>adb install 软件路径  <span class="hljs-comment"># 安装</span><br>adb uninstall 软件包名  <span class="hljs-comment"># 不了什么是包名，先略过</span><br>adb shell pm list packages  <span class="hljs-comment"># 查看手机上装的所有软件包名</span><br><br></code></pre></div></td></tr></table></figure>
+
+<p>其他命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 1 查看手机处理器平台</span><br>adb shell -s 设备<span class="hljs-built_in">id</span>号 getprop ro.product.cpu.abi <br>adb shell getprop ro.product.cpu.abi<br><span class="hljs-comment"># arm64-v8a   后面给手机下软件，需要知道这个型号</span><br><br><span class="hljs-comment"># 2 安卓手机，就是类 unix系统，我们可以进入到手机，执行 linux命令  （创建，删除文件。。。）</span><br>	-进入到手机<br>    adb shell  <span class="hljs-comment"># 命令窗口，就是进入到手机内了，敲的命令，就是操作手机了</span><br>    <span class="hljs-comment"># taimen:/ $</span><br>    -查看当前目录下有哪些文件和文件夹的命令<br>    <span class="hljs-built_in">ls</span><br>    -切换到某个目录下    如果你不是root权限，有的文件夹是进不去的<br>    <span class="hljs-built_in">cd</span> 目录名<br>    <br>    <br><span class="hljs-comment"># 3 其他</span><br>  - 查看手机设备：adb devices<br>  - 查看设备型号：adb shell getprop ro.product.model<br>  - 查看电池信息：adb shell dumpsys battery<br>  - 查看设备ID：adb shell settings get secure android_id<br>  - 查看设备IMEI：adb shell dumpsys iphonesubinfo<br>  - 查看Android版本：adb shell getprop ro.build.version.release<br>  - 查看手机网络信息：adb shell ifconfig<br>  - 查看设备日志：adb logcat<br>  - 重启手机设备：adb reboot<br>  - 安装一个apk：adb install /path/demo.apk<br>  - 卸载一个apk：adb uninstall &lt;package&gt;<br>  - 查看系统运行进程：adb shell ps<br>  - 查看系统磁盘情况：adb shell <span class="hljs-built_in">ls</span> /path/<br>  - 手机设备截屏：adb shell screencap -p /sdcard/download/aa.png<br>  - 手机文件下载到电脑：adb pull /sdcard/aa.png ./<br>  - 电脑文件上传到手机：adb push aa.png /data/local/<br>  - 手机设备录像：adb shell screenrecord /sdcard/ab.mp4<br>  - 手机屏幕分辨率：adb shell wm size<br>  - 手机屏幕密度：adb shell wm density<br>  - 手机屏幕点击：adb shell input tap xvalue yvalue<br>  - 手机屏幕滑动：adb shell input swipe 1000 1500 200 200<br>  - 手机屏幕带时间滑动：adb shell input swipe 1000 1500 0 0 1000<br>  - 手机文本输入：adb shell input text xxxxx<br>  - 手机键盘事件：adb shell input keyevent xx<br></code></pre></div></td></tr></table></figure>
+
+<p>charles抓包工具：<br><a target="_blank" rel="noopener" href="https://www.charlesproxy.com/">https://www.charlesproxy.com/</a></p>
+<p>随便找个激活账号激活</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">QAE-jibei<br><br>93FE4222AEA07F91C3<br></code></pre></div></td></tr></table></figure>
+
+<p><img src="/assets/2025-02-23-00-59-30.png" srcset="/img/loading.gif" lazyload></p>
+<p>Help - Local IP Address<br><img src="/assets/2025-02-23-01-06-11.png" srcset="/img/loading.gif" lazyload></p>
+<p>Proxy - Proxy Settings<br><img src="/assets/2025-02-23-01-05-11.png" srcset="/img/loading.gif" lazyload></p>
+<p>记录下来，ip和端口<br>192.168.169.217 8888</p>
+<p>手机的无线网配置代理<br>填写如下信息：<br><img src="/assets/2025-02-23-01-09-36.png" srcset="/img/loading.gif" lazyload></p>
+<p>charles安装证书、使用教程：<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/bao0/articles/16769863.html">https://www.cnblogs.com/bao0/articles/16769863.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://chls.pro/ssl">http://chls.pro/ssl</a></p>
+<p>charles与clash配置代理<br><a target="_blank" rel="noopener" href="https://github.com/thorseraq/Notebook/issues/16">https://github.com/thorseraq/Notebook/issues/16</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.hi-cat.cn/11154">https://www.hi-cat.cn/11154</a></p>
+<p>appnium 自动化操作</p>
+<h3 id="Hook框架-Frida"><a href="#Hook框架-Frida" class="headerlink" title="Hook框架 Frida"></a>Hook框架 Frida</h3><p>需要保证python模版版本和firda-server版本保持一致</p>
+<p>电脑端安装模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 1 python解释器环境安装好</span><br><span class="hljs-comment"># 2 下载frida相关模块（有版本--》默认安装最新--》我虚拟环境下安装）</span><br>pip install frida==16.6.6<br>pip install frida-tools==13.6.1<br><br></code></pre></div></td></tr></table></figure>
+
+<p>手机端安装frida-server</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 1 下载地址：https://github.com/frida/frida/releases</span><br>	-有很多很多平台架构<br><span class="hljs-comment"># 2 查看手机架构（手机连接到电脑上）</span><br>adb shell getprop ro.product.cpu.abi<br>	<span class="hljs-comment">#arm64-v8a</span><br>    <br><span class="hljs-comment"># 3 下载 软件</span><br><span class="hljs-comment"># 4 解压（不要用压缩包放到手机上，一定要解压开）</span><br><span class="hljs-comment"># 截止到2025-2-23 12:44:34最新版</span><br><span class="hljs-comment"># https://github.com/frida/frida/releases/download/16.6.6/frida-server-16.6.6-android-arm64.xz</span><br>frida-server-16.1.7-android-arm64<br>    <br><span class="hljs-comment"># 5 把 frida-server-16.1.7-android-arm64 推送到手机上  /data/local/tmp </span><br>adb push ./frida-server-16.1.7-android-arm64 /data/local/tmp<br><br><span class="hljs-comment"># 6 命令操作（查看是否顺利上传）</span><br>&gt;adb shell  <span class="hljs-comment"># 进入手机</span><br>taimen:/ $ su <span class="hljs-comment"># 申请获取超级用户权限，手机端点允许，不要点拒绝</span><br>taimen:/ <span class="hljs-comment">#    # 看到是# 表示已经得到了超级用户权限 ，$ 表示不是超级用户</span><br>taimen:/ <span class="hljs-comment"># cd /data/local/tmp</span><br>taimen:/data/local/tmp <span class="hljs-comment"># ls</span><br>	<span class="hljs-comment"># 能看到咱们推送上来的frida-server </span><br>    <span class="hljs-comment"># frida-server-16.1.7-an</span><br>    <br><span class="hljs-comment"># 7 赋予可执行权限（win连接手机中，来到相应目录下，执行命令）</span><br>    <span class="hljs-built_in">chmod</span> +x frida-server-16.1.7-an<br>    <span class="hljs-built_in">ls</span> -al <span class="hljs-comment"># 会有x权限了</span><br>    <br>    <br><span class="hljs-comment"># 8 运行frida-server （如果不加执行权限，运行不了）</span><br>./frida-server-16.1.7-an  <span class="hljs-comment"># 敲回车就可以执行了，卡主，表示启动了，如果没启动会报错</span><br><span class="hljs-comment"># 9 如果出现报错，基本上重启手机就能解决</span><br>	adb shell setenforce 0 <span class="hljs-comment"># 在电脑上运行</span><br></code></pre></div></td></tr></table></figure>
+
+<p>光标闪缩表示运行成功<br><img src="/assets/2025-02-23-12-47-20.png" srcset="/img/loading.gif" lazyload></p>
+<p>电脑端配置端口转发</p>
+<blockquote>
+<p>前提，手机端的frida要启动</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment">## # 手机端启动了frida-server，服务---》电脑端要跟它通信---》通过某个端口做通信---》以后发送到电脑端 27042端口的数据---》转发到手机的27042端口</span><br><br><span class="hljs-comment">## 方式一：使用命令(在电脑端的cmd窗口中)</span><br>adb forward tcp:27042 tcp:27042<br>adb forward tcp:27043 tcp:27043<br><br><br><span class="hljs-comment">## 方式二：使用python代码，右键运行即可</span><br>import subprocess <span class="hljs-comment"># python中执行系统命令的一个模块</span><br>subprocess.getoutput(<span class="hljs-string">&quot;adb forward tcp:27042 tcp:27042&quot;</span>)<br>subprocess.getoutput(<span class="hljs-string">&quot;adb forward tcp:27043 tcp:27043&quot;</span>)<br><br><span class="hljs-comment"># 以后手机端每次启动了frida-server，都要执行端口转发，否则会报错</span><br></code></pre></div></td></tr></table></figure>
+
+
+<p>使用python代码，打印手机中所有进程–前台运行的进程</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><br><span class="hljs-keyword">import</span> frida<br><br><span class="hljs-comment">#1  获取设备信息  必须手机端启动了frida-server并且做了端口转发</span><br>rdev = frida.get_remote_device()<br><br><span class="hljs-comment"># 2 枚举所有的进程</span><br><span class="hljs-comment"># processes = rdev.enumerate_processes()</span><br><span class="hljs-comment"># for process in processes:</span><br><span class="hljs-comment">#     print(process)</span><br><br><br><span class="hljs-comment"># 3 打印出前台在运行的app</span><br>front_app = rdev.get_frontmost_application()<br><span class="hljs-built_in">print</span>(front_app)<br><span class="hljs-comment"># Application(identifier=&quot;com.topjohnwu.magisk&quot;, name=&quot;Magisk&quot;, pid=23019, parameters=&#123;&#125;)</span><br><span class="hljs-comment"># Application(identifier=&quot;com.anhuitong.manage&quot;, name=&quot;爱学生&quot;, pid=24988, parameters=&#123;&#125;)</span><br><span class="hljs-comment"># 会使用，包名和应用名</span><br></code></pre></div></td></tr></table></figure>
+
+
+<p>hook</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> frida<br><span class="hljs-keyword">import</span> sys<br><br><span class="hljs-comment">### 以后这个代码不需要动### ### ###</span><br>rdev = frida.get_remote_device()<br>session = rdev.attach(<span class="hljs-string">&quot;车智赢+&quot;</span>)  <span class="hljs-comment"># 写上要hook的app的名字</span><br><span class="hljs-comment">### 以后这个代码不需要动### ###</span><br><br><br><br><span class="hljs-comment"># 要改动的地方,js语法</span><br>scr = <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">Java.perform(function () &#123;</span><br><span class="hljs-string">    //找到类 反编译的首行+类名：com.autohome.ahkit.utils下的</span><br><span class="hljs-string">    var SecurityUtil = Java.use(&quot;com.autohome.ahkit.utils.SecurityUtil&quot;);</span><br><span class="hljs-string">    </span><br><span class="hljs-string">    //替换类中的方法，方法有几个参数，就要传几个参数</span><br><span class="hljs-string">    SecurityUtil.encodeMD5.implementation = function(str)&#123;</span><br><span class="hljs-string">        console.log(&quot;参数：&quot;,str); // 传入的参数打印了，我们猜是明文密码</span><br><span class="hljs-string">        var res = this.encodeMD5(str); //调用原来的函数</span><br><span class="hljs-string">        console.log(&quot;返回值：&quot;,res);  // 打印出正常执行这个方法，返回的结果</span><br><span class="hljs-string">        return str; // 通过hook技术--》把传入的明文，直接返回--》抓包抓到的密码就是明文</span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string">&#125;);</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br><br><br><span class="hljs-comment">####下面代码完全不需要动</span><br>script = session.create_script(scr)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">on_message</span>(<span class="hljs-params">message, data</span>):<br>    <span class="hljs-built_in">print</span>(message, data)<br>script.on(<span class="hljs-string">&quot;message&quot;</span>, on_message)<br>script.load()<br>sys.stdin.read()<br><br><br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string"></span><br><span class="hljs-string">参数： 1234567</span><br><span class="hljs-string">返回值： fcea920f7412b5da7be0cf42b8c93759  </span><br><span class="hljs-string">抓包抓到的密码，一定是：fcea920f7412b5da7be0cf42b8c93759</span><br><span class="hljs-string"> </span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></div></td></tr></table></figure>
+
+<p>python hook的两种方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># hook 分两种</span><br>	- spawn方案<br>    - attach方案<br>   <br><span class="hljs-comment"># spawn方案</span><br>适应场景：<br>Spawn 方式是在目标应用程序启动时直接注入 Frida 的 Agent 代码<br><br>需要在应用程序启动的早期阶段进行 Hook。<br>需要访问和修改应用程序的内部状态，例如应用程序的全局变量、静态变量等。<br>需要 Hook 应用程序的初始化过程，以实现对应用程序的自定义初始化逻辑。<br>需要在应用程序的上下文中执行代码，并与其他模块或库进行交互。<br><br><br><span class="hljs-comment"># attach方案（上面的案例，就是attach方案）</span><br>适应场景：<br>Attach 方式是在目标应用程序已经运行的过程中动态地连接并注入 Frida 的 Agent 代码<br>需要对已经运行的应用程序进行 Hook，即动态地连接到正在运行的进程。<br>需要在应用程序运行时拦截和修改特定的方法调用。<br>需要实时监视和修改应用程序的行为，例如参数修改、返回值篡改等。<br>需要对应用程序进行调试和分析，以查找潜在的问题和漏洞。<br><br><br><br><span class="hljs-comment"># 上面的案例--》密码加密---》程序运行了，点击登录，才执行密码加密---》所以咱们使用了attach方案</span><br><br><span class="hljs-comment"># 比如：有个应用程序，一启动---》就向后端发送请求---》如果等app启动了，使用attach方案hook，就可能hook不到，这种情况下，使用spwan方案---》重启应用---》启动过程中，hook进去</span><br></code></pre></div></td></tr></table></figure>
+
+
+<p>attach方案hook</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> frida<br><span class="hljs-keyword">import</span> sys<br><br><span class="hljs-comment">### 以后这个代码不需要动### ### ###</span><br>rdev = frida.get_remote_device()<br>session = rdev.attach(<span class="hljs-string">&quot;车智赢+&quot;</span>)  <span class="hljs-comment"># 写上要hook的app的名字</span><br><span class="hljs-comment">### 以后这个代码不需要动### ###</span><br><br><br><br><span class="hljs-comment"># 要改动的地方,js语法</span><br>scr = <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">Java.perform(function () &#123;</span><br><span class="hljs-string">    //找到类 反编译的首行+类名：com.autohome.ahkit.utils下的</span><br><span class="hljs-string">    var SecurityUtil = Java.use(&quot;com.autohome.ahkit.utils.SecurityUtil&quot;);</span><br><span class="hljs-string">    </span><br><span class="hljs-string">    //替换类中的方法，方法有几个参数，就要传几个参数</span><br><span class="hljs-string">    SecurityUtil.encodeMD5.implementation = function(str)&#123;</span><br><span class="hljs-string">        console.log(&quot;参数：&quot;,str); // 传入的参数打印了，我们猜是明文密码</span><br><span class="hljs-string">        var res = this.encodeMD5(str); //调用原来的函数</span><br><span class="hljs-string">        console.log(&quot;返回值：&quot;,res);  // 打印出正常执行这个方法，返回的结果</span><br><span class="hljs-string">        return str; // 通过hook技术--》把传入的明文，直接返回--》抓包抓到的密码就是明文</span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string">&#125;);</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br><br><br><span class="hljs-comment">####下面代码完全不需要动</span><br>script = session.create_script(scr)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">on_message</span>(<span class="hljs-params">message, data</span>):<br>    <span class="hljs-built_in">print</span>(message, data)<br>script.on(<span class="hljs-string">&quot;message&quot;</span>, on_message)<br>script.load()<br>sys.stdin.read()<br></code></pre></div></td></tr></table></figure>
+
+
+<p>spawn方案–》他会自动重启app–》适应于应用程序启动初期进行hook</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># hook 密码加密的 也可以使用spawn方案</span><br><br><span class="hljs-keyword">import</span> frida<br><span class="hljs-keyword">import</span> sys<br><br>rdev = frida.get_remote_device()<br>pid = rdev.spawn([<span class="hljs-string">&quot;com.che168.autotradercloud&quot;</span>])<br>session = rdev.attach(pid)<br><br>scr = <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">Java.perform(function () &#123;</span><br><span class="hljs-string">    // 包.类</span><br><span class="hljs-string">    var SecurityUtil = Java.use(&quot;com.autohome.ahkit.utils.SecurityUtil&quot;);</span><br><span class="hljs-string">    SecurityUtil.encodeMD5.implementation = function(str)&#123;</span><br><span class="hljs-string">        console.log(&quot;明文：&quot;,str);</span><br><span class="hljs-string">        var res = this.encodeMD5(str);</span><br><span class="hljs-string">        console.log(&quot;md5加密结果=&quot;,res);</span><br><span class="hljs-string">        return &quot;305eb636-eb15-4e24-a29d-9fd60fbc91bf&quot;;</span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string">&#125;);</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br>script = session.create_script(scr)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">on_message</span>(<span class="hljs-params">message, data</span>):<br>    <span class="hljs-built_in">print</span>(message, data)<br><br><br>script.on(<span class="hljs-string">&quot;message&quot;</span>, on_message)<br>script.load()<br>rdev.resume(pid)<br>sys.stdin.read()<br></code></pre></div></td></tr></table></figure>
+
+
+<p>js的hook方式</p>
+<p>attach方案</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><br><span class="hljs-comment"># 由于frida，提供了js的api接口，它可以写js脚本去运行hook</span><br><br><br><span class="hljs-comment"># 而咱们之前讲的使用python--》其实它的核心逻辑，也是在用js调用frida的api，借助于了 frida-tools和firda这两个模块</span><br></code></pre></div></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-comment">// 名字叫：hook.js</span><br><span class="hljs-title class_">Java</span>.<span class="hljs-title function_">perform</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// 包.类</span><br>    <span class="hljs-keyword">var</span> <span class="hljs-title class_">SecurityUtil</span> = <span class="hljs-title class_">Java</span>.<span class="hljs-title function_">use</span>(<span class="hljs-string">&quot;com.autohome.ahkit.utils.SecurityUtil&quot;</span>);<br>    <span class="hljs-title class_">SecurityUtil</span>.<span class="hljs-property">encodeMD5</span>.<span class="hljs-property">implementation</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;明文：&quot;</span>,str);<br>        <span class="hljs-keyword">var</span> res = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">encodeMD5</span>(str);<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;md5加密结果=&quot;</span>,res);<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;123&quot;</span>;<br>    &#125;<br>&#125;);<br><br><span class="hljs-comment">// attach 运行 命令 （应用已经在前台运行了，不需要指定应用名字和包名）</span><br><span class="hljs-comment">// frida -UF -l hook.js  </span><br></code></pre></div></td></tr></table></figure>
+
+<p>spawn方案</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-comment">// hook.js</span><br><span class="hljs-title class_">Java</span>.<span class="hljs-title function_">perform</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// 包.类</span><br>    <span class="hljs-keyword">var</span> <span class="hljs-title class_">SecurityUtil</span> = <span class="hljs-title class_">Java</span>.<span class="hljs-title function_">use</span>(<span class="hljs-string">&quot;com.autohome.ahkit.utils.SecurityUtil&quot;</span>);<br>    <span class="hljs-title class_">SecurityUtil</span>.<span class="hljs-property">encodeMD5</span>.<span class="hljs-property">implementation</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;明文：&quot;</span>,str);<br>        <span class="hljs-keyword">var</span> res = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">encodeMD5</span>(str);<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;md5加密结果=&quot;</span>,res);<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;123&quot;</span>;<br>    &#125;<br>&#125;);<br><br><span class="hljs-comment">// spawn 方案运行 命令，会重启应用，需要指定应用的包名,不能不写包名，不写包名，不知道启动哪个应用</span><br><span class="hljs-comment">// frida -U -f com.che168.autotradercloud -l hook.js</span><br><br><br><br># 注意：输入q + 再点击回车则退出<br></code></pre></div></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%80%86%E5%90%91/">逆向</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"Haq24NRgHl4QheEi7oVqtAsM-gzGzoHsz","appKey":"kGbxzGaSiqqlFPxg24Tk3dVN","placeholder":"来都来了, 不留下点啥吗?","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":"https://valinecdn.bili33.top","emojiMaps":{"Tieba-New2":"/Tieba-New/image_emoticon.png","Tieba-New3":"/Tieba-New/image_emoticon10.png","Tieba-New4":"/Tieba-New/image_emoticon100.png","Tieba-New5":"/Tieba-New/image_emoticon101.png","Tieba-New6":"/Tieba-New/image_emoticon102.png","Tieba-New7":"/Tieba-New/image_emoticon103.png","Tieba-New8":"/Tieba-New/image_emoticon104.png","Tieba-New9":"/Tieba-New/image_emoticon105.png","Tieba-New10":"/Tieba-New/image_emoticon106.png","Tieba-New11":"/Tieba-New/image_emoticon107.png","Tieba-New12":"/Tieba-New/image_emoticon108.png","Tieba-New13":"/Tieba-New/image_emoticon109.png","Tieba-New14":"/Tieba-New/image_emoticon11.png","Tieba-New15":"/Tieba-New/image_emoticon110.png","Tieba-New16":"/Tieba-New/image_emoticon111.png","Tieba-New17":"/Tieba-New/image_emoticon112.png","Tieba-New18":"/Tieba-New/image_emoticon113.png","Tieba-New19":"/Tieba-New/image_emoticon114.png","Tieba-New20":"/Tieba-New/image_emoticon115.png","Tieba-New21":"/Tieba-New/image_emoticon116.png","Tieba-New22":"/Tieba-New/image_emoticon117.png","Tieba-New23":"/Tieba-New/image_emoticon118.png","Tieba-New24":"/Tieba-New/image_emoticon119.png","Tieba-New25":"/Tieba-New/image_emoticon12.png","Tieba-New26":"/Tieba-New/image_emoticon120.png","Tieba-New27":"/Tieba-New/image_emoticon121.png","Tieba-New28":"/Tieba-New/image_emoticon122.png","Tieba-New29":"/Tieba-New/image_emoticon123.png","Tieba-New30":"/Tieba-New/image_emoticon124.png","Tieba-New31":"/Tieba-New/image_emoticon13.png","Tieba-New32":"/Tieba-New/image_emoticon14.png","Tieba-New33":"/Tieba-New/image_emoticon15.png","Tieba-New34":"/Tieba-New/image_emoticon16.png","Tieba-New35":"/Tieba-New/image_emoticon17.png","Tieba-New36":"/Tieba-New/image_emoticon18.png","Tieba-New37":"/Tieba-New/image_emoticon19.png","Tieba-New38":"/Tieba-New/image_emoticon2.png","Tieba-New39":"/Tieba-New/image_emoticon20.png","Tieba-New40":"/Tieba-New/image_emoticon21.png","Tieba-New41":"/Tieba-New/image_emoticon22.png","Tieba-New42":"/Tieba-New/image_emoticon23.png","Tieba-New43":"/Tieba-New/image_emoticon24.png","Tieba-New44":"/Tieba-New/image_emoticon25.png","Tieba-New45":"/Tieba-New/image_emoticon26.png","Tieba-New46":"/Tieba-New/image_emoticon27.png","Tieba-New47":"/Tieba-New/image_emoticon28.png","Tieba-New48":"/Tieba-New/image_emoticon29.png","Tieba-New49":"/Tieba-New/image_emoticon3.png","Tieba-New50":"/Tieba-New/image_emoticon30.png","Tieba-New51":"/Tieba-New/image_emoticon31.png","Tieba-New52":"/Tieba-New/image_emoticon32.png","Tieba-New53":"/Tieba-New/image_emoticon33.png","Tieba-New54":"/Tieba-New/image_emoticon34.png","Tieba-New55":"/Tieba-New/image_emoticon35.png","Tieba-New56":"/Tieba-New/image_emoticon36.png","Tieba-New57":"/Tieba-New/image_emoticon37.png","Tieba-New58":"/Tieba-New/image_emoticon38.png","Tieba-New59":"/Tieba-New/image_emoticon39.png","Tieba-New60":"/Tieba-New/image_emoticon4.png","Tieba-New61":"/Tieba-New/image_emoticon40.png","Tieba-New62":"/Tieba-New/image_emoticon41.png","Tieba-New63":"/Tieba-New/image_emoticon42.png","Tieba-New64":"/Tieba-New/image_emoticon43.png","Tieba-New65":"/Tieba-New/image_emoticon44.png","Tieba-New66":"/Tieba-New/image_emoticon45.png","Tieba-New67":"/Tieba-New/image_emoticon46.png","Tieba-New68":"/Tieba-New/image_emoticon47.png","Tieba-New69":"/Tieba-New/image_emoticon48.png","Tieba-New70":"/Tieba-New/image_emoticon49.png","Tieba-New71":"/Tieba-New/image_emoticon5.png","Tieba-New72":"/Tieba-New/image_emoticon50.png","Tieba-New73":"/Tieba-New/image_emoticon6.png","Tieba-New74":"/Tieba-New/image_emoticon66.png","Tieba-New75":"/Tieba-New/image_emoticon67.png","Tieba-New76":"/Tieba-New/image_emoticon68.png","Tieba-New77":"/Tieba-New/image_emoticon69.png","Tieba-New78":"/Tieba-New/image_emoticon7.png","Tieba-New79":"/Tieba-New/image_emoticon70.png","Tieba-New80":"/Tieba-New/image_emoticon71.png","Tieba-New81":"/Tieba-New/image_emoticon72.png","Tieba-New82":"/Tieba-New/image_emoticon73.png","Tieba-New83":"/Tieba-New/image_emoticon74.png","Tieba-New84":"/Tieba-New/image_emoticon75.png","Tieba-New85":"/Tieba-New/image_emoticon76.png","Tieba-New86":"/Tieba-New/image_emoticon77.png","Tieba-New87":"/Tieba-New/image_emoticon78.png","Tieba-New88":"/Tieba-New/image_emoticon79.png","Tieba-New89":"/Tieba-New/image_emoticon8.png","Tieba-New90":"/Tieba-New/image_emoticon80.png","Tieba-New91":"/Tieba-New/image_emoticon81.png","Tieba-New92":"/Tieba-New/image_emoticon82.png","Tieba-New93":"/Tieba-New/image_emoticon83.png","Tieba-New94":"/Tieba-New/image_emoticon84.png","Tieba-New95":"/Tieba-New/image_emoticon85.png","Tieba-New96":"/Tieba-New/image_emoticon86.png","Tieba-New97":"/Tieba-New/image_emoticon87.png","Tieba-New98":"/Tieba-New/image_emoticon88.png","Tieba-New99":"/Tieba-New/image_emoticon89.png","Tieba-New100":"/Tieba-New/image_emoticon9.png","Tieba-New101":"/Tieba-New/image_emoticon90.png","Tieba-New102":"/Tieba-New/image_emoticon91.png","Tieba-New103":"/Tieba-New/image_emoticon92.png","Tieba-New104":"/Tieba-New/image_emoticon93.png","Tieba-New105":"/Tieba-New/image_emoticon94.png","Tieba-New106":"/Tieba-New/image_emoticon95.png","Tieba-New107":"/Tieba-New/image_emoticon96.png","Tieba-New108":"/Tieba-New/image_emoticon97.png","Tieba-New109":"/Tieba-New/image_emoticon98.png","Tieba-New110":"/Tieba-New/image_emoticon99.png"},"enableQQ":true,"requiredFields":["nick","mail"]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+		
+
+		
+		  <a id="scroll-top-button" href="#" role="button">
+			<i class="iconfont icon-arrowup" aria-hidden="true"></i>
+		  </a>
+		
+
+		
+		  <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+		
+		  <div class="col-lg-7 mx-auto nopadding-x-md">
+			<div class="container custom mx-auto">
+			   
+			</div>
+		  </div>
+		
+	  </main>
+	  <!-- AJAX-SCRIPTS -->
+	  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script defer>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+  </div>
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        湘ICP备2021007554号-1
+      </a>
+    </span>
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document)
+.ajaxStart(function () {
+//NProgress.start();
+})
+.ajaxStop(function () {
+//NProgress.done();
+if ($(window).scrollTop() > 50) {
+	$(".pagination").fadeIn();
+} else {
+	$(".pagination").fadeOut();
+}
+});
+$(document).pjax("a[target!=_blank]", "#ajaxD", {fragment:"#ajaxD", timeout:5000});
+//$(document).pjax("a.extend[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.page-number[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+//$(document).pjax("a.nextPageButtom[target!=_blank]", "#board", {fragment:"#board", timeout:5000});
+</script>
+<script>
+$.getScript("https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js");
+//加載修復區
+$(document).on('pjax:send',function(){
+  //destroy()方法
+  if ($('.toc').length) Fluid.plugins.delTocBot(); 
+  if ($('.modal-backdrop').length) Fluid.events.registerResetModal();
+})
+// $(document).on('pjax:popstate', function() {
+//   debugger
+//   Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+// });
+$(document).on('pjax:end', function() {
+  debugger
+  Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+});
+$(document).on('pjax:complete', function() {
+  debugger
+	$("script[data-pjax], .pjax-reload script").each(function () {
+	  $(this).parent().append($(this).remove()); //所有符合標籤物件重載(目前:0)
+	});
+	Fluid.plugins.initAnchor(); //錨點重載
+	Fluid.plugins.initTocBot(); //文章目錄重載
+	Fluid.plugins.initCopyCode(); //highlight copy功能重載
+	Fluid.events.registerNavbarEvent(); //導覽頁css重載
+	Fluid.events.registerScrollTopArrowEvent(); //往上按鈕重載
+	Fluid.events.registerResetModal();  // 调用模态框的重置和重新注册方法
+	Fluid.events.registerScrollDownArrowEvent(); //往下
+    $.getScript("/js/img-lazyload.js"); //懶加載
+    $.getScript("/js/color-schema.js"); //切換主題黑白
+	window.NProgress.done(); //關閉進度條
+});
+//懶加載
+$(document).ready(function(){$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"); })
+</script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $(".pagination").fadeIn();
+        } else {
+            $(".pagination").fadeOut();
+        }
+    });
+});
+</script>
+
+
+  
+<script src="/js/custom.js"></script>
+<script src="/js/sakura.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+</body>
+</html>
