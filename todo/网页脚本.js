@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>document.addEventListener('keydown', function (event) {
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>document.addEventListener('keydown', function (event) {
     // 判断是否按下了 F12 键
     if ((event.key === 'F12' || event.code === 'F12') || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
         console.clear();
