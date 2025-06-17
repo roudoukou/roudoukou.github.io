@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://xiamu.icu/assets/2025-06-15-15-18-07.png">
 <meta property="og:image" content="https://xiamu.icu/assets/2025-06-15-15-39-14.png">
 <meta property="article:published_time" content="2025-06-13T22:01:38.000Z">
-<meta property="article:modified_time" content="2025-06-15T15:24:40.547Z">
+<meta property="article:modified_time" content="2025-06-17T15:47:30.451Z">
 <meta property="article:author" content="肉豆蔻吖">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary_large_image">
@@ -266,7 +266,7 @@
         
         
         
-          93 分钟
+          94 分钟
         
       </span>
     
@@ -408,6 +408,18 @@
 
 <p>输出, 因为有icu.xiamu.entity.Red 和 icu.xiamu.entity.Green ，rainbow成功被注册<br><img src="/assets/2025-06-15-15-39-14.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="小总结"><a href="#小总结" class="headerlink" title="小总结:"></a>小总结:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 给容器中注册组件；</span><br><span class="hljs-comment">     * 1）、包扫描+组件标注注解（<span class="hljs-doctag">@Controller</span>/<span class="hljs-doctag">@Service</span>/<span class="hljs-doctag">@Repository</span>/<span class="hljs-doctag">@Component</span>）[自己写的类]</span><br><span class="hljs-comment">     * 2）、<span class="hljs-doctag">@Bean</span>[导入的第三方包里面的组件]</span><br><span class="hljs-comment">     * 3）、<span class="hljs-doctag">@Import</span>[快速给容器中导入一个组件]</span><br><span class="hljs-comment">     * 		1）、<span class="hljs-doctag">@Import</span>(要导入到容器中的组件)；容器中就会自动注册这个组件，id默认是全类名</span><br><span class="hljs-comment">     * 		2）、ImportSelector:返回需要导入的组件的全类名数组；</span><br><span class="hljs-comment">     * 		3）、ImportBeanDefinitionRegistrar:手动注册bean到容器中</span><br><span class="hljs-comment">     * 4）、使用Spring提供的 FactoryBean（工厂Bean）;</span><br><span class="hljs-comment">     * 		1）、默认获取到的是工厂bean调用getObject创建的对象</span><br><span class="hljs-comment">     * 		2）、要获取工厂Bean本身，我们需要给id前面加一个&amp;</span><br><span class="hljs-comment">     * 			&amp;colorFactoryBean</span><br><span class="hljs-comment">     */</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<p>FactoryBean和BeanFactory有什么区别呢?</p>
+<p>简单来说：</p>
+<ol>
+<li>BeanFactory 是 Spring IoC 容器的核心接口，它是所有 Spring Bean 容器的根接口，负责管理和获取 Bean。</li>
+<li>FactoryBean 是一个特殊的 Bean，它本身是一个 Bean，但它的目的是生产或创建另一个 Bean 实例。</li>
+</ol>
+
                 
               </div>
             
