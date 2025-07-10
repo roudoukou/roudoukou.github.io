@@ -52,7 +52,7 @@ window.console.log(string.getMultiLine());
 // }
 
 
-if (window.location.href.includes('https://xiamu.icu/about/')
+/* if (window.location.href.includes('https://xiamu.icu/about/')
     || window.location.href.includes('http://localhost:4000/about/')) {
     const observer = new MutationObserver(mutations => {
         mutations.forEach(mutation => {
@@ -73,4 +73,4 @@ if (window.location.href.includes('https://xiamu.icu/about/')
 
     // 开始监听 document
     observer.observe(document, config);
-}
+} */
