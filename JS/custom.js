@@ -52,26 +52,25 @@ window.console.log(string.getMultiLine());
 // }
 
 
-// if (window.location.href.includes('https://xiamu.icu/about/')
-//     || window.location.href.includes('http://localhost:4000/about/')) {
-//     const observer = new MutationObserver(mutations => {
-//         mutations.forEach(mutation => {
-//             if (mutation.addedNodes.length) {
-//                 mutation.addedNodes.forEach(node => {
-//                     // 检查节点是否为我们关心的 DOM 节点
-//                     debugger
-//                     if (node.nodeType === 1 && node.classList.contains('aplayer') && node.getAttribute('data-id') === '5237049130') {
-//                         console.log('找到目标节点，即将移除');
-//                         node.remove(); // 移除节点
-//                     }
-//                 });
-//             }
-//         });
-//     });
+/* if (window.location.href.includes('https://xiamu.icu/about/')
+    || window.location.href.includes('http://localhost:4000/about/')) {
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes.length) {
+                mutation.addedNodes.forEach(node => {
+                    // 检查节点是否为我们关心的 DOM 节点
+                    if (node.nodeType === 1 && node.classList.contains('aplayer') && node.getAttribute('data-id') === '5237049130') {
+                        console.log('找到目标节点，即将移除');
+                        node.remove(); // 移除节点
+                    }
+                });
+            }
+        });
+    });
 
-//     // 配置 observer 来监听子节点的增加
-//     const config = { childList: true, subtree: true };
+    // 配置 observer 来监听子节点的增加
+    const config = { childList: true, subtree: true };
 
-//     // 开始监听 document
-//     observer.observe(document, config);
-// }
+    // 开始监听 document
+    observer.observe(document, config);
+} */
