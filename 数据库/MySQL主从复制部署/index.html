@@ -16,25 +16,26 @@
   <meta name="author" content="肉豆蔻吖">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一个老项目的配置 12345678910111213141516 &lt;dependency&gt;     &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;     &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;     &lt;version&gt;$&amp;#123;mybatis.version&amp;#125;&lt;&#x2F;">
+    <meta name="description" content="MySQL 8.0.30 一主两从架构实战 (Docker)1. 环境准备在宿主机（IP: 192.168.31.128）上创建独立的挂载目录，确保数据隔离。 12345678# 1. 创建自定义网络docker network create mysql-net# 2. 创建主从目录mkdir -p &#x2F;mydata&#x2F;mysql&#x2F;master&#x2F;&amp;#123;conf,log,data&amp;#125;mkd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="引入tk mybaits报错">
-<meta property="og:url" content="https://xiamu.icu/Java/%E5%BC%95%E5%85%A5tk%20mybatis%E6%8A%A5%E9%94%99/index.html">
+<meta property="og:title" content="MySQL主从复制部署">
+<meta property="og:url" content="https://xiamu.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="肉豆蔻吖">
-<meta property="og:description" content="一个老项目的配置 12345678910111213141516 &lt;dependency&gt;     &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;     &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;     &lt;version&gt;$&amp;#123;mybatis.version&amp;#125;&lt;&#x2F;">
+<meta property="og:description" content="MySQL 8.0.30 一主两从架构实战 (Docker)1. 环境准备在宿主机（IP: 192.168.31.128）上创建独立的挂载目录，确保数据隔离。 12345678# 1. 创建自定义网络docker network create mysql-net# 2. 创建主从目录mkdir -p &#x2F;mydata&#x2F;mysql&#x2F;master&#x2F;&amp;#123;conf,log,data&amp;#125;mkd">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-19T11:42:17.000Z">
-<meta property="article:modified_time" content="2026-01-13T12:25:34.099Z">
+<meta property="article:published_time" content="2026-01-13T20:24:14.000Z">
+<meta property="article:modified_time" content="2026-01-13T12:25:34.108Z">
 <meta property="article:author" content="肉豆蔻吖">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="tk mybatis">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="主从复制">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>引入tk mybaits报错 - 肉豆蔻吖</title>
+  <title>MySQL主从复制部署 - 肉豆蔻吖</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="引入tk mybaits报错"></span>
+            <span id="subtitle" data-typed-text="MySQL主从复制部署"></span>
           
         </div>
 
@@ -224,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-19 11:42" pubdate>
-          2023年11月19日 中午
+        <time datetime="2026-01-13 20:24" pubdate>
+          2026年1月13日 晚上
         </time>
       </span>
     
@@ -236,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          4.7k 字
         
       </span>
     
@@ -247,7 +248,7 @@
         
         
         
-          14 分钟
+          39 分钟
         
       </span>
     
@@ -285,26 +286,68 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">引入tk mybaits报错</h1>
+            <h1 style="display: none">MySQL主从复制部署</h1>
             
             
               <div class="markdown-body">
                 
-                <p>一个老项目的配置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>$&#123;mybatis.version&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis-spring<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>$&#123;mybatis.spring.version&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>tk.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mapper<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.1.4<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+                <h1 id="MySQL-8-0-30-一主两从架构实战-Docker"><a href="#MySQL-8-0-30-一主两从架构实战-Docker" class="headerlink" title="MySQL 8.0.30 一主两从架构实战 (Docker)"></a>MySQL 8.0.30 一主两从架构实战 (Docker)</h1><h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h2><p>在宿主机（IP: 192.168.31.128）上创建独立的挂载目录，确保数据隔离。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1. 创建自定义网络</span><br>docker network create mysql-net<br><br><span class="hljs-comment"># 2. 创建主从目录</span><br><span class="hljs-built_in">mkdir</span> -p /mydata/mysql/master/&#123;conf,<span class="hljs-built_in">log</span>,data&#125;<br><span class="hljs-built_in">mkdir</span> -p /mydata/mysql/slave1/&#123;conf,<span class="hljs-built_in">log</span>,data&#125;<br><span class="hljs-built_in">mkdir</span> -p /mydata/mysql/slave2/&#123;conf,<span class="hljs-built_in">log</span>,data&#125;<br><br></code></pre></td></tr></table></figure>
 
-<p>重构成springboot</p>
-<p>修改配置如下: </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--spring-boot mybatis依赖--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.3.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-comment">&lt;!--添加tk-mapper依赖--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>tk.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mapper-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-编写配置文件"><a href="#2-编写配置文件" class="headerlink" title="2. 编写配置文件"></a>2. 编写配置文件</h2><p>MySQL 8.0 需要注意 <code>server-id</code> 的唯一性。</p>
+<h3 id="1-主库配置"><a href="#1-主库配置" class="headerlink" title="1. 主库配置"></a>1. 主库配置</h3><p>主库的核心是开启 <code>log-bin</code> 并配置好需要推送给从库的数据库。</p>
+<p><code>vim /mydata/mysql/master/conf/my.cnf</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[client]</span><br><span class="hljs-attr">default-character-set</span>=utf8mb4<br><br><span class="hljs-section">[mysql]</span><br><span class="hljs-attr">default-character-set</span>=utf8mb4<br><br><span class="hljs-section">[mysqld]</span><br><span class="hljs-comment"># --- 你原有的字符集与基础配置 ---</span><br><span class="hljs-attr">init_connect</span>=<span class="hljs-string">&#x27;SET collation_connection = utf8mb4_unicode_ci&#x27;</span><br><span class="hljs-attr">init_connect</span>=<span class="hljs-string">&#x27;SET NAMES utf8mb4&#x27;</span><br><span class="hljs-attr">character-set-server</span>=utf8mb4<br><span class="hljs-attr">collation-server</span>=utf8mb4_unicode_ci<br>skip-character-set-client-handshake<br>skip-name-resolve<br><br><span class="hljs-comment"># --- 主从核心配置 ---</span><br><span class="hljs-attr">server_id</span>=<span class="hljs-number">1</span><br><span class="hljs-attr">log-bin</span>=mysql-bin<br><span class="hljs-attr">read-only</span>=<span class="hljs-number">0</span><br><br><span class="hljs-comment"># 指定需要同步的数据库 (保持你笔记中的业务库)</span><br><span class="hljs-attr">binlog-do-db</span>=gulimall_ums<br><span class="hljs-attr">binlog-do-db</span>=gulimall_pms<br><span class="hljs-attr">binlog-do-db</span>=gulimall_oms<br><span class="hljs-attr">binlog-do-db</span>=gulimall_sms<br><span class="hljs-attr">binlog-do-db</span>=gulimall_wms<br><span class="hljs-attr">binlog-do-db</span>=gulimall_admin<br><br><span class="hljs-comment"># 忽略系统库同步</span><br><span class="hljs-attr">replicate-ignore-db</span>=mysql<br><span class="hljs-attr">replicate-ignore-db</span>=sys<br><span class="hljs-attr">replicate-ignore-db</span>=information_schema<br><span class="hljs-attr">replicate-ignore-db</span>=performance_schema<br><br><span class="hljs-comment"># --- MySQL 8.0 增强建议 ---</span><br><span class="hljs-comment"># 解决 8.0 默认认证插件导致的连接问题（重要）</span><br><span class="hljs-attr">default-authentication-plugin</span>=mysql_native_password<br><span class="hljs-comment"># 设置时区</span><br><span class="hljs-attr">default-time-zone</span>=<span class="hljs-string">&#x27;+8:00&#x27;</span><br><span class="hljs-comment"># 开启 binlog 的过期自动清理（8.0 新参数，设置保留 7 天）</span><br><span class="hljs-attr">binlog_expire_logs_seconds</span>=<span class="hljs-number">604800</span><br><span class="hljs-comment"># 限制只能由 master 写入（防止误操作，主库通常设为 0）</span><br><span class="hljs-attr">log_slave_updates</span>=<span class="hljs-number">1</span><br><br></code></pre></td></tr></table></figure>
 
-<p>启动类, 注意这里的 <code>MapperScan</code> 引入应该需要引入 <code>tk.mybatis.spring.annotation.MapperScan</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;<br><span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;<br><span class="hljs-keyword">import</span> tk.mybatis.spring.annotation.MapperScan;<br><br><span class="hljs-meta">@MapperScan(basePackages = &quot;com.coder.mapper&quot;)</span><br><span class="hljs-meta">@SpringBootApplication</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BackendApplication</span> &#123;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		SpringApplication.run(BackendApplication.class, args);<br>	&#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+<hr>
+<h3 id="2-从库配置"><a href="#2-从库配置" class="headerlink" title="2. 从库配置"></a>2. 从库配置</h3><p>从库的关键在于 <code>server_id</code> 必须唯一，且开启 <code>read-only</code> 保证数据一致性。</p>
+<p><strong>从库 1 (Slave-1):</strong></p>
+<p><code>vim /mydata/mysql/slave1/conf/my.cnf</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[client]</span><br><span class="hljs-attr">default-character-set</span>=utf8mb4<br><br><span class="hljs-section">[mysql]</span><br><span class="hljs-attr">default-character-set</span>=utf8mb4<br><br><span class="hljs-section">[mysqld]</span><br><span class="hljs-comment"># --- 基础配置 ---</span><br><span class="hljs-attr">character-set-server</span>=utf8mb4<br><span class="hljs-attr">collation-server</span>=utf8mb4_unicode_ci<br>skip-name-resolve<br><br><span class="hljs-comment"># --- 主从核心配置 ---</span><br><span class="hljs-attr">server_id</span>=<span class="hljs-number">2</span>               <span class="hljs-comment"># 唯一 ID</span><br><span class="hljs-attr">read-only</span>=<span class="hljs-number">1</span>               <span class="hljs-comment"># 从库只读</span><br><span class="hljs-attr">relay-log</span>=mysql-relay-bin <span class="hljs-comment"># 从库中继日志</span><br><span class="hljs-attr">log-bin</span>=mysql-bin         <span class="hljs-comment"># 从库也开启 binlog 方便以后做级联或切换</span><br><br><span class="hljs-comment"># 复制过滤（确保只接受这几个库的同步数据）</span><br><span class="hljs-attr">replicate-do-db</span>=gulimall_ums<br><span class="hljs-attr">replicate-do-db</span>=gulimall_pms<br><span class="hljs-attr">replicate-do-db</span>=gulimall_oms<br><span class="hljs-attr">replicate-do-db</span>=gulimall_sms<br><span class="hljs-attr">replicate-do-db</span>=gulimall_wms<br><span class="hljs-attr">replicate-do-db</span>=gulimall_admin<br><br><span class="hljs-comment"># --- MySQL 8.0 增强建议 ---</span><br><span class="hljs-attr">default-authentication-plugin</span>=mysql_native_password<br><span class="hljs-attr">default-time-zone</span>=<span class="hljs-string">&#x27;+8:00&#x27;</span><br><span class="hljs-comment"># 即使是从库，也建议配置超级用户只读</span><br><span class="hljs-comment"># super_read_only=1</span><br><br></code></pre></td></tr></table></figure>
 
-<p>参考:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/aae31a9becad">Spring-boot集成通用Mapper（tk.mybatis）</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhaoyanjun6/article/details/80734057">SpringBoot 2.x 整合Mybatis三：tk.mybatis</a></li>
+
+<p><strong>从库 2 (Slave-2):</strong></p>
+<p><code>vim /mydata/mysql/slave2/conf/my.cnf</code></p>
+<blockquote>
+<p>配置内容与 Slave-1 完全一致，只需将 <code>server_id=2</code> 修改为 <code>server_id=3</code>。</p>
+</blockquote>
+<hr>
+<h2 id="3-启动容器"><a href="#3-启动容器" class="headerlink" title="3. 启动容器"></a>3. 启动容器</h2><p>使用 <code>8.0.30</code> 版本，并映射不同端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 启动 Master (3307)</span><br>docker run -p 3307:3306 --name mysql-master \<br>--network mysql-net \<br>-v /mydata/mysql/master/log:/var/log/mysql \<br>-v /mydata/mysql/master/data:/var/lib/mysql \<br>-v /mydata/mysql/master/conf/my.cnf:/etc/mysql/my.cnf \<br>-e MYSQL_ROOT_PASSWORD=root \<br>--restart always \<br>-d mysql:8.0.30<br><br><span class="hljs-comment"># 启动 Slave1 (3308)</span><br>docker run -p 3308:3306 --name mysql-slave-1 \<br>--network mysql-net \<br>-v /mydata/mysql/slave1/log:/var/log/mysql \<br>-v /mydata/mysql/slave1/data:/var/lib/mysql \<br>-v /mydata/mysql/slave1/conf/my.cnf:/etc/mysql/my.cnf \<br>-e MYSQL_ROOT_PASSWORD=root \<br>--restart always \<br>-d mysql:8.0.30<br><br><span class="hljs-comment"># 启动 Slave2 (3309)</span><br>docker run -p 3309:3306 --name mysql-slave-2 \<br>--network mysql-net \<br>-v /mydata/mysql/slave2/log:/var/log/mysql \<br>-v /mydata/mysql/slave2/data:/var/lib/mysql \<br>-v /mydata/mysql/slave2/conf/my.cnf:/etc/mysql/my.cnf \<br>-e MYSQL_ROOT_PASSWORD=root \<br>--restart always \<br>-d mysql:8.0.30<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-主库配置-Master"><a href="#4-主库配置-Master" class="headerlink" title="4. 主库配置 (Master)"></a>4. 主库配置 (Master)</h2><ol>
+<li>进入主库并创建同步账号：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it mysql-master mysql -uroot -proot<br><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>执行 SQL：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- MySQL 8.0 必须先创建用户再授权，并指定加密规则（防止从库连不上）</span><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;backup&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;123456&#x27;</span>;<br><span class="hljs-keyword">GRANT</span> REPLICATION SLAVE <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;backup&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;<br>FLUSH PRIVILEGES;<br><br><span class="hljs-comment">-- 记录 File 和 Position 的值</span><br><span class="hljs-keyword">SHOW</span> MASTER STATUS;<br><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>假设此时查到：</strong> File: <code>mysql-bin.000003</code>, Position: <code>831</code></p>
+</blockquote>
+<hr>
+<h2 id="5-从库配置-Slaves"><a href="#5-从库配置-Slaves" class="headerlink" title="5. 从库配置 (Slaves)"></a>5. 从库配置 (Slaves)</h2><p>分别进入 <code>mysql-slave-1</code> 和 <code>mysql-slave-2</code> 执行同步命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it mysql-slave-1 mysql -uroot -proot<br><br></code></pre></td></tr></table></figure>
+
+<p><strong>关键同步命令：</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sql">CHANGE MASTER <span class="hljs-keyword">TO</span> <br>  MASTER_HOST<span class="hljs-operator">=</span><span class="hljs-string">&#x27;mysql-master&#x27;</span>, <span class="hljs-comment">-- 使用 Docker 网络中的容器名  , 或者替换成 master 的ip</span><br>  MASTER_USER<span class="hljs-operator">=</span><span class="hljs-string">&#x27;backup&#x27;</span>,       <span class="hljs-comment">-- 使用的同步的账号</span><br>  MASTER_PASSWORD<span class="hljs-operator">=</span><span class="hljs-string">&#x27;123456&#x27;</span>,   <span class="hljs-comment">-- 同步的账号密码</span><br>  MASTER_PORT<span class="hljs-operator">=</span><span class="hljs-number">3306</span>,           <span class="hljs-comment">-- 注意这是容器内部端口</span><br>  MASTER_LOG_FILE<span class="hljs-operator">=</span><span class="hljs-string">&#x27;mysql-bin.000003&#x27;</span>,<br>  MASTER_LOG_POS<span class="hljs-operator">=</span><span class="hljs-number">831</span>;        <span class="hljs-comment">-- 填刚才 SHOW MASTER STATUS 查到的数字</span><br><br><span class="hljs-keyword">START</span> SLAVE;<br><br><span class="hljs-comment">-- 查看状态</span><br><span class="hljs-keyword">SHOW</span> SLAVE STATUS\G<br><br></code></pre></td></tr></table></figure>
+
+<p>进入 slave2 执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it mysql-slave-2 mysql -uroot -proot<br><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs sql">CHANGE MASTER <span class="hljs-keyword">TO</span> <br>  MASTER_HOST<span class="hljs-operator">=</span><span class="hljs-string">&#x27;mysql-master&#x27;</span>, <span class="hljs-comment">-- 使用 Docker 网络中的容器名  , 或者替换成 master 的ip</span><br>  MASTER_USER<span class="hljs-operator">=</span><span class="hljs-string">&#x27;backup&#x27;</span>,       <span class="hljs-comment">-- 使用的同步的账号</span><br>  MASTER_PASSWORD<span class="hljs-operator">=</span><span class="hljs-string">&#x27;123456&#x27;</span>,   <span class="hljs-comment">-- 同步的账号密码</span><br>  MASTER_PORT<span class="hljs-operator">=</span><span class="hljs-number">3306</span>,           <span class="hljs-comment">-- 注意这是容器内部端口</span><br>  MASTER_LOG_FILE<span class="hljs-operator">=</span><span class="hljs-string">&#x27;mysql-bin.000003&#x27;</span>,<br>  MASTER_LOG_POS<span class="hljs-operator">=</span><span class="hljs-number">831</span>;        <span class="hljs-comment">-- 填刚才 SHOW MASTER STATUS 查到的数字</span><br><br>CHANGE MASTER <span class="hljs-keyword">TO</span> <br>  MASTER_HOST<span class="hljs-operator">=</span><span class="hljs-string">&#x27;mysql-master&#x27;</span>,<br>  MASTER_USER<span class="hljs-operator">=</span><span class="hljs-string">&#x27;backup&#x27;</span>,<br>  MASTER_PASSWORD<span class="hljs-operator">=</span><span class="hljs-string">&#x27;123456&#x27;</span>,<br>  MASTER_PORT<span class="hljs-operator">=</span><span class="hljs-number">3306</span>,<br>  MASTER_LOG_FILE<span class="hljs-operator">=</span><span class="hljs-string">&#x27;mysql-bin.000003&#x27;</span>,<br>  MASTER_LOG_POS<span class="hljs-operator">=</span><span class="hljs-number">831</span>;<br><br><span class="hljs-keyword">START</span> SLAVE;<br><br><span class="hljs-comment">-- 查看状态</span><br><span class="hljs-keyword">SHOW</span> SLAVE STATUS\G<br><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="6-验证"><a href="#6-验证" class="headerlink" title="6. 验证"></a>6. 验证</h2><ul>
+<li><strong>Slave_IO_Running: Yes</strong></li>
+<li><strong>Slave_SQL_Running: Yes</strong></li>
 </ul>
+<p>如果在主库创建一个数据库 <code>CREATE DATABASE gulimall_pms;</code>，你在从库 <code>SHOW DATABASES;</code> 就能立刻看到了。</p>
 
                 
               </div>
@@ -323,7 +366,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
   
 
@@ -338,9 +381,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/">#Java</a>
+        <a href="/tags/MySQL/">#MySQL</a>
       
-        <a href="/tags/tk-mybatis/">#tk mybatis</a>
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+      
+        <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">#主从复制</a>
       
     </div>
   
@@ -352,8 +397,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>引入tk mybaits报错</div>
-      <div>https://xiamu.icu/Java/引入tk mybatis报错/</div>
+      <div>MySQL主从复制部署</div>
+      <div>https://xiamu.icu/数据库/MySQL主从复制部署/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +410,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月19日</div>
+          <div>2026年1月13日</div>
         </div>
       
       
@@ -397,18 +442,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Java/Nginx%E9%AB%98%E7%BA%A7/" title="Nginx高级">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nginx高级</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Java/tk-mybatis%E4%BD%BF%E7%94%A8selectByPrimaryKey%E6%97%A0%E6%B3%95%E6%A0%B9%E6%8D%AE%E4%B8%BB%E9%94%AE%E6%9F%A5%E6%89%BE%E8%8E%B7%E5%8F%96%E7%BB%93%E6%9E%9C/" title="tk-mybatis使用selectByPrimaryKey无法根据主键查找获取结果">
-                        <span class="hidden-mobile">tk-mybatis使用selectByPrimaryKey无法根据主键查找获取结果</span>
+                      <a href="/%E7%BE%8E%E9%A3%9F/%E7%BA%A2%E7%83%A7%E9%B1%BC/" title="红烧鱼实操攻略：从流血到流口水">
+                        <span class="hidden-mobile">红烧鱼实操攻略：从流血到流口水</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
