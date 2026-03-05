@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://xiamu.icu/assets/2024-01-14-00-47-18.png">
 <meta property="og:image" content="https://xiamu.icu/assets/2024-01-11-14-46-03.png">
 <meta property="article:published_time" content="2024-01-08T19:27:23.000Z">
-<meta property="article:modified_time" content="2026-02-24T01:53:26.222Z">
+<meta property="article:modified_time" content="2026-03-05T03:05:58.917Z">
 <meta property="article:author" content="肉豆蔻吖">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="面试题">
@@ -379,7 +379,7 @@
         
         
         
-          847 分钟
+          850 分钟
         
       </span>
     
@@ -437,6 +437,8 @@
 <p>Synchronized是自动锁, 在汇编采用 可以修饰非静态方法, 代码块, 一个对象, 一个类, 粒度比较大, 非公平锁<br>ReentrantLock是Lock的实现类, 通过lock()方法和unlock()方法来控制上锁的过程, 粒度比较小, 默认非公平, 可设置公平锁, <strong>需要 finally 块手动释放，否则易死锁</strong></p>
 <h2 id="volatile-是什么"><a href="#volatile-是什么" class="headerlink" title="volatile 是什么?"></a>volatile 是什么?</h2><p>volatile 是 Java 虚拟机提供的轻量级的同步机制<br>保证可见性, 不保证原子性, 禁止指令重排</p>
 <h2 id="画出JVM内存模型"><a href="#画出JVM内存模型" class="headerlink" title="画出JVM内存模型"></a>画出JVM内存模型</h2><p><img src="/assets/2023-12-26-11-26-26.png" srcset="/img/loading.gif" lazyload></p>
+<p>程序计数器：CPU需要不断的切换线程上下文，需要使用一个程序计数器来记录下一条需要执行的字节码指令地址（如果是native方法则为空）<br>虚拟机栈(Java栈), 存放方法调用的栈帧, 每个栈帧存放: 局部变量表(基本类型值+对象引用), 操作栈数, 动态链接, 返回地址等<br>本地方法栈, 存放本地方法native的方法调用的堆栈, C语言编写的方法<br>堆: 创建出来的对象都放在堆中, 并且有垃圾回收的机制, 字符串常量也存放在这<br>    新生代(约等于1&#x2F;3) eden+from+to (8:1:1)<br>    老年代(约等于2&#x2F;3) old<br>    在 eden 区创建对象, 创建完的对象放 from 区, from 区和 to 区来回拷贝, 并且计数, 计数超过15次的, 给移动到 old 区<br>    期间有对象的回收, 大对象会直接放到 old 区, 不会有 from to 区的来回拷贝的过程<br>方法区(元空间): 程序运行, 加载的一些静态变量, 类信息放这里</p>
+<p>线程私有: 程序计数器, 虚拟机栈, 本地方法栈<br>线程共享: 堆, 元空间</p>
 <h2 id="JMM内存模型"><a href="#JMM内存模型" class="headerlink" title="JMM内存模型"></a>JMM内存模型</h2><p>JMM 可见性, 原子性, 有序性<br>但是没有volatile是没有原子性的</p>
 <p>本地内存就是工作内存</p>
 <p><img src="/assets/2024-01-02-14-30-57.png" srcset="/img/loading.gif" lazyload></p>

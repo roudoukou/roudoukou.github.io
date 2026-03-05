@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://xiamu.icu/assets/2024-01-25-23-54-44.png">
 <meta property="og:image" content="https://xiamu.icu/assets/2024-01-26-09-18-44.gif">
 <meta property="article:published_time" content="2024-01-15T16:36:55.000Z">
-<meta property="article:modified_time" content="2026-02-24T01:53:26.222Z">
+<meta property="article:modified_time" content="2026-03-05T03:05:58.917Z">
 <meta property="article:author" content="肉豆蔻吖">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="面试题">
@@ -314,7 +314,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          75k 字
+          76k 字
         
       </span>
     
@@ -325,7 +325,7 @@
         
         
         
-          624 分钟
+          633 分钟
         
       </span>
     
@@ -542,6 +542,7 @@ true
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.atguigu.spring.circulardepend.constructorinjection;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ClientConstructor</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// new ServiceA(new ServiceB(new ServiceA(???)));</span><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
+<p>这里A需要B, B需要A, A又需要B, …<br>构造器注入会存在循环依赖的问题</p>
 <p>以set方式注入依赖</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.atguigu.spring.circulardepend.setinjection;<br><br><span class="hljs-keyword">import</span> org.springframework.stereotype.Component;<br><br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ServiceAA</span> &#123;<br>    <span class="hljs-keyword">private</span> ServiceBB serviceBB;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setServiceBB</span><span class="hljs-params">(ServiceBB serviceBB)</span> &#123;<br>        <span class="hljs-built_in">this</span>.serviceBB = serviceBB;<br>        System.out.println(<span class="hljs-string">&quot;A里面设置了B&quot;</span>);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
@@ -582,10 +583,21 @@ true
 <p>循环依赖出现如下异常:<br>BeanCreationException: Error creating bean with name ‘a’ … Is there an unresolvable circular reference?</p>
 <h5 id="重要结论-Spring内部通过3级缓存来解决循环依赖"><a href="#重要结论-Spring内部通过3级缓存来解决循环依赖" class="headerlink" title="重要结论(Spring内部通过3级缓存来解决循环依赖)"></a>重要结论(Spring内部通过3级缓存来解决循环依赖)</h5><p>使用 <code>DefaultSingletonBeanRegistry</code></p>
 <p><img src="/assets/2024-01-21-22-10-18.png" srcset="/img/loading.gif" lazyload></p>
-<h4 id="循环依赖Debug-困难-请坚持"><a href="#循环依赖Debug-困难-请坚持" class="headerlink" title="循环依赖Debug-困难, 请坚持"></a>循环依赖Debug-困难, 请坚持</h4><p>实例化:<br>内存中申请一块内存空间<br>租赁好房子, 自己的家具东西还没有搬家进去</p>
-<p>初始化属性填充:<br>完成属性的各种赋值<br>装修、家电家具进场</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DefaultSingletonBeanRegistry</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">SimpleAliasRegistry</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">SingletonBeanRegistry</span> &#123;<br>    <span class="hljs-comment">// 第一级缓存</span><br>	<span class="hljs-comment">/** Cache of singleton objects: bean name to bean instance. */</span><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ConcurrentHashMap</span>&lt;&gt;(<span class="hljs-number">256</span>);<br><br>    <span class="hljs-comment">// 第三级缓存</span><br>	<span class="hljs-comment">/** Creation-time registry of singleton factories: bean name to ObjectFactory. */</span><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ConcurrentHashMap</span>&lt;&gt;(<span class="hljs-number">16</span>);<br><br>    <span class="hljs-comment">// 第二级缓存</span><br>	<span class="hljs-comment">/** Cache of early singleton objects: bean name to bean instance. */</span><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ConcurrentHashMap</span>&lt;&gt;(<span class="hljs-number">16</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>一级缓存，二级缓存都是Map&lt;String, Object&gt;类型的，一级是存放成品的，已经填充好的属性<br>二级是存放一个半成品的Bean对象的，此时还没有给属性赋值的<br>三级缓存的类型是 Map&lt;String, ObjectFactory&lt;?&gt;&gt; , key 表示创建这个Bean的名称, value 表示创建这个Bean的对象工厂</p>
+<p>prototype相当于每次都是new一个对象, 每次new都是一个新的对象, 那么是没有办法放到缓存中的<br>非单例的Bean不会放到三级缓存中, 会直接报出异常BeanCurrentlyInCreationException</p>
+<h4 id="循环依赖Debug-困难-请坚持"><a href="#循环依赖Debug-困难-请坚持" class="headerlink" title="循环依赖Debug-困难, 请坚持"></a>循环依赖Debug-困难, 请坚持</h4><p>实例化和初始化区别: </p>
+<p>实例化(new Object):<br>内存中申请一块内存空间<br>租赁好房子, 自己的家具东西还没有搬家进去</p>
+<p>初始化属性填充(set):<br>完成属性的各种赋值<br>装修、家电家具进场</p>
 <p><img src="/assets/2024-01-21-22-31-42.png" srcset="/img/loading.gif" lazyload></p>
 <p>3个Map和四大方法, 总体相关对象<br><img src="/assets/2024-01-21-22-33-56.png" srcset="/img/loading.gif" lazyload></p>
+<ol>
+<li>从 getSingleton() 去获取看看有没有 Bean </li>
+<li>如果没有调用 doSingleton() 去创建一个 Bean</li>
+<li>创建完成, 调用 populateBean() 去给 Bean 进行赋值操作</li>
+<li>属性值填充完成之后, 通过 addSingleton() 放到一级缓存中, 暴露出去给使用</li>
+</ol>
 <p>A&#x2F;B两对象在三级缓存中的迁移说明<br><img src="/assets/2024-01-21-22-35-40.png" srcset="/img/loading.gif" lazyload></p>
 <ol>
 <li>A创建过程中需要B, 于是A将自己放到三级缓存里面, 去实例化B</li>
