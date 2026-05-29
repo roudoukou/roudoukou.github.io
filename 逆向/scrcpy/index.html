@@ -24,8 +24,9 @@
 <meta property="og:description" content="手机投屏到电脑 使用文档: https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xzqyun&#x2F;p&#x2F;17475142.htmlhttps:&#x2F;&#x2F;blog.csdn.net&#x2F;j1451284189&#x2F;article&#x2F;details&#x2F;116053027官网: https:&#x2F;&#x2F;github.com&#x2F;Genymobile&#x2F;scrcpy 12adb usbscrcpy  让手机息屏, 电脑显示 1scrcpy -S">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xiamu.icu/assets/2024-08-11-12-20-41.png">
+<meta property="og:image" content="https://xiamu.icu/assets/2026-05-28-09-24-28.png">
 <meta property="article:published_time" content="2024-08-04T20:00:28.000Z">
-<meta property="article:modified_time" content="2026-05-27T01:04:23.870Z">
+<meta property="article:modified_time" content="2026-05-29T05:43:34.077Z">
 <meta property="article:author" content="肉豆蔻吖">
 <meta property="article:tag" content="逆向">
 <meta property="article:tag" content="scrcpy">
@@ -238,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          391 字
+          593 字
         
       </span>
     
@@ -249,7 +250,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -300,7 +301,7 @@
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">scrcpy -S</span><br></code></pre></td></tr></table></figure>
 
 <p>无线连接wifi</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 这一步需要电脑和手机先连着线</span><br>adb tcpip 5555<br><br><span class="hljs-comment"># 断线</span><br><span class="hljs-comment"># 查看手机的ip</span><br>adb connect 192.168.209.148:5555<br><br>scrcpy<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 这一步需要电脑和手机先连着线</span><br>adb tcpip 5555<br><br><span class="hljs-comment"># 查看手机的ip</span><br><span class="hljs-comment"># ip addr | grep wlan0</span><br>ip addr | grep wlan0<br><span class="hljs-comment"># 192.168.31.128</span><br><br><span class="hljs-comment"># 断线</span><br><span class="hljs-comment"># 连接手机的ip和端口 </span><br>adb connect 192.168.209.148:5555<br><br>scrcpy<br></code></pre></td></tr></table></figure>
 
 <p><img src="/assets/2024-08-11-12-20-41.png" srcset="/img/loading.gif" lazyload></p>
 <p>无线比较考虑网速，降低比特率和分辨率</p>
@@ -309,6 +310,15 @@
 
 <p>开启输入法, 需要PC端的保持英文状态</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">scrcpy <span class="hljs-attribute">--keyboard</span>=uhid<br></code></pre></td></tr></table></figure>
+
+
+<p>拷贝文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">(base) PS D:\xiamu\temp\myphonephoto&gt; adb pull <span class="hljs-string">&quot;/sdcard/Pictures/知乎/1766331296666.jpeg&quot;</span> .<br></code></pre></td></tr></table></figure>
+
+<p>进入中文目录, 中文异常</p>
+<p><img src="/assets/2026-05-28-09-24-28.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">chcp 65001<br><br>adb shell -t<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
