@@ -16,12 +16,12 @@
   <meta name="author" content="肉豆蔻吖">
   <meta name="keywords" content="">
   
-    <meta name="description" content="0.安装 DockerDocker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。 Docker CE 分为 stable test 和 nightly 三个更新频道。 官方网站上有各种环境下的 安装指南，这里主要介绍 Docker CE 在 CentOS 上的安装。 1.CentOS 安装 DockerDoc">
+    <meta name="description" content="0.安装 DockerDocker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。 Docker CE 分为 stable test 和 nightly 三个更新频道。 官方网站上有各种环境下的 安装指南，这里主要介绍 Docker CE 在 CentOS 上的安装。 0.0 补充 Windows 安装http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker">
 <meta property="og:url" content="https://xiamu.icu/Java/Docker/index.html">
 <meta property="og:site_name" content="肉豆蔻吖">
-<meta property="og:description" content="0.安装 DockerDocker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。 Docker CE 分为 stable test 和 nightly 三个更新频道。 官方网站上有各种环境下的 安装指南，这里主要介绍 Docker CE 在 CentOS 上的安装。 1.CentOS 安装 DockerDoc">
+<meta property="og:description" content="0.安装 DockerDocker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。 Docker CE 分为 stable test 和 nightly 三个更新频道。 官方网站上有各种环境下的 安装指南，这里主要介绍 Docker CE 在 CentOS 上的安装。 0.0 补充 Windows 安装http">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xiamu.icu/assets/ac9d54ff1f1d4a17a5d56eaf154deda8.png">
 <meta property="og:image" content="https://xiamu.icu/assets/a9e29557e11d4429be6331a43f386cc9.png">
@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://xiamu.icu/assets/db2f768b60584ad2aab64b00cef71d7a.png">
 <meta property="og:image" content="https://xiamu.icu/assets/9cdb1b9bf5044a21a71255d4d1dcdedb.png">
 <meta property="article:published_time" content="2023-03-04T14:00:03.000Z">
-<meta property="article:modified_time" content="2026-06-30T05:12:02.112Z">
+<meta property="article:modified_time" content="2026-07-12T14:52:46.436Z">
 <meta property="article:author" content="肉豆蔻吖">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Docker">
@@ -40,8 +40,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://xiamu.icu/assets/ac9d54ff1f1d4a17a5d56eaf154deda8.png">
   
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Docker - 肉豆蔻吖</title>
@@ -246,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.6k 字
+          7.8k 字
         
       </span>
     
@@ -257,7 +255,7 @@
         
         
         
-          64 分钟
+          65 分钟
         
       </span>
     
@@ -303,6 +301,11 @@
                 <h1 id="0-安装-Docker"><a href="#0-安装-Docker" class="headerlink" title="0.安装 Docker"></a>0.安装 Docker</h1><p>Docker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。</p>
 <p>Docker CE 分为 <code>stable</code> <code>test</code> 和 <code>nightly</code> 三个更新频道。</p>
 <p>官方网站上有各种环境下的 <a target="_blank" rel="noopener" href="https://docs.docker.com/install/">安装指南</a>，这里主要介绍 Docker CE 在 CentOS 上的安装。</p>
+<h1 id="0-0-补充-Windows-安装"><a href="#0-0-补充-Windows-安装" class="headerlink" title="0.0 补充 Windows 安装"></a>0.0 补充 Windows 安装</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/686882945">https://zhuanlan.zhihu.com/p/686882945</a></p>
+<p>修改安装路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Start-Process <span class="hljs-string">&#x27;.\Docker Desktop Installer.exe&#x27;</span> <span class="hljs-string">&#x27;install --installation-dir=D:\xiamu\module\Docker&#x27;</span><br></code></pre></td></tr></table></figure>
+
+
 <h1 id="1-CentOS-安装-Docker"><a href="#1-CentOS-安装-Docker" class="headerlink" title="1.CentOS 安装 Docker"></a>1.CentOS 安装 Docker</h1><p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10， CentOS 7 满足最低内核的要求，所以我们在 CentOS 7 安装 Docker。</p>
 <h2 id="1-1-卸载（可选）"><a href="#1-1-卸载（可选）" class="headerlink" title="1.1.卸载（可选）"></a>1.1.卸载（可选）</h2><p>如果之前安装过旧版本的 Docker，可以使用下面命令卸载：</p>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs livescript">yum remove docker <span class="hljs-string">\</span><br>                  docker-client <span class="hljs-string">\</span><br>                  docker-client-latest <span class="hljs-string">\</span><br>                  docker-common <span class="hljs-string">\</span><br>                  docker-latest <span class="hljs-string">\</span><br>                  docker-latest-logrotate <span class="hljs-string">\</span><br>                  docker-logrotate <span class="hljs-string">\</span><br>                  docker-selinux <span class="hljs-string">\</span><br>                  docker-engine-selinux <span class="hljs-string">\</span><br>                  docker-engine <span class="hljs-string">\</span><br>                  docker-ce<br></code></pre></td></tr></table></figure>
@@ -687,30 +690,6 @@
     </div>
   
   
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        总访问量 
-        <span id="busuanzi_value_site_pv"></span>
-         次
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        总访客数 
-        <span id="busuanzi_value_site_uv"></span>
-         人
-      </span>
-    
-    
-  
-</div>
-
-  
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -870,8 +849,6 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
